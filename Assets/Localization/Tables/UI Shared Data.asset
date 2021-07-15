@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: 79a617d65d99e444ca736fdc92074738
+  m_Entries:
+  - m_Id: 18324910080
+    m_Key: Chinese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178778009600
+    m_Key: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228518260736
+    m_Key: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275674820608
+    m_Key: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326610448384
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546043850752
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 586598576128
+    m_Key: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 624271814656
+    m_Key: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 672334344192
+    m_Key: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 711874048000
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 788449456128
+    m_Key: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 839234088960
+    m_Key: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 863238090752
+    m_Key: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928069447680
+    m_Key: Apply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1019593355264
+    m_Key: Bag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1103852728320
+    m_Key: BagFull
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4929573875712
+    m_Key: NoHp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5308181114880
+    m_Key: NoSan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7806862225408
+    m_Key: AutoSave
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8690149093376
+    m_Key: ModeSelect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8787142373376
+    m_Key: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9426845036544
+    m_Key: Normal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9558273552384
+    m_Key: Hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10208441004032
+    m_Key: Easy_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10574209478656
+    m_Key: Normal_desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10657697099776
+    m_Key: Hard_desc
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1625140100692

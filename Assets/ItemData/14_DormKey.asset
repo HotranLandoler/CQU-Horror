@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c528747a30dda724c9e52cfea6b6a42f, type: 3}
+  m_Name: 14_DormKey
+  m_EditorClassIdentifier: 
+  Id: 14
+  itemSprite: {fileID: 3719068211130651045, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
+  Name: "\u5BBF\u820D\u94A5\u5319"
+  Desc: "\u4E00\u628A\u5BBF\u820D\u623F\u95E8\u7684\u94A5\u5319\uFF0C\u4E0A\u9762\u7684\u6807\u7B7E\u5DF2\u7ECF\u65E0\u6CD5\u8FA8\u8BA4\u3002"
+  itemType: 4
+  val: 0

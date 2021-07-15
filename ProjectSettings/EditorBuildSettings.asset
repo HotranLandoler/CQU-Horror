@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 8a9f42df96296ad43a26124f98266890
+  - enabled: 1
+    path: Assets/Scenes/Scene0-Cheng's Home.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Scene1-1-NorthGate.unity
+    guid: 27c4a0b7a1941544083d7abe6a2a965a
+  - enabled: 1
+    path: Assets/Scenes/Scene1-2-B5.unity
+    guid: 960fceff1f3642848a162a5a19f18bc0
+  - enabled: 1
+    path: Assets/Scenes/Scene1-3-B5InDoor.unity
+    guid: dadedc9fb2583fa469a674ee4388b05b
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ca047c2c4fcdc2c438fb3134cf290670, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: deff2a10108603a4f83d76c99b8e4fe1, type: 2}

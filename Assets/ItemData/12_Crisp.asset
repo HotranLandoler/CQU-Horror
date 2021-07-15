@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c528747a30dda724c9e52cfea6b6a42f, type: 3}
+  m_Name: 12_Crisp
+  m_EditorClassIdentifier: 
+  Id: 12
+  itemSprite: {fileID: -2821042892349479055, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
+  Name: "\u85AF\u7247"
+  Desc: "\u7F8E\u5473\u7684\u85AF\u7247\uFF0C\u53EF\u4EE5\u7A0D\u5FAE\u56DE\u590D\u751F\u547D\u503C\u3002"
+  itemType: 0
+  val: 20

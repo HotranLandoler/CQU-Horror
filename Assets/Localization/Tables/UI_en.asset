@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 79a617d65d99e444ca736fdc92074738, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 18324910080
+    m_Localized: Chinese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 178778009600
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228518260736
+    m_Localized: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275674820608
+    m_Localized: RESUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 326610448384
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 546043850752
+    m_Localized: LOAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 586598576128
+    m_Localized: OPTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 624271814656
+    m_Localized: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 672334344192
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 711874048000
+    m_Localized: 'Language
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 788449456128
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 839234088960
+    m_Localized: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 863238090752
+    m_Localized: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 928069447680
+    m_Localized: APPLY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1019593355264
+    m_Localized: Inventory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1103852728320
+    m_Localized: My bag is full.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4929573875712
+    m_Localized: Cheng Yo died.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5308181114880
+    m_Localized: Cheng Yo went insane.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7806862225408
+    m_Localized: (AutoSave)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8690149093376
+    m_Localized: Select Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8787142373376
+    m_Localized: Noviciate Detective
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9426845036544
+    m_Localized: Explorer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9558273552384
+    m_Localized: Night Mare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10208441004032
+    m_Localized: Partial health recovery when safe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10574209478656
+    m_Localized: A normal choice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10657697099776
+    m_Localized: Reduced max health. All save points can be used only once.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d780a205cf456ef43809932d8956c910, type: 3}
+  m_Name: 3_Knife
+  m_EditorClassIdentifier: 
+  Id: 3
+  itemSprite: {fileID: -7573354855677281409, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
+  Name: "\u5C0F\u5200"
+  Desc: "\u804A\u80DC\u4E8E\u65E0\u7684\u9632\u8EAB\u6B66\u5668\u3002"
+  itemType: 3
+  val: 0
+  weaponType: 1
+  BulletId: 0
+  MaxAmmo: 0
+  ShootInterval: 0.5
+  Damage: 1
+  BulletsPerShot: 1
+  Sound: {fileID: 8300000, guid: 6d5ce2c7ad3acd940b693c9f5a9c15eb, type: 3}

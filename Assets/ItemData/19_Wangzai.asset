@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c528747a30dda724c9e52cfea6b6a42f, type: 3}
+  m_Name: 19_Wangzai
+  m_EditorClassIdentifier: 
+  Id: 19
+  itemSprite: {fileID: 0}
+  Name: "\u65FA\u4ED4\u725B\u5976"
+  Desc: "\u518D\u770B\uFF0C\u6211\u5C31\u628A\u4F60\u559D\u6389\uFF01\u7A0D\u5FAE\u56DE\u590D\u7406\u667A\u503C\u3002"
+  itemType: 1
+  val: 10
