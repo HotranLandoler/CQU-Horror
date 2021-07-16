@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 16_5.56mm
   m_EditorClassIdentifier: 
   Id: 16
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -7652154954077232485, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "5.56mm\u6B65\u67AA\u5F39"
   Desc: "\u7A81\u51FB\u6B65\u67AA\u4F7F\u7528\u7684\u6807\u51C6\u5B50\u5F39\u3002"
   itemType: 2

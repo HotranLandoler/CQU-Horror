@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 17_Bandage
   m_EditorClassIdentifier: 
   Id: 17
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -3004918560657441691, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u7EF7\u5E26"
   Desc: "\u80FD\u7B80\u5355\u5904\u7406\u4F24\u53E3\uFF0C\u7A0D\u5FAE\u56DE\u590D\u751F\u547D\u503C\u3002"
   itemType: 0

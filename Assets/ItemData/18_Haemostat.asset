@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 18_Haemostat
   m_EditorClassIdentifier: 
   Id: 18
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -2421343691936151383, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u6B62\u8840\u5242"
   Desc: "\u80FD\u5904\u7406\u4E0D\u592A\u4E25\u91CD\u7684\u4F24\u52BF\uFF0C\u56DE\u590D\u4E2D\u91CF\u751F\u547D\u503C\u3002"
   itemType: 0

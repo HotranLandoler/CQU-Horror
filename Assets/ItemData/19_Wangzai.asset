@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 19_Wangzai
   m_EditorClassIdentifier: 
   Id: 19
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: -9075936618163766259, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u65FA\u4ED4\u725B\u5976"
   Desc: "\u518D\u770B\uFF0C\u6211\u5C31\u628A\u4F60\u559D\u6389\uFF01\u7A0D\u5FAE\u56DE\u590D\u7406\u667A\u503C\u3002"
   itemType: 1

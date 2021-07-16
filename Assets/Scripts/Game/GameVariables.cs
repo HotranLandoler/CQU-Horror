@@ -54,6 +54,11 @@ public class GameVariables
         return false;
     }
 
+    public bool HasFlag(GameFlag flag)
+    {
+        return HasFlag(flag.id);
+    }
+
     public void SetFlag(string name)
     {
         if (!gameFlags.Contains(name))
@@ -62,6 +67,11 @@ public class GameVariables
         }
         else
             Debug.LogError($"Already has flag{name}");
+    }
+
+    public void SetFlag(GameFlag flag)
+    {
+        SetFlag(flag.id);
     }
 
     public string[] GetFlagArray()
