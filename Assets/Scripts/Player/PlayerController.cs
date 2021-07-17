@@ -94,13 +94,15 @@ public class PlayerController : MonoBehaviour
 
     private void Interact(InputAction.CallbackContext ctx)
     {
+        //Debug.Log($"InteractNum:{player.interactObjs.Count}");
         if (player.interactObjs.Count == 0)
             return;
         if (GameManager.Instance.CurGameMode != GameMode.Gameplay || GameManager.Instance.bag
             || GameManager.Instance.paused)
             return;
         StopAction();
-        player.interactObjs[player.interactObjs.Count-1].Interact();
+        var obj = player.interactObjs[player.interactObjs.Count - 1];
+        obj.Interact();
         //Physics.OverlapSphere(transform.position, 1.5f)[0];
     }
 

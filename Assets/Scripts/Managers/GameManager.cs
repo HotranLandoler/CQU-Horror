@@ -79,6 +79,8 @@ public class GameManager : MonoBehaviour
 
     private string[] dialogs;
     private int dialogIndex = 0;
+
+    public event UnityAction DialogueEnded;
     //private AudioSource effectAudioSource;
 
     //[SerializeField]
@@ -602,6 +604,11 @@ public class GameManager : MonoBehaviour
 
     public void StartDialogue(params string[] dialogs)
     {
+        if (dialogs.Length == 0)
+        {
+            Debug.LogError("Start a empty dialogue");
+            return;
+        }
         this.dialogs = dialogs;
         dialogIndex = 0;
         UIManager.Instance.ShowDialogue(dialogs[dialogIndex], false);
@@ -617,6 +624,7 @@ public class GameManager : MonoBehaviour
             {
                 UIManager.Instance.ToggleDialoguePanel(false);
                 SwitchGameMode(GameMode.Gameplay);
+                DialogueEnded?.Invoke();
             }
             return;
         }

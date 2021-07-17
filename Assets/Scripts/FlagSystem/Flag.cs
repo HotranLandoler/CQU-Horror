@@ -9,17 +9,8 @@ public class Flag : MonoBehaviour
 	[ContextMenu("GenerateFlag")]
 	private void GenerateFlag()
 	{
-		flag = ScriptableObject.CreateInstance<GameFlag>();
+		flag = GameFlag.Create();
+		//flag = ScriptableObject.CreateInstance<GameFlag>();
 		//destroyFlag = System.Guid.NewGuid().ToString();
 	}
-
-	public void Set()
-	{
-		GameManager.Instance.gameVariables.SetFlag(flag);
-	}
-
-	public bool Has()
-    {
-		return GameManager.Instance.gameVariables.HasFlag(flag);
-    }
 }

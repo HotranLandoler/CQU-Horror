@@ -10,6 +10,8 @@ public class Door : SceneTravelBase, IInteractable
     [SerializeField]
     private AudioClip openSound;
 
+    [SerializeField]
+    private GameObject nameText;
 
     void Awake()
     {
@@ -34,7 +36,10 @@ public class Door : SceneTravelBase, IInteractable
         {
             var player = collision.GetComponent<Player>();
             if (!player.interactObjs.Contains(this))
+            {
                 player.interactObjs.Add(this);
+                nameText.SetActive(true);
+            }
         }
     }
 
@@ -43,6 +48,7 @@ public class Door : SceneTravelBase, IInteractable
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<Player>().interactObjs.Remove(this);
+            nameText.SetActive(false);
         }
     }
 }

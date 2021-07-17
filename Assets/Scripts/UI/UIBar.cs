@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public abstract class UIBar : MonoBehaviour
+public abstract class UIBar : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     protected Image val;
 
@@ -12,6 +13,9 @@ public abstract class UIBar : MonoBehaviour
 
     [SerializeField]
     private Image valEffect;
+
+    [SerializeField]
+    private Text tipText;
 
     protected virtual void Awake()
     {
@@ -39,4 +43,14 @@ public abstract class UIBar : MonoBehaviour
     {
         text.text = value.ToString();
     }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        tipText.gameObject.SetActive(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        tipText.gameObject.SetActive(false);
+    } 
 }

@@ -7,8 +7,9 @@ public class PickableItem : InteractObjects
     [SerializeField]
     private Item itemGet;
 
+    //不同难度下数量
     [SerializeField]
-    private int itemNum;
+    private int[] numInModes = new int[] { 1,1,1 };
 
     [SerializeField]
     private string id;
@@ -21,7 +22,7 @@ public class PickableItem : InteractObjects
 
     public override void Interact()
     {
-        if (!GameManager.Instance.inventory.AddItem(itemGet, itemNum))
+        if (!GameManager.Instance.inventory.AddItem(itemGet, numInModes[(int)Game.difficulty]))
         {
             //添加失败
             GameManager.Instance.StartDialogue(Game.gameStrings.BagFull);

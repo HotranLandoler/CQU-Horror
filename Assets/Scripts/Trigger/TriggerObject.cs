@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class TriggerObject : MonoBehaviour
+public class TriggerObject : MonoBehaviour
 {
     [SerializeField]
     protected UnityEvent onTrigger;
 
     [SerializeField]
-    protected string triggeredFlag;
+    protected GameFlag triggeredFlag;
 
     private void Awake()
     {
-        if (GameManager.Instance.gameVariables.HasFlag(triggeredFlag))
+        if (triggeredFlag.Has())
         {
             //Debug.Log("destroy");
             Destroy(gameObject);
@@ -25,7 +25,7 @@ public abstract class TriggerObject : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //必须首先设置flag，否则flag无法被保存
+            //IMPORTANT 必须首先设置flag，否则flag无法被保存
             GameManager.Instance.gameVariables.SetFlag(triggeredFlag);
             onTrigger?.Invoke();
             Destroy(gameObject);

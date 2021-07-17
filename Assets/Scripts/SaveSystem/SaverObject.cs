@@ -10,9 +10,28 @@ public class SaverObject : InteractObjects
     [SerializeField]
     private string sceneName;
 
+    private DebutDialog debut;
+
+    private void Awake()
+    {
+        if (TryGetComponent(out debut))
+        {
+            //³õ´Îµ÷²é
+            debut.DialogEnded += ShowSave;
+        }
+    }
+
     public override void Interact()
-    {        
-        savePanel.StartSave(sceneName);
+    {
+        if (debut != null)
+            debut.StartDialog();
+        else
+            ShowSave();
         //SaveManager.Save(sceneName);
+    }
+
+    private void ShowSave()
+    {
+        savePanel.StartSave(sceneName);
     }
 }

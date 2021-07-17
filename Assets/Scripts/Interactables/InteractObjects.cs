@@ -12,7 +12,7 @@ public abstract class InteractObjects : MonoBehaviour, IInteractable
     private Animator _animator;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         _animator = GetComponent<Animator>();
     }

@@ -32,12 +32,14 @@ public class Chest : MonoBehaviour, IInteractable
 
 	private Animator animator;
 
+	private Player player;
+
 	void Awake()
 	{
 		spResolver = GetComponent<SpriteResolver>();
 		animator = GetComponent<Animator>();
 		flag = GetComponent<Flag>();
-		if (flag.Has())
+		if (flag.flag.Has())
 		{
 			animator.enabled = false;
 			spResolver.SetCategoryAndLabel(spResolver.GetCategory(), openedKey);
@@ -71,16 +73,18 @@ public class Chest : MonoBehaviour, IInteractable
 			opened = false;
 			yield break;
 		}
-		flag.Set();
+		flag.flag.Set();
 		pointAnim.gameObject.SetActive(false);
-		Destroy(this);
+		//IMPORTANT 仅Destroy(this)无法从互动集合移除
+		player.interactObjs.Remove(this);
+		Destroy(this);		
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		if (collision.CompareTag("Player"))
 		{
-			var player = collision.GetComponent<Player>();
+			player = collision.GetComponent<Player>();
 			if (!player.interactObjs.Contains(this))
 				player.interactObjs.Add(this);
 			pointAnim.SetBool("FadeIn", true);
@@ -92,7 +96,7 @@ public class Chest : MonoBehaviour, IInteractable
 	{
 		if (collision.CompareTag("Player"))
 		{
-			collision.GetComponent<Player>().interactObjs.Remove(this);
+			player.interactObjs.Remove(this);
 			pointAnim.SetBool("FadeIn", false);
 			tipAnim.SetBool("MovFadeIn", false);
 		}
