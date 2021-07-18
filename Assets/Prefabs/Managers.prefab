@@ -55,15 +55,16 @@ MonoBehaviour:
   redScreen: {fileID: 0}
   blackScreen: {fileID: 0}
   bagUI: {fileID: 0}
-  pauseMenuUI: {fileID: 0}
-  gameOptionsUI: {fileID: 0}
-  crosshair: {fileID: 2800000, guid: ac18e93875ccbf3498636dbad4522f52, type: 3}
   weaponImage: {fileID: 0}
   ammoText: {fileID: 0}
-  itemTip: {fileID: 0}
+  crosshair: {fileID: 2800000, guid: ac18e93875ccbf3498636dbad4522f52, type: 3}
+  pauseMenuUI: {fileID: 0}
+  gameOptionsUI: {fileID: 0}
   GameOver: {fileID: 0}
   GameOverText: {fileID: 0}
   redFlashTime: 0.2
+  savingImage: {fileID: 0}
+  itemTip: {fileID: 0}
   itemTipTime: 1
 --- !u!114 &4917740948373578753
 MonoBehaviour:

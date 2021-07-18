@@ -544,11 +544,28 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void MovePlayer(Vector3 position, Vector2 dir)
+    {
+        StartCoroutine(DoMovePlayer(position, dir));
+    }
+
     public void LoadScene(int sceneId)
     {
         player.StopAction?.Invoke();
         CurGameMode = GameMode.Timeline;
         StartCoroutine(DoLoadSceneFade(sceneId));
+    }
+
+    private IEnumerator DoMovePlayer(Vector3 position, Vector2 dir)
+    {
+        UIManager.Instance.ScreenFadeOut();
+        CurGameMode = GameMode.Timeline;
+        player.StopAction?.Invoke();
+        yield return new WaitForSeconds(1);
+        player.transform.position = position;
+        player.SetDirection(dir);
+        UIManager.Instance.ScreenFadeIn();
+        CurGameMode = GameMode.Gameplay;
     }
 
     private IEnumerator DoLoadSceneFade(int sceneId)

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    //溶解特效
+    private Material material;
+    private float currDissolve = 1f;
+    //private float tarDissolve = 1f;
+
     private AudioSource ad;
 
     protected Animator animator;
@@ -55,6 +60,7 @@ public abstract class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        material = GetComponent<SpriteRenderer>().material;
         ad = GetComponent<AudioSource>();
         collider2d = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
@@ -93,7 +99,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (dieSound)
         {
-            Debug.Log("diesound");
+            //Debug.Log("diesound");
             ad.PlayOneShot(dieSound);
             //AudioManager.Instance.PlaySound(dieSound);
         }
@@ -101,9 +107,10 @@ public abstract class Enemy : MonoBehaviour
         StopFollow(true);
         IsDead = true;
         animator.SetTrigger("Die");
+        //IMPORTANT 手动触发敌人离开，停止减San
         collider2d.enabled = false;
-        //transform.Translate(Vector3.right * 200); //#
-        Destroy(gameObject, 2);
+        StartCoroutine(DoDissolveDeath());      
+        //Destroy(gameObject, 2);
     }
 
     public void PlayAttackSound()
@@ -114,5 +121,17 @@ public abstract class Enemy : MonoBehaviour
     public void PlayFootStepSound()
     {
         if (stepSound) ad.PlayOneShot(stepSound);
+    }
+
+    private IEnumerator DoDissolveDeath()
+    {
+        yield return new WaitForSeconds(1);
+        while (currDissolve > 0)
+        {
+            currDissolve -= Time.deltaTime;
+            material.SetFloat("_Fade", currDissolve);
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }

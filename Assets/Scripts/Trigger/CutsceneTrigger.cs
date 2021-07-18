@@ -12,7 +12,7 @@ public class CutsceneTrigger : MonoBehaviour
     private bool triggerOnEnter = true;
 
     [SerializeField]
-    private string playedFlag;
+    private GameFlag playedFlag;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,22 +22,23 @@ public class CutsceneTrigger : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"GetFlag{playedFlag}:{GameManager.Instance.gameVariables.HasFlag(playedFlag)}");
-        if (!triggerOnEnter && !GameManager.Instance.gameVariables.HasFlag(playedFlag))
+        //Debug.Log($"GetFlag{playedFlag}:{GameManager.Instance.gameVariables.HasFlag(playedFlag)}");
+        if (!triggerOnEnter && !playedFlag.Has())
         {
             director.Play();
-            GameManager.Instance.gameVariables.SetFlag(playedFlag);
-            Debug.Log($"SetFlag{playedFlag}:true");
+            playedFlag.Set();
+            //GameManager.Instance.gameVariables.SetFlag(playedFlag);
+            //Debug.Log($"SetFlag{playedFlag}:true");
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (triggerOnEnter && !GameManager.Instance.gameVariables.HasFlag(playedFlag) &&
+        if (triggerOnEnter && !playedFlag.Has() &&
             collision.CompareTag("Player"))
         {
             director.Play();
-            GameManager.Instance.gameVariables.SetFlag(playedFlag);
+            playedFlag.Set();
         }
     }
 }

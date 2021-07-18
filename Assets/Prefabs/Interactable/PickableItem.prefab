@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5068074284169615347}
   - component: {fileID: 5068074284169615346}
   - component: {fileID: 5068074284169615345}
+  - component: {fileID: 2573565477843882817}
   - component: {fileID: 3399349721544068568}
   m_Layer: 12
   m_Name: PickableItem
@@ -123,6 +124,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2573565477843882817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068074284169615344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9300c7bae6b26ef46bd1de50b1eeb690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flag: {fileID: 0}
 --- !u!114 &3399349721544068568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,8 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipAnimator: {fileID: 5068074285163047432}
   itemGet: {fileID: 11400000, guid: c7ae2c53c81933147aa1c1bbc7b79b02, type: 2}
-  itemNum: 5
-  id: 
+  numInModes: 010000000100000001000000
 --- !u!1 &5068074285163047430
 GameObject:
   m_ObjectHideFlags: 0

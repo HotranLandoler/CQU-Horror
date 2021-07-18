@@ -8,6 +8,7 @@ using UnityEngine.Events;
 /// </summary>
 public class DebutDialog : MonoBehaviour
 {
+	[TextArea(3,4)]
     [SerializeField]
     private string[] debutDialog;
 
@@ -31,6 +32,7 @@ public class DebutDialog : MonoBehaviour
 
 	private void OnDialogEnded()
 	{
+		flag.Set();
 		GameManager.Instance.DialogueEnded -= OnDialogEnded;
 		DialogEnded?.Invoke();
 	}

@@ -33,7 +33,7 @@ public abstract class UIBar : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (valEffect.fillAmount > val.fillAmount)
         {
-            valEffect.fillAmount -= 0.002f;
+            valEffect.fillAmount -= 0.003f;
         }
         else if (valEffect.fillAmount < val.fillAmount)
             valEffect.fillAmount = val.fillAmount;

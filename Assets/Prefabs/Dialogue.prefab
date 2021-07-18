@@ -111,7 +111,7 @@ MonoBehaviour:
   m_InstantDisplaySpace: 1
   m_InstantDisplayTab: 1
   m_DelayBetweenLetters: 0.05
-  m_InterLettersCount: 2
+  m_InterLettersCount: 1
   m_UseSpecificCharacters: 0
   m_FollowSpecificCharactersOrder: 0
   m_PossibleChar: 

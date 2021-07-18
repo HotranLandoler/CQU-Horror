@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4627aa0c01edcbc4ebd15d33ac6658b1, type: 3}
-  m_Name: B51f-2f
+  m_Name: s1_FirstEnemy
   m_EditorClassIdentifier: 
-  id: b51f-2f
+  id: firstEnemy

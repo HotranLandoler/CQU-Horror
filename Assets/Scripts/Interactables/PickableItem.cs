@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Flag))]
 public class PickableItem : InteractObjects
 {
     [SerializeField]
@@ -11,12 +12,14 @@ public class PickableItem : InteractObjects
     [SerializeField]
     private int[] numInModes = new int[] { 1,1,1 };
 
-    [SerializeField]
-    private string id;
+    private Flag flag;
+    //[SerializeField]
+    //private GameFlag id;
 
     private void Awake()
     {
-        if (GameManager.Instance.gameVariables.HasFlag(id))
+        flag = GetComponent<Flag>();
+        if (flag.flag.Has())
             Destroy(gameObject);
     }
 
@@ -28,13 +31,13 @@ public class PickableItem : InteractObjects
             GameManager.Instance.StartDialogue(Game.gameStrings.BagFull);
             return;
         }
-        GameManager.Instance.gameVariables.SetFlag(id);
+        flag.flag.Set();
         Destroy(gameObject);
     }
 
-    [ContextMenu("Set Flag")]
-    private void GenerateId()
-    {
-        id = System.Guid.NewGuid().ToString();
-    }
+    //[ContextMenu("Set Flag")]
+    //private void GenerateId()
+    //{
+    //    id = System.Guid.NewGuid().ToString();
+    //}
 }
