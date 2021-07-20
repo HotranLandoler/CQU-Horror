@@ -46401,7 +46401,7 @@ MonoBehaviour:
   onTrigger:
     m_PersistentCalls:
       m_Calls: []
-  triggeredFlag: s1_gate_check
+  triggeredFlag: {fileID: 11400000, guid: 695f98251db7b9b4b800972a9c3ac33a, type: 2}
   sceneName: "\u94F6\u674F\u5927\u9053"
 --- !u!61 &1171954598
 BoxCollider2D:
@@ -113725,7 +113725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerOnEnter: 1
-  playedFlag: S1_HeardScream
+  playedFlag: {fileID: 11400000, guid: 26c2e7a6ac4415249ab9c6f560813861, type: 2}
 --- !u!320 &1891201350
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -114455,7 +114455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerOnEnter: 0
-  playedFlag: s1_enterGate
+  playedFlag: {fileID: 11400000, guid: 12ef1c60f8b128c47aed5a6d5bac5414, type: 2}
 --- !u!1 &1991038170
 GameObject:
   m_ObjectHideFlags: 0
