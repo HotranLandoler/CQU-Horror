@@ -25,7 +25,7 @@ public class Door : SceneTravelBase, IInteractable
 
     protected void OpenDoor()
     {
-        AudioManager.Instance.PlaySound(openSound);
+        if (openSound) AudioManager.Instance.PlaySound(openSound);
         animator.SetTrigger("Open");
         SceneTravel();
     }
