@@ -8,16 +8,19 @@ public class LockedDoor : Door
     private bool isLocked = true;
 
     [SerializeField]
-    private int keyId = -1;
+    private Item key;
 
     [SerializeField]
     private AudioClip lockedSound;
+
+    [SerializeField]
+    private string[] lockedDialog;
 
     public override void Interact()
     {
         if (isLocked)
         {
-            if (keyId != -1 && GameManager.Instance.inventory.HasItem(keyId) > 0)
+            if (key != null && GameManager.Instance.inventory.HasItem(key) > 0)
             {
                 //¿ªËø
                 isLocked = false;
@@ -26,7 +29,12 @@ public class LockedDoor : Door
             else
             {
                 if (lockedSound) AudioManager.Instance.PlaySound(lockedSound);
-                UIManager.Instance.ShowDialogue(Game.gameStrings.LockedDoor, false);
+                if (lockedDialog.Length > 0)
+                {
+                    GameManager.Instance.StartDialogue(lockedDialog);
+                }
+                else
+                    GameManager.Instance.StartDialogue(Game.gameStrings.LockedDoor);
             }     
         }
         else

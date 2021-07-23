@@ -56,6 +56,7 @@ public class KeyBlock : InteractObjects
 			GameManager.Instance.inventory.RemoveItem(key);
 			blockCollider.enabled = false;
 			blockAnim.SetTrigger("Unlock");
+			Destroy(this);
 		}
 		else
 		{
