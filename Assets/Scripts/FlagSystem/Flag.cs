@@ -10,7 +10,7 @@ public class Flag : MonoBehaviour
 	public GameFlag flag;
 
 	[ContextMenu("GenerateFlag")]
-	private void GenerateFlag()
+	public void GenerateFlag()
 	{
 		flag = GameFlag.Create();
 		//flag = ScriptableObject.CreateInstance<GameFlag>();

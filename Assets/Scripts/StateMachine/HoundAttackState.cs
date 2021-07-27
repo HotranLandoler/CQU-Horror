@@ -20,12 +20,12 @@ public class HoundAttackState : State
 
     public override void OnUpdate()
     {
-        if (enemy.target == null)
+        if (enemy.Target == null)
         {
             fsm.TransitState(StateType.Idle);
             return;
         }  
-        var dir = enemy.target.transform.position - enemy.transform.position;
+        var dir = enemy.Target.transform.position - enemy.transform.position;
         //facePlayer
         enemy.SetDirection(dir);
         enemy.Attack();
@@ -35,7 +35,7 @@ public class HoundAttackState : State
             return;
         }
         if (dir.sqrMagnitude
-            > enemy.attackRange)
+            > enemy.data.ShortAtkRangeSqr)
         {
             fsm.TransitState(StateType.Chase);
         }

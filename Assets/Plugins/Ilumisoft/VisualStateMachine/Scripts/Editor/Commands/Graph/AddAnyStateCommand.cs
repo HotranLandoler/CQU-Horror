@@ -20,7 +20,8 @@
 
             var graph = stateMachine.GetStateMachineGraph();
 
-            //Create the rect of the state (for the graph)
+            //Create the rect of the state (
+            //the graph)
             var rect = new Rect(0, 0, 120, 60);
             rect.x = this.position.x - rect.width / 2;
             rect.y = this.position.y - rect.height / 2;

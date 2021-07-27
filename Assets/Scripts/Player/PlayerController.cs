@@ -37,7 +37,8 @@ public class PlayerController : MonoBehaviour
         player = GetComponent<Player>();
         rgbody = GetComponent<Rigidbody2D>();
         //interactObjs = new List<InteractObjects>(3);
-        player.StopAction += StopAction; 
+        player.StopAction += StopAction;
+        player.StopAim += StopAim;
     }
 
     private void Start()
@@ -144,9 +145,8 @@ public class PlayerController : MonoBehaviour
         if (player.Equip == null)
             return;
         player.IsAiming = false;
-        //Cursor.visible = false;
-        if (GameManager.Instance.CurGameMode == GameMode.Gameplay)
-            player.Equip.Show(false);
+        //if (GameManager.Instance.CurGameMode == GameMode.Gameplay)
+        player.Equip.Show(false);
     }
 
     private void Attack()

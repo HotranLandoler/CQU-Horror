@@ -20,14 +20,14 @@ public class HoundChaseState : State
 
     public override void OnUpdate()
     { 
-        if (GameManager.Instance.CurGameMode != GameMode.Gameplay || enemy.target == null)
+        if (GameManager.Instance.CurGameMode != GameMode.Gameplay || enemy.Target == null)
         {
             fsm.TransitState(StateType.Idle);
             return;
         }
         enemy.Follow();
         if ((enemy.transform.position - GameManager.Instance.player.transform.position).sqrMagnitude
-            < enemy.attackRange)
+            < enemy.data.ShortAtkRangeSqr)
         {
             fsm.TransitState(StateType.Attack);
         }

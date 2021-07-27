@@ -20,7 +20,7 @@ public class HoundIdleState : State
 
     public override void OnUpdate()
     {
-        if (GameManager.Instance.CurGameMode == GameMode.Gameplay && enemy.target != null)
+        if (GameManager.Instance.CurGameMode == GameMode.Gameplay && enemy.Target != null)
             fsm.TransitState(StateType.Chase);
     }
 }

@@ -12,8 +12,9 @@ public class SaverObject : InteractObjects
 
     private DebutDialog debut;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         if (TryGetComponent(out debut))
         {
             //³õ´Îµ÷²é

@@ -24,7 +24,7 @@ public static class SaveManager
         Debug.Log("Save Started.");
         UIManager.Instance.ToggleSaving(true);
         SaveData data = GameManager.Instance.Save(sceneName);
-        bool success = false;
+        bool success;
         if (autoSave)
         {
             success = await SerializationManager<SaveData>.SaveAsync("0", data);
@@ -32,6 +32,7 @@ public static class SaveManager
         else
             success = await SerializationManager<SaveData>.SaveAsync(saveId.ToString(), data);
         UIManager.Instance.ToggleSaving(false);
+        if (success) UIManager.Instance.ShowSavedTip();
         return success;
     }
 }

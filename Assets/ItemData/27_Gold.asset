@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c528747a30dda724c9e52cfea6b6a42f, type: 3}
+  m_Name: 27_Gold
+  m_EditorClassIdentifier: 
+  Id: 27
+  itemSprite: {fileID: -586250976929357127, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
+  Name: "\u602A\u7269\u6B8B\u9AB8"
+  Desc: "\u602A\u7269\u6B7B\u4EA1\u540E\u7559\u4E0B\u7684\u5947\u602A\u6676\u4F53\u3002"
+  itemType: 4
+  val: 0

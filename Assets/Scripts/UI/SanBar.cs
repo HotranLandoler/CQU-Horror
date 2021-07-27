@@ -17,7 +17,7 @@ public class SanBar : UIBar
     {
         //Debug.Log("change");
         base.UpdateValue(value);
-        val.fillAmount = ((float)value / GameManager.Instance.maxSan);
+        val.fillAmount = ((float)value / Game.MaxSan);
     }
 
     private void OnDestroy()

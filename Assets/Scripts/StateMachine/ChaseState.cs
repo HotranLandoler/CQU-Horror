@@ -11,24 +11,25 @@ public class ChaseState : State
     public override void OnEnter()
     {
         //Debug.Log("Chase");
-        enemy.StopFollow(false);
+        enemy.Nav.speed = enemy.data.NormSpeed;
+        //enemy.StopFollow(false);
     }
 
     public override void OnExit()
     {
-        enemy.StopFollow(true);
+        //enemy.StopFollow(true);
     }
 
     public override void OnUpdate()
     {
-        if (enemy.target == null || enemy.IsDead || enemy.target.IsDead)
+        if (enemy.Target == null || enemy.IsDead || enemy.Target.IsDead)
         {
             fsm.TransitState(StateType.Idle);
             return;
         }
         enemy.Follow();
-        if ((enemy.transform.position - GameManager.Instance.player.transform.position).sqrMagnitude
-            < enemy.attackRange)
+        if ((enemy.transform.position - enemy.Target.transform.position).sqrMagnitude
+            < enemy.data.LongAtkRangeSqr)
         {
             fsm.TransitState(StateType.Attack);
         }

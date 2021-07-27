@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Ghoul : Enemy
 {
-    [SerializeField]
     private EnemyAttack attackShape;
 
     protected override void Start()
@@ -25,9 +24,9 @@ public class Ghoul : Enemy
 
     public override void Follow()
     {
-        nav.destination = target.transform.position;
+        Nav.destination = Target.transform.position;
         //move = (GameManager.Instance.player.transform.position - transform.position).normalized;
-        move = nav.velocity;
+        move = Nav.velocity;
         animator.SetBool("Move", true);
         Vector3 scale;
         if (move.x < 0)

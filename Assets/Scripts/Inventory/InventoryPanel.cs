@@ -44,7 +44,7 @@ public class InventoryPanel : MonoBehaviour
             UpdateSlot(itemSlots[i], pair.Key, pair.Value);
             i++;
         }
-        for (;i<9;i++)
+        for (;i<Inventory.MaxItems;i++)
         {
             itemSlots[i].item = null;
             itemSlots[i].itemImage.enabled = false;

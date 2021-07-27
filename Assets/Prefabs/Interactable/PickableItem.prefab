@@ -163,7 +163,6 @@ GameObject:
   - component: {fileID: 5068074285163047431}
   - component: {fileID: 5068074285163047433}
   - component: {fileID: 5068074285163047432}
-  - component: {fileID: 8899928340705102797}
   m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
@@ -226,7 +225,7 @@ SpriteRenderer:
   m_SortingLayerID: -1836381945
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -6794720176531396108, guid: b5498d1cfe1550c4b832c35c88c9c9a0, type: 3}
+  m_Sprite: {fileID: 7072416089854249007, guid: b5498d1cfe1550c4b832c35c88c9c9a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -256,20 +255,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8899928340705102797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5068074285163047430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f599809c9879044b69f17af8c248c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  translationName: Check
-  FallbackSprite: {fileID: -6794720176531396108, guid: b5498d1cfe1550c4b832c35c88c9c9a0, type: 3}
 --- !u!1 &6628474324950778780
 GameObject:
   m_ObjectHideFlags: 0

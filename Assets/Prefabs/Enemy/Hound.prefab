@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 420421729286656765}
   - component: {fileID: 315225370422029484}
   - component: {fileID: 2647120828477883975}
+  - component: {fileID: 5531983316438962959}
   - component: {fileID: 707657594142978584}
   - component: {fileID: 707657594142978590}
   m_Layer: 9
@@ -171,9 +172,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 40
+  MaxDistance: 25
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -267,6 +268,19 @@ MonoBehaviour:
   _quality: 4
   _priority: 50
   _autoRepath: 1
+--- !u!114 &5531983316438962959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707657594142978567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9300c7bae6b26ef46bd1de50b1eeb690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flag: {fileID: 0}
 --- !u!114 &707657594142978584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,14 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3bd845ec0abaa14ba17981f28836321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  hp: 50
-  flag: 
-  IsDead: 0
-  attackRange: 2
-  moveSpeed: 8
-  attackSound: {fileID: 8300000, guid: fd29cbe52f7a74540a8f369e3ca19bf6, type: 3}
-  dieSound: {fileID: 0}
+  data: {fileID: 11400000, guid: a013e1c06c9e6cf4e8cc7305269f6db3, type: 2}
+  enemyTriggers: []
   attackShapes:
   - {fileID: 707657594418171076}
   - {fileID: 707657595574823146}

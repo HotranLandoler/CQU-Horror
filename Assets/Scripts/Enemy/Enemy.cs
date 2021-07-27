@@ -2,26 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+[RequireComponent(typeof(Flag))]
+public class Enemy : MonoBehaviour
 {
+    public EnemyData data;
+
+    public Player Target { get; set; }
+
+    private Flag flag;
+
+    [SerializeField]
+    private EnemyTrigger[] enemyTriggers;
+
+    [SerializeField]
+    private EnemyAttack attackShape;
+
     //溶解特效
     private Material material;
     private float currDissolve = 1f;
-    //private float tarDissolve = 1f;
-
+    //音效
     private AudioSource ad;
 
-    protected Animator animator;
     protected Rigidbody2D rb;
-    protected NavMeshAgent2D nav;
+
+    //移动方向
     protected Vector2 move;
 
     protected Collider2D collider2d;
 
-    public Player target;
+    //自动寻路
+    public NavMeshAgent2D Nav { get; private set; }
 
-    [SerializeField]
-    protected float hp = 50;
+    public Animator animator { get; private set; }
+
+    /// <summary>
+    /// 当前生命值
+    /// </summary>
+    private float hp;
     public float Hp
     {
         get => hp;
@@ -33,62 +50,68 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    [SerializeField]
-    protected string flag;
-    public bool IsDead = false;
-
-   //所有敌人共享的数据，包括Damage()
-    #region 
-    public float attackRange = 2;
-
-    [SerializeField]
-    protected int moveSpeed = 5;
-
-    protected float speedMod = 0.7f;
-
-    protected float trueSpeed;
-
-    [SerializeField]
-    protected AudioClip attackSound;
-
-    [SerializeField]
-    protected AudioClip dieSound;
-
-    [SerializeField]
-    protected AudioClip stepSound;
-    #endregion
+    public bool IsDead { get; private set; }
 
     private void Awake()
     {
+        flag = GetComponent<Flag>();
+        if (flag.flag.Has())
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         material = GetComponent<SpriteRenderer>().material;
         ad = GetComponent<AudioSource>();
         collider2d = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        nav = GetComponent<NavMeshAgent2D>();
-        if (GameManager.Instance.gameVariables.HasFlag(flag))
-            Destroy(gameObject);
+        Nav = GetComponent<NavMeshAgent2D>();
     }
 
     protected virtual void Start()
     {
-        nav.speed = moveSpeed;
+        Hp = data.MaxHp;
+        Nav.speed = data.SlowSpeed;
 
     }
 
-    public abstract void Follow();
+    public virtual void Follow()
+    {
+        Nav.SetDestination(Target.transform.position);
+        //move = (GameManager.Instance.player.transform.position - transform.position).normalized;
+        move = Nav.velocity;
+        animator.SetBool("Move", true);
+        Vector3 scale;
+        if (move.x < 0)
+            scale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        else
+            scale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        transform.localScale = scale;
+    }
 
-    public abstract void Attack();
+    public virtual void Attack()
+    {
+
+    }
+
+    //public void MoveToPos(Vector3 pos, float speed)
+    //{
+    //    nav.speed = speed;
+    //}
 
     public void StopFollow(bool stop)
     {
-        if (stop) nav.velocity = Vector2.zero;
+        if (stop) Nav.velocity = Vector2.zero;
         //move = Vector2.zero;
-        nav.isStopped = stop;
+        Nav.isStopped = stop;
         animator.SetBool("Move", false);
     }
 
-    public abstract int Damage();
+    public virtual int Damage()
+    {
+        return data.LightDamage;
+    }
 
     public void SetDirection(Vector2 val)
     {
@@ -97,13 +120,14 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Die()
     {
-        if (dieSound)
+        flag.flag.Set();
+        //掉落奖励
+        if (data.Gold > 0) Loot();
+        if (data.DieSound)
         {
             //Debug.Log("diesound");
-            ad.PlayOneShot(dieSound);
-            //AudioManager.Instance.PlaySound(dieSound);
+            ad.PlayOneShot(data.DieSound);
         }
-        GameManager.Instance.gameVariables.SetFlag(flag);
         StopFollow(true);
         IsDead = true;
         animator.SetTrigger("Die");
@@ -113,14 +137,30 @@ public abstract class Enemy : MonoBehaviour
         //Destroy(gameObject, 2);
     }
 
+    public void ShowAttackBox(int show)
+    {
+        if (show == 1)
+            attackShape.gameObject.SetActive(true);
+        else
+            attackShape.gameObject.SetActive(false);
+    }
+
     public void PlayAttackSound()
     {
-        if (attackSound) ad.PlayOneShot(attackSound); //AudioManager.Instance.PlaySound(attackSound);
+        if (data.AttackSound) ad.PlayOneShot(data.AttackSound); //AudioManager.Instance.PlaySound(attackSound);
     }
 
     public void PlayFootStepSound()
     {
-        if (stepSound) ad.PlayOneShot(stepSound);
+        if (data.StepSound) ad.PlayOneShot(data.StepSound);
+    }
+
+    //生成战利品
+    private void Loot()
+    {
+        var gold = Instantiate(GameManager.Instance.goldPrefab, transform.position, Quaternion.identity)
+            .GetComponent<LootGold>();
+        gold.Initialize(data.Gold);
     }
 
     private IEnumerator DoDissolveDeath()

@@ -5,18 +5,16 @@ using UnityEngine;
 public class DestroyByFlag : MonoBehaviour
 {
     [SerializeField]
-    private string destroyFlag;
+    private GameFlag destroyFlag;
 
     private void Awake()
     {
-        if (!string.IsNullOrEmpty(destroyFlag))
-            if (GameManager.Instance.gameVariables.HasFlag(destroyFlag))
-                Destroy(gameObject);
+        if (destroyFlag.Has())
+            Destroy(gameObject);
     }
-
-    [ContextMenu("GenerateFlag")]
-    void GenerateFlag()
-    {
-        destroyFlag = System.Guid.NewGuid().ToString();
-    }
+    //[ContextMenu("GenerateFlag")]
+    //void GenerateFlag()
+    //{
+    //    destroyFlag = System.Guid.NewGuid().ToString();
+    //}
 }

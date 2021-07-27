@@ -64,6 +64,9 @@ public class UIManager : Singleton<UIManager>
     [SerializeField]
     private UIPanel savingImage;
 
+    [SerializeField]
+    private UIPanel savedTip;
+
     //物品获得提示
     [Header("ItemTip")]
     [SerializeField]
@@ -298,6 +301,18 @@ public class UIManager : Singleton<UIManager>
             savingImage.Show();
         else
             savingImage.Hide();
+    }
+
+    public void ShowSavedTip()
+    {
+        StartCoroutine(DoShowSavedTip());       
+    }
+
+    private IEnumerator DoShowSavedTip()
+    {
+        savedTip.Show();
+        yield return new WaitForSeconds(2);
+        savedTip.Hide();
     }
 
     private IEnumerator FlashRedScreen()

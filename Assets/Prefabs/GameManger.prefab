@@ -64,18 +64,22 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a82c345651f43d94c85ee6861be06775, type: 2}
   - {fileID: 11400000, guid: 9e2c83d8533b2054e8e159f3d44f8d9d, type: 2}
   - {fileID: 11400000, guid: 96d7499e3cf16d148811a6d375667a46, type: 2}
+  - {fileID: 11400000, guid: 2e280c8b144d8604ca410b8d37e2899c, type: 2}
   - {fileID: 11400000, guid: ef9af46a563191f46be62ad7521df031, type: 2}
   - {fileID: 11400000, guid: 78f119041ae25534493f41604b605890, type: 2}
   - {fileID: 11400000, guid: a41c06d822d0ed84d87ddaeae7a96176, type: 2}
   - {fileID: 11400000, guid: 008b8104e31a33b498f490bd318d1b03, type: 2}
   - {fileID: 11400000, guid: a304cef54de7e1140aaf377b0b7fa0da, type: 2}
   - {fileID: 11400000, guid: bca4e3ef0feb1a646965ba236afde4c6, type: 2}
+  - {fileID: 11400000, guid: a6a5e4b8ad2387e42814eac38aee36e5, type: 2}
+  - {fileID: 11400000, guid: f89f9d79eda70a14a8c1bb51f1db778e, type: 2}
   WeaponPrefabs:
   - {fileID: 5351950884264839131, guid: 8a9cd2312d00bbf449a95b9312ea2df2, type: 3}
   - {fileID: 2997879500754477800, guid: 1ec9e18704051c34a84977ec553b6909, type: 3}
   - {fileID: 5287313096370258488, guid: e2b657e80de29fb498027764a5d8c4f2, type: 3}
   - {fileID: 4532516631696598214, guid: 1990aa6dc4f97fe48a98aee9ed08b0b8, type: 3}
   bloodPrefab: {fileID: 5510233262304678125, guid: a484b4ce4710c034d8ad17fd058bdec1, type: 3}
+  goldPrefab: {fileID: 3867490386504901827, guid: 7d8f2f46dbbe9094aad967cf339029c0, type: 3}
   bag: 0
   paused: 0
   roomId: -1

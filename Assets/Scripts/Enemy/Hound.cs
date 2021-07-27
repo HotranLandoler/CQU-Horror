@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Hound : Enemy
 {
-    [SerializeField]
     private EnemyAttack[] attackShapes;
 
     protected override void Start()
@@ -20,10 +19,10 @@ public class Hound : Enemy
     {
         if (GameManager.Instance.player != null && GameManager.Instance.player.IsDead == false)
         {
-            target = GameManager.Instance.player;
+            Target = GameManager.Instance.player;
         }
         else
-            target = null;
+            Target = null;
     }
 
     public override void Follow()
@@ -31,9 +30,9 @@ public class Hound : Enemy
         if (GameManager.Instance.CurGameMode == GameMode.Gameplay )
             //GameManager.Instance.CurGameMode == GameMode.Items)
         {
-            nav.destination = GameManager.Instance.player.transform.position;
+            Nav.destination = GameManager.Instance.player.transform.position;
             //move = (GameManager.Instance.player.transform.position - transform.position).normalized;
-            move = nav.velocity;
+            move = Nav.velocity;
             animator.SetBool("Move", true);
             animator.SetFloat("MoveX", move.x);
             animator.SetFloat("MoveY", move.y);

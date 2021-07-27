@@ -16,15 +16,15 @@ public class EnemyDetect : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            enemy.target = collision.GetComponent<Player>();
+            enemy.Target = collision.GetComponent<Player>();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            enemy.target = null;
-        }
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        enemy.Target = null;
+    //    }
+    //}
 }

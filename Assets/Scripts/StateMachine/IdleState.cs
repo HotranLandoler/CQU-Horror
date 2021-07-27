@@ -22,7 +22,7 @@ public class IdleState : State
     {
         if (GameManager.Instance.CurGameMode == GameMode.Gameplay)
         {
-            if (enemy.target != null && !enemy.IsDead && !enemy.target.IsDead)
+            if (enemy.Target != null && !enemy.IsDead && !enemy.Target.IsDead)
                 fsm.TransitState(StateType.Chase);
         }
         

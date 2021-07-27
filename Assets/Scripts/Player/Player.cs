@@ -90,6 +90,8 @@ public class Player : MonoBehaviour
     [System.NonSerialized]
     public UnityAction StopAction;
 
+    public UnityAction StopAim;
+
     [System.NonSerialized]
     public UnityAction OnDeath;
 

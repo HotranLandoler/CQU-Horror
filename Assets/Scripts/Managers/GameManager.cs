@@ -51,13 +51,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject bloodPrefab;
 
+    public GameObject goldPrefab;
+
     public int MaxHp { get; private set; }
-
-    public readonly int maxHp_Norm = 100;
-
-    public readonly int maxHp_Hard = 60;
-
-    public readonly int maxSan = 100;
 
     public bool bag = false;
 
@@ -126,9 +122,9 @@ public class GameManager : MonoBehaviour
         }
         set
         {
-            if (value > maxSan)
+            if (value > Game.MaxSan)
             {
-                value = maxSan;
+                value = Game.MaxSan;
             }
             if (value <= 0)
             {
@@ -291,14 +287,16 @@ public class GameManager : MonoBehaviour
         //player.DamageTaken += () => UIManager.Instance.FlashRed();
         InitMaxHp();
         Hp = MaxHp;
-        Sanity = maxSan; 
+        Sanity = Game.MaxSan; 
     }
     
     private void InitMaxHp()
     {
-        if (Game.difficulty == Game.Difficulty.Hard)
-            MaxHp = maxHp_Hard;
-        else MaxHp = maxHp_Norm;
+        if (Game.difficulty == Game.Difficulty.Easy)
+            MaxHp = Game.MaxHp_Easy;
+        else if (Game.difficulty == Game.Difficulty.Hard)
+            MaxHp = Game.MaxHp_Hard;
+        else MaxHp = Game.MaxHp_Norm;
     }
 
     public Item GetItemData(int id)
@@ -393,7 +391,9 @@ public class GameManager : MonoBehaviour
         {
             if (bag == false)
             {
-                //停止移动
+                //开背包停止移动
+                //停止瞄准
+                player.StopAim?.Invoke();
                 player.SetRun(false);
                 //player.StopAction?.Invoke(); //#
             }
@@ -406,6 +406,8 @@ public class GameManager : MonoBehaviour
 
     public void UseItem(Item item)
     {
+        //暂停时不能使用
+        if (paused) return;
         switch (item.itemType)
         {
             case ItemType.AddHp:
@@ -549,8 +551,17 @@ public class GameManager : MonoBehaviour
         StartCoroutine(DoMovePlayer(position, dir));
     }
 
+    /// <summary>
+    /// 过图
+    /// </summary>
+    /// <param name="sceneId"></param>
     public void LoadScene(int sceneId)
     {
+        if (bag)
+        {
+            UIManager.Instance.ToggleBag(!bag);
+            bag = false;
+        }
         player.StopAction?.Invoke();
         CurGameMode = GameMode.Timeline;
         StartCoroutine(DoLoadSceneFade(sceneId));

@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Spider : Enemy
 {
-    [SerializeField]
-    private EnemyAttack attackShape;
+    //private EnemyAttack attackShape;
 
     protected override void Start()
     {
         base.Start();
-        attackShape.damage = Damage();
+        //attackShape.damage = Damage();
     }
 
     public override void Attack()
@@ -25,9 +24,9 @@ public class Spider : Enemy
 
     public override void Follow()
     {
-        nav.destination = target.transform.position;
+        Nav.destination = Target.transform.position;
         //move = (GameManager.Instance.player.transform.position - transform.position).normalized;
-        move = nav.velocity;
+        move = Nav.velocity;
         animator.SetBool("Move", true);
         Vector3 scale;
         if (move.x < 0)
@@ -39,9 +38,9 @@ public class Spider : Enemy
 
     public override void Die()
     {
-        GameManager.Instance.gameVariables.SetFlag(flag);
+        //GameManager.Instance.gameVariables.SetFlag(flag);
         StopFollow(true);
-        IsDead = true;
+        //IsDead = true;
         //animator.SetTrigger("Die");
         collider2d.enabled = false;
         Destroy(gameObject);

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 25_Book4
   m_EditorClassIdentifier: 
   Id: 25
-  itemSprite: {fileID: 0}
-  Name: "\u4E664"
-  Desc: 
+  itemSprite: {fileID: 2049916588613589399, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
+  Name: "\u300A\u72EC\u5C45\u300B"
+  Desc: "\u300A\u72EC\u5C45\u300B\uFF0C\u67D0\u7545\u9500\u5C0F\u8BF4\u5BB6\u6240\u5199\u7684\u6563\u6587\u96C6\u3002"
   itemType: 4
   val: 0

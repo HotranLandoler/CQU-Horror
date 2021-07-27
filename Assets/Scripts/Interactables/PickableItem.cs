@@ -10,15 +10,20 @@ public class PickableItem : InteractObjects
 
     //不同难度下数量
     [SerializeField]
-    private int[] numInModes = new int[] { 1,1,1 };
+    protected int[] numInModes = new int[] { 1,1,1 };
 
-    private Flag flag;
+    protected Flag flag;
     //[SerializeField]
     //private GameFlag id;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         flag = GetComponent<Flag>();
+    }
+
+    protected void Start()
+    {        
         if (flag.flag.Has())
             Destroy(gameObject);
     }

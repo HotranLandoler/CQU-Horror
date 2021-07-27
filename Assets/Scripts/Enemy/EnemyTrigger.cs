@@ -25,7 +25,7 @@ public class EnemyTrigger : MonoBehaviour
         {
             enemy.Hp -= collision.GetComponent<Bullet>().damage * damageMod;
             Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
-            enemy.target = GameManager.Instance.player;
+            enemy.Target = GameManager.Instance.player;
             //if (enemy.Hp < 0)
             //    Destroy(enemy.gameObject);
         }

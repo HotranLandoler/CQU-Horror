@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2137091004931142421}
   - component: {fileID: 2137091004931142427}
   - component: {fileID: 2137091004931142426}
-  - component: {fileID: 2341862923533406943}
   m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -104,20 +103,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2341862923533406943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137091004931142420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84f599809c9879044b69f17af8c248c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  translationName: 
-  FallbackSprite: {fileID: -6794720176531396108, guid: b5498d1cfe1550c4b832c35c88c9c9a0, type: 3}
 --- !u!1 &2137091005924364002
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 21_FiredoorKey
   m_EditorClassIdentifier: 
   Id: 21
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 612596470744354101, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u9632\u706B\u95E8\u94A5\u5319"
   Desc: "\u6807\u7B7E\u5199\u7740\u201C4\u697C\u201D\u3002"
   itemType: 4

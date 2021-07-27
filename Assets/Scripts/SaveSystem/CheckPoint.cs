@@ -12,8 +12,9 @@ public class CheckPoint : TriggerObject
         onTrigger.AddListener(Save);
     }
 
-    private void Save()
+    private async void Save()
     {
-        SaveManager.SaveAsync(sceneName, true);
+        bool success = await SaveManager.SaveAsync(sceneName, true);
+        if (!success) Debug.LogError("SaveAsync failed");
     }
 }

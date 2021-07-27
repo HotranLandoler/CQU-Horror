@@ -85,7 +85,8 @@ GameObject:
   - component: {fileID: 7144293357534990815}
   - component: {fileID: 286942881157641504}
   - component: {fileID: 1901878324736742282}
-  - component: {fileID: 5426578413627712499}
+  - component: {fileID: 5596478203866770406}
+  - component: {fileID: 1658226874891779684}
   - component: {fileID: 1475857534643335443}
   m_Layer: 8
   m_Name: Ghoul
@@ -250,7 +251,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 40
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -340,13 +341,13 @@ MonoBehaviour:
   _speed: 3.5
   _angularSpeed: 120
   _acceleration: 8
-  _stoppingDistance: 0
+  _stoppingDistance: 1
   _autoBraking: 1
   _radius: 0.5
   _quality: 4
   _priority: 50
   _autoRepath: 1
---- !u!114 &5426578413627712499
+--- !u!114 &5596478203866770406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,18 +356,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 3966185595490494410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da61ad40e5a3eff44b68cbccae12ada3, type: 3}
+  m_Script: {fileID: 11500000, guid: 9300c7bae6b26ef46bd1de50b1eeb690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  hp: 4
-  flag: 
-  IsDead: 0
-  attackRange: 1
-  moveSpeed: 7
-  attackSound: {fileID: 8300000, guid: a777e2c93333d9e41a2a6449d67891e9, type: 3}
-  dieSound: {fileID: 8300000, guid: 1bd9c0b5cd393514e9a633e7af2ff6fe, type: 3}
-  stepSound: {fileID: 8300000, guid: 1afda04bda9be9e41a3b99fe75b94bed, type: 3}
+  flag: {fileID: 0}
+--- !u!114 &1658226874891779684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966185595490494410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4f87be4b496a3469ce1b922e124e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8fe9fcd4ff7f46546b77fcea647fe7fb, type: 2}
+  enemyTriggers:
+  - {fileID: 5636672702776102753}
   attackShape: {fileID: 3966185595765758217}
 --- !u!114 &1475857534643335443
 MonoBehaviour:

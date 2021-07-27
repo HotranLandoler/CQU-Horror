@@ -7,12 +7,12 @@ using UnityEngine.InputSystem.Controls;
 public abstract class InteractObjects : MonoBehaviour, IInteractable
 {
     [SerializeField]
-    private Animator tipAnimator;
+    protected Animator tipAnimator;
 
-    private Animator _animator;
+    protected Animator _animator;
 
     // Start is called before the first frame update
-    protected void Start()
+    protected virtual void Awake()
     {
         _animator = GetComponent<Animator>();
     }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: 10
   itemSprite: {fileID: -3694533877916086887, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "MP5\u51B2\u950B\u67AA"
-  Desc: "HK MP5\u51B2\u950B\u67AA\uFF0C\u4F7F\u75289mm\u5E15\u62C9\u8D1D\u9C81\u59C6\u5F39\u3002"
+  Desc: "HK-MP5\u51B2\u950B\u67AA\uFF0C\u4F7F\u75289mm\u5E15\u62C9\u8D1D\u9C81\u59C6\u5F39\u3002"
   itemType: 3
   val: 0
   weaponType: 0

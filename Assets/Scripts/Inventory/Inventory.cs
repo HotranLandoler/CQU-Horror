@@ -7,11 +7,15 @@ using UnityEngine;
 
 public class Inventory
 {
+	/// <summary>
+	/// 物品栏格数
+	/// </summary>
+	public static readonly int MaxItems = 12;
+
 	public Dictionary<Item, int> ItemNums { get; private set; }
 
 	private Dictionary<Weapon, int> gunAmmos = new Dictionary<Weapon, int>();
 
-	public readonly int maxItems = 9;
 
 	public Inventory(SaveData data)
 	{
@@ -80,7 +84,7 @@ public class Inventory
 	public bool AddItem(Item item, int num = 1)
 	{
 		//是否有空余格子
-		if (ItemNums.Count >= maxItems)
+		if (ItemNums.Count >= MaxItems)
         {
 			//没有空余格子，是否已有该物品（可堆叠）
 			if (!ItemNums.ContainsKey(item))
