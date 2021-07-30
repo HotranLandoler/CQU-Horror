@@ -11,10 +11,13 @@ public abstract class InteractObjects : MonoBehaviour, IInteractable
 
     protected Animator _animator;
 
+    private Collider2D triggerCollider;
+
     // Start is called before the first frame update
     protected virtual void Awake()
     {
         _animator = GetComponent<Animator>();
+        triggerCollider = GetComponent<Collider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,6 +40,14 @@ public abstract class InteractObjects : MonoBehaviour, IInteractable
             _animator.SetBool("FadeIn", false);
             tipAnimator.SetBool("MovFadeIn", false);
         }
+    }
+
+    /// <summary>
+    /// 手动关闭互动
+    /// </summary>
+    protected void Deactivate()
+    {
+        triggerCollider.enabled = false;
     }
 
     public abstract void Interact();

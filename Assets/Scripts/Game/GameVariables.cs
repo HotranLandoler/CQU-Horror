@@ -66,7 +66,7 @@ public class GameVariables
             gameFlags.Add(name);
         }
         else
-            Debug.LogError($"Already has flag{name}");
+            Debug.LogError($"Already has flag {name}");
     }
 
     public void SetFlag(GameFlag flag)

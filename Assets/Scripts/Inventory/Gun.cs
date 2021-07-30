@@ -70,6 +70,8 @@ public class Gun : WeaponObject
         {
             if (GameManager.Instance.inventory.GetGunAmmoLoaded(data) > 0)
             {
+                //¿ª»ð
+                _animator.SetTrigger("Attack");
                 PlayGunSound();
                 if (data.BulletsPerShot > 0)
                 {

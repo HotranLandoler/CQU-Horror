@@ -487,7 +487,15 @@ public class GameManager : MonoBehaviour
                 }
                 break;
             case WeaponType.Melee:
-                weaponObj = Instantiate(WeaponPrefabs[1], player.transform).GetComponent<Melee>(); //#
+                switch (weapon.Id)
+                {
+                    case 3:
+                        weaponObj = Instantiate(WeaponPrefabs[1], player.transform).GetComponent<Melee>();
+                        break;
+                    case 7:
+                        weaponObj = Instantiate(WeaponPrefabs[4], player.transform).GetComponent<Melee>();
+                        break;
+                }
                 break;
             case WeaponType.Magic:
                 weaponObj = Instantiate(WeaponPrefabs[0], player.transform).GetComponent<WeaponObject>(); //#

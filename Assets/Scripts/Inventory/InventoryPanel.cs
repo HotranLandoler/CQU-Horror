@@ -115,9 +115,8 @@ public class InventoryPanel : MonoBehaviour
         }
         else
             slot.itemNumText.color = Color.white;
-        //其他物品不显示数量
-        if (key.itemType != ItemType.Other)
-            slot.itemNumText.enabled = true;
+        //其他类型物品不显示数量
+        slot.itemNumText.enabled = key.itemType != ItemType.Other;
         slot.itemImage.enabled = true;
     }
 

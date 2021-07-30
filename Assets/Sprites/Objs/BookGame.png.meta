@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 45afccef6c347af4ab52717fb64996de
+guid: 73f52ae3f3c0be84390885761ca74626
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8949341313339128864
-    second: 503Box_0
+      213: -1781783661370505556
+    second: BookGame_0
   - first:
-      213: 7035445643939806315
-    second: 503Box_1
+      213: -2144911589646544079
+    second: BookGame_1
+  - first:
+      213: 4387688588512009762
+    second: BookGame_2
+  - first:
+      213: -5050998835435790970
+    second: BookGame_3
+  - first:
+      213: 8131984650087551326
+    second: BookGame_4
+  - first:
+      213: 8834236117358178631
+    second: BookGame_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 503Box_0
+      name: BookGame_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 72
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e381bcbd7d8dc380800000000000000
-      internalID: -8949341313339128864
+      spriteID: ca68a654335d547e0800000000000000
+      internalID: -1781783661370505556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 503Box_1
+      name: BookGame_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 100
+        y: 3
         width: 16
-        height: 32
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,8 +156,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6cf99ba98ce2a160800000000000000
-      internalID: 7035445643939806315
+      spriteID: 133df70064ebb32e0800000000000000
+      internalID: -2144911589646544079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookGame_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 3
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e1b47368334ec30800000000000000
+      internalID: 4387688588512009762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookGame_3
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 3
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d10fc025f37e9b0800000000000000
+      internalID: -5050998835435790970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookGame_4
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 3
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51d56344fc9ad070800000000000000
+      internalID: 8131984650087551326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BookGame_5
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 3
+        width: 16
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7417f0561f2899a70800000000000000
+      internalID: 8834236117358178631
       vertices: []
       indices: 
       edges: []

@@ -48,11 +48,11 @@ public class Melee : WeaponObject
             FlipSprite(false);
     }
 
-    public void ShowAttackShape(int show)
-    {
-        if (show == 1)
-            attackShape.gameObject.SetActive(true);
-        else
-            attackShape.gameObject.SetActive(false);
-    }
+    //public void ShowAttackShape(int show)
+    //{
+    //    if (show == 1)
+    //        attackShape.gameObject.SetActive(true);
+    //    else
+    //        attackShape.gameObject.SetActive(false);
+    //}
 }

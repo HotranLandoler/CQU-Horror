@@ -16,5 +16,5 @@ MonoBehaviour:
   itemSprite: {fileID: -586250976929357127, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u602A\u7269\u6B8B\u9AB8"
   Desc: "\u602A\u7269\u6B7B\u4EA1\u540E\u7559\u4E0B\u7684\u5947\u602A\u6676\u4F53\u3002"
-  itemType: 4
+  itemType: 2
   val: 0

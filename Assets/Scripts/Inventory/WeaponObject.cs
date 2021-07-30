@@ -9,18 +9,22 @@ public abstract class WeaponObject : MonoBehaviour
 {
     public Weapon data;
 
+    [SerializeField]
+    private GameObject weaponObj;
+    
     protected SpriteRenderer _spriteRenderer;
 
     protected AudioSource _audioSource;
 
     protected Animator _animator;
 
+    //private bool fliped;
 
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _animator = GetComponent<Animator>();
+        _spriteRenderer = weaponObj.GetComponent<SpriteRenderer>();
+        _animator = weaponObj.GetComponent<Animator>();
     }
 
     public virtual void Setup(Weapon weapon)
@@ -39,6 +43,7 @@ public abstract class WeaponObject : MonoBehaviour
 
     protected void FlipSprite(bool flip)
     {
+        _animator.SetFloat("Flip", flip ? 1 : 0);
         _spriteRenderer.flipY = flip;
     }
 
