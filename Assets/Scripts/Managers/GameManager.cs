@@ -319,6 +319,17 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
+    /// °´ÏÂEsc
+    /// </summary>
+    public void OnEscapePressed()
+    {
+        if (!UIManager.Instance.CloseWindows())
+        {
+            TogglePauseMenu();
+        }
+    }
+
+    /// <summary>
     /// ÇÐ»»ÔÝÍ£²Ëµ¥
     /// </summary>
     public void TogglePauseMenu()

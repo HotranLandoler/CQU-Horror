@@ -34,6 +34,9 @@ public class Box503 : InteractObjects
     private string[] unlockedDialog;
 
     [SerializeField]
+    private string[] bagFullDialog;
+
+    [SerializeField]
     private Sprite openedSprite;
 
     protected override void Awake()
@@ -93,6 +96,7 @@ public class Box503 : InteractObjects
             }
             return true;
         }
+        GameManager.Instance.StartDialogue(Game.gameStrings.BagFull);
         return false;
     }
 

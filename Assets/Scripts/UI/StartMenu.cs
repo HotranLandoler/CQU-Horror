@@ -8,6 +8,8 @@ using UnityEngine.EventSystems;
 
 public class StartMenu : MonoBehaviour
 {
+    private GameControls controls;
+
     private AudioSource audioSource;
 
     //[SerializeField]
@@ -57,10 +59,13 @@ public class StartMenu : MonoBehaviour
     [SerializeField]
     private Toggle enToggle;
 
+    private IWindow window;
 
     // Start is called before the first frame update
     void Awake()
     {
+        controls = new GameControls();
+        
         cnToggle.onValueChanged.AddListener(LangOptionChanged);
         enToggle.onValueChanged.AddListener(LangOptionChanged);
         startButton.onClick.AddListener(StartClicked);
@@ -68,6 +73,19 @@ public class StartMenu : MonoBehaviour
         optionsButton.onClick.AddListener(Options);
         exitButton.onClick.AddListener(Quit);        
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void OnEnable()
+    {
+        controls.GamePlay.Menu.started += ctx =>
+        {
+            if (window != null)
+            {
+                window.Close();
+                window = null;
+            }
+        };
+        controls.Enable();
     }
 
     private void Start()
@@ -91,8 +109,10 @@ public class StartMenu : MonoBehaviour
 
     private void StartClicked()
     {
-        RayBlocker.SetActive(true);
+        //RayBlocker.SetActive(true);
         ModeSelectPanel.Show();
+        window = ModeSelectPanel;
+        //UIManager.Instance.AddWindow(ModeSelectPanel);
         //StartCoroutine(LoadScene(1));
     }
 

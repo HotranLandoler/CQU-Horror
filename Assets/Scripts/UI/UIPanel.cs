@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIPanel : MonoBehaviour
+public class UIPanel : MonoBehaviour, IWindow
 {
     private enum MotionType
     {
@@ -79,4 +79,8 @@ public class UIPanel : MonoBehaviour
         }
         cg.blocksRaycasts = false;
     }
+
+    public void Open() => Show();
+
+    public void Close() => Hide();
 }

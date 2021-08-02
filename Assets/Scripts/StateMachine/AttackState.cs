@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class AttackState : State
 {
-    float time;
+    private AnimatorStateInfo info;
+    //float time;
     public AttackState(FSM fsm, Enemy enemy) : base(fsm, enemy)
     {
     }
 
     public override void OnEnter()
     {
-        time = 0;
+        //time = 0;
+        enemy.PrepareLightAttack();
         enemy.PlayAttackSound();
         enemy.animator.SetTrigger("Attack");
         enemy.Nav.speed = enemy.data.FastSpeed;
@@ -25,14 +27,15 @@ public class AttackState : State
 
     public override void OnUpdate()
     {
-        time += Time.deltaTime;
+//time += Time.deltaTime;
         if (enemy.IsDead || enemy.Target == null || GameManager.Instance.CurGameMode != GameMode.Gameplay)
         {
             fsm.TransitState(StateType.Idle);
             return;
         }
+        info = enemy.animator.GetCurrentAnimatorStateInfo(0);
         enemy.Attack();
-        if (time > 1.5f)
+        if (info.normalizedTime >= 0.95f)
         {
             fsm.TransitState(StateType.Chase);
         }

@@ -30,7 +30,7 @@ public class PlayerTrigger : MonoBehaviour
         {
             isProtect = true;
             timer = 1;
-            player.TakeDamage(collision.GetComponent<EnemyAttack>().damage);
+            player.TakeDamage(collision.GetComponent<EnemyAttack>().Damage);
             //GameManager.Instance.ChangeHp(-1 * collision.GetComponent<EnemyAttack>().damage);
             //StartCoroutine(DamageProtect());
         }

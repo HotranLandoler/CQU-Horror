@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BookGame : MonoBehaviour
+public class BookGame : MonoBehaviour, IWindow
 {
     [SerializeField]
     private GameFlag flag;
@@ -132,6 +132,7 @@ public class BookGame : MonoBehaviour
     public void StartGame()
     {
         GameManager.Instance.SwitchGameMode(GameMode.Timeline);
+        UIManager.Instance.AddWindow(this);
         gamePanel.Show();
         booksPanel.Show();
     }
@@ -143,4 +144,9 @@ public class BookGame : MonoBehaviour
         booksPanel.Hide();
         GameManager.Instance.SwitchGameMode(GameMode.Gameplay);
     }
+
+    public void Open() => StartGame();
+
+
+    public void Close() => Exit(false);
 }

@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
   template:
-    PhraseName: ghost
+    phrase: "\u7A0B\uFF1A\u521A\u624D..\u90A3\u662F\u4EC0\u4E48\uFF1F"
     IsSystemTip: 0
     hasToPause: 1
 --- !u!114 &-5532105414569880903
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
   template:
-    PhraseName: ghost2
+    phrase: "\u7A0B\uFF1A\u73B0\u5728\u6211\u770B\u5230\u4EC0\u4E48\u90FD\u4E0D\u4F1A\u60CA\u8BB6\u4E86\u3002"
     IsSystemTip: 0
     hasToPause: 1
 --- !u!114 &-2567442620859639851

@@ -9,7 +9,7 @@ public class Ghoul : Enemy
     protected override void Start()
     {
         base.Start();
-        attackShape.damage = Damage();
+        attackShape.Damage = Damage();
     }
 
     public override void Attack()

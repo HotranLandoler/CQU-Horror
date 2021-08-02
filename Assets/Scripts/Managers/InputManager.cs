@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour
 		=> GameManager.Instance.ToggleBag();
 
 	private void Menu(InputAction.CallbackContext ctx)
-		=> GameManager.Instance.TogglePauseMenu();
+		=> GameManager.Instance.OnEscapePressed();
 
 	//public void AddInteractObject(UnityAction action)
  //   {

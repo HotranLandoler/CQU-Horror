@@ -11,7 +11,7 @@ public class Hound : Enemy
         base.Start();
         foreach (var item in attackShapes)
         {
-            item.damage = Damage();
+            item.Damage = Damage();
         }
     }
 

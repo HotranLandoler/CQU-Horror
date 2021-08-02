@@ -81,6 +81,7 @@ public class UIManager : Singleton<UIManager>
 
     private float itemTipTimer = 0;
 
+    private Stack<IWindow> windows = new Stack<IWindow>(2);
     //private TipState tipState = TipState.Idle; 
 
     private void Awake()
@@ -306,6 +307,19 @@ public class UIManager : Singleton<UIManager>
     public void ShowSavedTip()
     {
         StartCoroutine(DoShowSavedTip());       
+    }
+
+    public void AddWindow(IWindow window)
+    {
+        windows.Push(window);
+    }
+
+    public bool CloseWindows()
+    {
+        if (windows.Count == 0)
+            return false;
+        windows.Pop().Close();
+        return true;
     }
 
     private IEnumerator DoShowSavedTip()

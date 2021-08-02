@@ -92,7 +92,7 @@ public class Enemy : MonoBehaviour
 
     public virtual void Attack()
     {
-
+        animator.SetTrigger("Attack");
     }
 
     //public void MoveToPos(Vector3 pos, float speed)
@@ -154,6 +154,12 @@ public class Enemy : MonoBehaviour
     {
         if (data.StepSound) ad.PlayOneShot(data.StepSound);
     }
+
+    public void PrepareLightAttack() =>
+        attackShape.Damage = data.LightDamage;
+
+    public void PrepareHeavyAttack() =>
+        attackShape.Damage = data.HeavyDamage;
 
     //生成战利品
     private void Loot()

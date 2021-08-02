@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public int damage { get; set; }
+    public int Damage { get; set; }
 
     //public void OnTriggerStay2D(Collider2D collision)
     //{
