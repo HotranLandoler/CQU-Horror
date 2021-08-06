@@ -44,7 +44,11 @@ public class BookGame : MonoBehaviour, IWindow
     // Start is called before the first frame update
     void Start()
     {
-        exitButton.onClick.AddListener(()=>Exit(false));
+        exitButton.onClick.AddListener(()=>
+        {
+            UIManager.Instance.RemoveWindow();
+            Exit(false);      
+        });
         for (int i = 0; i < bookUis.Length; i++)
         {
             bookUis[i].Clicked += SelectBook;

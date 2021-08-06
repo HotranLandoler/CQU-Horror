@@ -314,6 +314,11 @@ public class UIManager : Singleton<UIManager>
         windows.Push(window);
     }
 
+    public void RemoveWindow()
+    {
+        windows.Pop();
+    }
+
     public bool CloseWindows()
     {
         if (windows.Count == 0)

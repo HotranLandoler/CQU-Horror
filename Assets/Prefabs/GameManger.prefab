@@ -73,6 +73,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bca4e3ef0feb1a646965ba236afde4c6, type: 2}
   - {fileID: 11400000, guid: a6a5e4b8ad2387e42814eac38aee36e5, type: 2}
   - {fileID: 11400000, guid: f89f9d79eda70a14a8c1bb51f1db778e, type: 2}
+  SkillDatas:
+  - {fileID: 11400000, guid: ee5d0467f4ff7aa44bd185f0b1f16472, type: 2}
+  - {fileID: 11400000, guid: fbf9a5f190833cc4ca50bcaf81712956, type: 2}
+  - {fileID: 11400000, guid: 2983010f54ac4c24cbd5427f7b0ea682, type: 2}
+  - {fileID: 11400000, guid: 83f1a0041dc5a71439556ee34a45e8ea, type: 2}
+  - {fileID: 11400000, guid: f5e72797a7b908449a66c53aa06955dd, type: 2}
+  - {fileID: 11400000, guid: 672d50a6f86f8ff41b2d16a3cc62241b, type: 2}
+  - {fileID: 11400000, guid: 6987d28de6b7f86469e33cbbafd71ab2, type: 2}
+  - {fileID: 11400000, guid: 8b0f5452e8e300f438b063c023f65948, type: 2}
+  - {fileID: 11400000, guid: dbbd2e563898457479e4a9dd83f462a6, type: 2}
   WeaponPrefabs:
   - {fileID: 5351950884264839131, guid: 8a9cd2312d00bbf449a95b9312ea2df2, type: 3}
   - {fileID: 2997879500754477800, guid: 1ec9e18704051c34a84977ec553b6909, type: 3}

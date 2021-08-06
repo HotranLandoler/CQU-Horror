@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
             if (_isReloading == false && value == true)
             {
                 StartReloading?.Invoke();
-                reloadTimer = reloadTime;
+                reloadTimer = ReloadTime;
             }
             if (_isReloading == true && value == false)
             {
@@ -54,7 +54,9 @@ public class Player : MonoBehaviour
 
     public bool IsDead = false;
 
-    public float reloadTime = 1;
+    private readonly float reloadTime = 1;
+
+    public float ReloadTime => reloadTime * GameManager.Instance.playerSkills.ReloadTimeMod;
 
     public float reloadTimer = 0;
 

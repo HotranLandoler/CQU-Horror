@@ -59,7 +59,7 @@ public class PlayerAnim : MonoBehaviour
     {
         if (player.IsReloading)
         {
-            reloadBar.fillAmount = player.reloadTimer / player.reloadTime;
+            reloadBar.fillAmount = player.reloadTimer / player.ReloadTime;
         }
     }
 

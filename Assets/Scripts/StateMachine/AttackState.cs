@@ -34,7 +34,7 @@ public class AttackState : State
             return;
         }
         info = enemy.animator.GetCurrentAnimatorStateInfo(0);
-        enemy.Attack();
+        //enemy.Attack();
         if (info.normalizedTime >= 0.95f)
         {
             fsm.TransitState(StateType.Chase);

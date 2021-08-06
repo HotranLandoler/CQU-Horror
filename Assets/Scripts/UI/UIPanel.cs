@@ -80,7 +80,7 @@ public class UIPanel : MonoBehaviour, IWindow
         cg.blocksRaycasts = false;
     }
 
-    public void Open() => Show();
+    public virtual void Open() => Show();
 
-    public void Close() => Hide();
+    public virtual void Close() => Hide();
 }

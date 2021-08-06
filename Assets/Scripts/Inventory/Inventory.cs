@@ -12,6 +12,11 @@ public class Inventory
 	/// </summary>
 	public static readonly int MaxItems = 12;
 
+	/// <summary>
+	/// 货币物品id
+	/// </summary>
+	public static readonly int GoldId = 27;
+
 	public Dictionary<Item, int> ItemNums { get; private set; }
 
 	private Dictionary<Weapon, int> gunAmmos = new Dictionary<Weapon, int>();
@@ -34,6 +39,8 @@ public class Inventory
 	{
 		return GameManager.Instance.ItemData[id];
 	}
+
+	public int HasGold() => HasItem(GoldId);
 
 	/// <summary>
 	/// 检查是否持有某物品
@@ -108,6 +115,8 @@ public class Inventory
 		UIManager.Instance.UpdateInventory();
 		return true;
 	}
+
+	public void RemoveGold(int num) => RemoveItem(GetItemData(GoldId), num);
 
 	/// <summary>
 	/// 减少指定物品数目

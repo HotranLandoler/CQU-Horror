@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ce28d41f654ce4d9725c4b8df02195, type: 3}
+  m_Name: 7_Gourmet
+  m_EditorClassIdentifier: 
+  SkillID: 7
+  SkillSprite: {fileID: 3672223182082440460, guid: abfdcb3e171db2f4fa3fcec8ebc4111f, type: 3}
+  SkillName: "\u7F8E\u98DF\u5BB6"
+  SkillDesc: "\u96F6\u98DF\u7684\u56DE\u590D\u6548\u679C\u589E\u52A0<color=#72c292>50%</color>"
+  Cost: 0
+  preSkills:
+  - {fileID: 11400000, guid: 672d50a6f86f8ff41b2d16a3cc62241b, type: 2}

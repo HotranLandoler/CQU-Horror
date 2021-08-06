@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: -5212494400329476486
     second: InteractTip_4
+  - first:
+      213: -8685666798920903131
+    second: InteractTip_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -218,6 +221,27 @@ TextureImporter:
       bones: []
       spriteID: a7616aab5ff79a7b0800000000000000
       internalID: -5212494400329476486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InteractTip_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5265ae4a010567780800000000000000
+      internalID: -8685666798920903131
       vertices: []
       indices: 
       edges: []

@@ -24,6 +24,13 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField]
     private AudioClip gunNoAmmo;
 
+    [Header("UI")]
+    [SerializeField]
+    private AudioClip skillUnlocked;
+
+    [SerializeField]
+    private AudioClip learnSkillFailed;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -77,5 +84,15 @@ public class AudioManager : Singleton<AudioManager>
     public void PlayEquipSound()
     {
         _as.PlayOneShot(equip);
+    }
+
+    public void PlaySkillUnlockSound()
+    {
+        _as.PlayOneShot(skillUnlocked);
+    }
+
+    public void PlayLearnSkillFailedSound()
+    {
+        _as.PlayOneShot(learnSkillFailed);
     }
 }

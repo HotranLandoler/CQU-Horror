@@ -64,6 +64,7 @@ MonoBehaviour:
   GameOverText: {fileID: 0}
   redFlashTime: 0.2
   savingImage: {fileID: 0}
+  savedTip: {fileID: 0}
   itemTip: {fileID: 0}
   itemTipTime: 1
 --- !u!114 &4917740948373578753
@@ -206,6 +207,8 @@ MonoBehaviour:
   heartBeat: {fileID: 8300000, guid: b7b384c714b2aff4a9fb275695629ef0, type: 3}
   bulletShell: {fileID: 8300000, guid: fbd16fd12cb77e74ea0364487d90ea17, type: 3}
   gunNoAmmo: {fileID: 8300000, guid: 38d6f430c3a990a43a450ae8355b2e52, type: 3}
+  skillUnlocked: {fileID: 8300000, guid: 91201bb487dd8c94a93e79f624d867a3, type: 3}
+  learnSkillFailed: {fileID: 8300000, guid: 967a8398415c9894993561b76b419f08, type: 3}
 --- !u!114 &1161287333
 MonoBehaviour:
   m_ObjectHideFlags: 0

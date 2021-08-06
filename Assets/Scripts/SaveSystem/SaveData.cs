@@ -16,6 +16,8 @@ public class SaveData
 
     public string[] gameFlags;
 
+    public int[] skills;
+
     public int[] itemNums;
 
     public int[] gunAmmos;

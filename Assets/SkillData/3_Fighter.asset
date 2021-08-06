@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ce28d41f654ce4d9725c4b8df02195, type: 3}
+  m_Name: 3_Fighter
+  m_EditorClassIdentifier: 
+  SkillID: 3
+  SkillSprite: {fileID: 8685077388864575728, guid: abfdcb3e171db2f4fa3fcec8ebc4111f, type: 3}
+  SkillName: "\u640F\u51FB\u8005"
+  SkillDesc: "\u8FD1\u6218\u653B\u51FB\u9020\u6210\u7684\u4F24\u5BB3\u589E\u52A0<color=#72c292>40%</color>"
+  Cost: 0
+  preSkills:
+  - {fileID: 11400000, guid: 2983010f54ac4c24cbd5427f7b0ea682, type: 2}

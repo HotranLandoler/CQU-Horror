@@ -41,11 +41,15 @@ public class GameManager : MonoBehaviour
 
     public Item[] ItemData;
 
+    public SkillData[] SkillDatas;
+
     //public Dictionary<Item, int> ItemNums = new Dictionary<Item, int>();
 
     //public Dictionary<Weapon, int> gunAmmos = new Dictionary<Weapon, int>();
 
-    public Inventory inventory;
+    public Inventory inventory { get; set; }
+
+    public PlayerSkills playerSkills { get; set; }
 
     public GameObject[] WeaponPrefabs;
 
@@ -69,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     private float sanTimer = 0;
 
-    private readonly float sanTime = 1;
+    private float sanTime => 1 * playerSkills.SanityDropIntervalMod;
 
     public Item[] startItems;
 
@@ -208,15 +212,26 @@ public class GameManager : MonoBehaviour
     private void InitFromData(SaveData data)
     {
         //初始化物品
-        inventory = new Inventory(data);
+        inventory = new Inventory(data);      
         if (data == null)
         {
+            playerSkills = new PlayerSkills();
             gameVariables = new GameVariables();
             Initialize();
             return;
         }
         Game.difficulty = data.difficulty;
         InitMaxHp();
+        if (data.skills.Length > 0)
+        {
+            List<SkillData> skills = new List<SkillData>(data.skills.Length);
+            foreach (var id in data.skills)
+            {
+                skills.Add(SkillDatas[id]);
+            }
+            playerSkills = new PlayerSkills(skills);
+        }
+        else playerSkills = new PlayerSkills();
         gameVariables = new GameVariables(data.gameFlags);
         //for (int i = 0; i < data.itemNums.Length; i++)
         //{
@@ -244,6 +259,7 @@ public class GameManager : MonoBehaviour
             difficulty = Game.difficulty,
             dateTime = System.DateTime.Now,
             gameFlags = gameVariables.GetFlagArray(),
+            skills = playerSkills.GetSkillsArray(),
             //itemNums = new int[ItemData.Length],
             itemNums = inventory.SaveItems(),
             //gunAmmos = new int[ItemData.Length],
