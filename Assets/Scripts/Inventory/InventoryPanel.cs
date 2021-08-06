@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryPanel : MonoBehaviour
+public class InventoryPanel : UIPanel
 {
-    private Animator _animator;
-    private CanvasGroup _canvasGroup;
+    //private Animator _animator;
+    //private CanvasGroup _canvasGroup;
 
     [SerializeField]
     private ItemSlot[] itemSlots = new ItemSlot[9];
@@ -20,16 +20,26 @@ public class InventoryPanel : MonoBehaviour
     [SerializeField]
     private Text ItemDescText;
 
+    protected virtual Dictionary<Item, int> DataSource => GameManager.Instance.inventory.ItemNums;
+
+    //protected virtual int Capacity => Inventory.MaxItems;
+
     //public Sprite[] itemSprites;
 
-    private void Awake()
+    //protected override void Awake()
+    //{
+    //    base.Awake();
+    //}
+
+    protected void Start()
     {
-        _canvasGroup = GetComponent<CanvasGroup>();
-        _animator = GetComponent<Animator>();
+        //_canvasGroup = GetComponent<CanvasGroup>();
+        //_animator = GetComponent<Animator>();
         foreach (var slot in itemSlots)
         {
             slot.OnMouse += ShowItemDesc;
             slot.OnMouseLeave += ClearItemDesc;
+            slot.OnClick += OnItemClicked;
         }
     }
 
@@ -39,12 +49,12 @@ public class InventoryPanel : MonoBehaviour
     public void UpdateItems()
     {
         int i = 0;
-        foreach (var pair in GameManager.Instance.inventory.ItemNums)
+        foreach (var pair in DataSource)
         {
             UpdateSlot(itemSlots[i], pair.Key, pair.Value);
             i++;
         }
-        for (;i<Inventory.MaxItems;i++)
+        for (;i<itemSlots.Length;i++)
         {
             itemSlots[i].item = null;
             itemSlots[i].itemImage.enabled = false;
@@ -64,28 +74,28 @@ public class InventoryPanel : MonoBehaviour
         {
             if (slot.item.Equals(key))
             {
-                UpdateSlot(slot, key, GameManager.Instance.inventory.ItemNums[key]);
+                UpdateSlot(slot, key, DataSource[key]);
                 return;
             }
         }
     }
 
-    public void Show()
-    {
-        _canvasGroup.blocksRaycasts = true;
-        _animator.Play("Bag_Open");
-    }
+    //public void Show()
+    //{
+    //    _canvasGroup.blocksRaycasts = true;
+    //    _animator.Play("Bag_Open");
+    //}
 
-    public void Hide()
-    {
-        _canvasGroup.blocksRaycasts = false;
-        _animator.Play("Bag_Close");
-    }
+    //public void Hide()
+    //{
+    //    _canvasGroup.blocksRaycasts = false;
+    //    _animator.Play("Bag_Close");
+    //}
 
     public void ClearItemDesc()
     {
         ItemNameText.text = string.Empty;
-        ItemDescText.text = string.Empty;
+        if (ItemDescText) ItemDescText.text = string.Empty;
     }
 
     private void ShowItemDesc(Item item)
@@ -93,7 +103,7 @@ public class InventoryPanel : MonoBehaviour
         if (item == null) return;
         //var item = GameManager.Instance.GetItemData(id);
         ItemNameText.text = item.Name;
-        ItemDescText.text = item.Desc;
+        if (ItemDescText) ItemDescText.text = item.Desc;
     }
 
     private void UpdateSlot(ItemSlot slot, Item key, int value)
@@ -120,5 +130,7 @@ public class InventoryPanel : MonoBehaviour
         slot.itemImage.enabled = true;
     }
 
-    
+    protected virtual void OnItemClicked(ItemSlot slot) 
+        => GameManager.Instance.UseItem(slot.item);
+
 }

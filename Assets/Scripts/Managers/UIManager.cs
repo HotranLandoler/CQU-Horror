@@ -35,6 +35,9 @@ public class UIManager : Singleton<UIManager>
     private InventoryPanel bagUI;
 
     [SerializeField]
+    private ItemBox itemBoxUI;
+
+    [SerializeField]
     private Image weaponImage;
 
     [SerializeField]
@@ -256,6 +259,11 @@ public class UIManager : Singleton<UIManager>
     public void UpdateInventory()
     {
         bagUI.UpdateItems();
+    }
+
+    public void UpdateItemBox()
+    {
+        itemBoxUI.UpdateItems();
     }
 
     public void ScreenFadeOut()

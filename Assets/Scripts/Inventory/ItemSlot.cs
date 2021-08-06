@@ -18,6 +18,7 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public Text itemNumText;
 
+    public event UnityAction<ItemSlot> OnClick;
     public event UnityAction<Item> OnMouse;
     public event UnityAction OnMouseLeave;
 
@@ -42,6 +43,7 @@ public class ItemSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         if (item == null) return;
-        GameManager.Instance.UseItem(item);
+        OnClick?.Invoke(this);
+        //GameManager.Instance.UseItem(item);
     }
 }

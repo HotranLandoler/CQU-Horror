@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public GameVariables gameVariables;
 
-	public GameMode CurGameMode = GameMode.Gameplay;
+    public GameMode CurGameMode = GameMode.Gameplay;
 
     private Player _player;
 
@@ -35,9 +35,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-	public event UnityAction<int> HpChanged;
+    public event UnityAction<int> HpChanged;
 
-	public event UnityAction<int> SanChanged;
+    public event UnityAction<int> SanChanged;
 
     public Item[] ItemData;
 
@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
     public GameObject goldPrefab;
 
     public int MaxHp { get; private set; }
+
+    public bool OnItemBox { get; private set; } = false;
 
     public bool bag = false;
 
@@ -212,7 +214,7 @@ public class GameManager : MonoBehaviour
     private void InitFromData(SaveData data)
     {
         //初始化物品
-        inventory = new Inventory(data);      
+        inventory = new Inventory(data);
         if (data == null)
         {
             playerSkills = new PlayerSkills();
@@ -264,6 +266,7 @@ public class GameManager : MonoBehaviour
             itemNums = inventory.SaveItems(),
             //gunAmmos = new int[ItemData.Length],
             gunAmmos = inventory.SaveGunAmmo(),
+            boxItems = inventory.SaveBoxItems(),
             Hp = Hp,
             Sanity = Sanity,
             EquipId = player.Equip == null ? -1 : player.Equip.data.Id,
@@ -291,7 +294,7 @@ public class GameManager : MonoBehaviour
     public void ChangeSanity(int change)
     {
         Sanity += change;
-    }    
+    }
 
     //触发一次
     /// <summary>
@@ -303,9 +306,9 @@ public class GameManager : MonoBehaviour
         //player.DamageTaken += () => UIManager.Instance.FlashRed();
         InitMaxHp();
         Hp = MaxHp;
-        Sanity = Game.MaxSan; 
+        Sanity = Game.MaxSan;
     }
-    
+
     private void InitMaxHp()
     {
         if (Game.difficulty == Game.Difficulty.Easy)
@@ -361,27 +364,27 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             paused = true;
         }
-    } 
+    }
 
     //Called by the TimeMachine Clip (of type Pause)
     public void PauseTimeline(PlayableDirector whichOne)
-	{
+    {
         if (whichOne == null) return;
-		activeDirector = whichOne;
-		activeDirector.playableGraph.GetRootPlayable(0).SetSpeed(0d);
-		CurGameMode = GameMode.DialogueMoment; //InputManager will be waiting for a spacebar to resume
-		//UIManager.Instance.ToggleDialogArrow(true);
-	}
+        activeDirector = whichOne;
+        activeDirector.playableGraph.GetRootPlayable(0).SetSpeed(0d);
+        CurGameMode = GameMode.DialogueMoment; //InputManager will be waiting for a spacebar to resume
+                                               //UIManager.Instance.ToggleDialogArrow(true);
+    }
 
-	//Called by the InputManager
-	public void ResumeTimeline()
-	{
-		UIManager.Instance.ToggleDialogArrow(false);
-		UIManager.Instance.ToggleDialoguePanel(false);
+    //Called by the InputManager
+    public void ResumeTimeline()
+    {
+        UIManager.Instance.ToggleDialogArrow(false);
+        UIManager.Instance.ToggleDialoguePanel(false);
         UIManager.Instance.ToggleTip(false);
         activeDirector.playableGraph.GetRootPlayable(0).SetSpeed(1d);
-		CurGameMode = GameMode.Timeline;
-	}
+        CurGameMode = GameMode.Timeline;
+    }
 
     /// <summary>
     /// 切换游戏模式至过场动画
@@ -405,7 +408,17 @@ public class GameManager : MonoBehaviour
     /// <param name="mode"></param>
     public void SwitchGameMode(GameMode mode)
     {
-		CurGameMode = mode;
+        CurGameMode = mode;
+    }
+
+    public void ToggleItemBox(bool open)
+    {
+        if (open) SwitchGameMode(GameMode.Timeline);
+        else SwitchGameMode(GameMode.Gameplay);
+        OnItemBox = open;
+        player.StopAction?.Invoke();
+        UIManager.Instance.ToggleBag(open);
+        if (open) UIManager.Instance.UpdateItemBox();
     }
 
     /// <summary>
@@ -435,6 +448,12 @@ public class GameManager : MonoBehaviour
     {
         //暂停时不能使用
         if (paused) return;
+        if (OnItemBox)
+        {
+            //正在存取物品
+            inventory.StoreItem(item);
+            return;
+        }
         switch (item.itemType)
         {
             case ItemType.AddHp:

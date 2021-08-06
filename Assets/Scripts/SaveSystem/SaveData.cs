@@ -22,6 +22,8 @@ public class SaveData
 
     public int[] gunAmmos;
 
+    public int[] boxItems;
+
     public int Hp;
 
     public int Sanity;

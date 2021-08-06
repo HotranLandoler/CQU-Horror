@@ -1072,6 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5d52940148ad14bb8dca13292c917b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motionType: 3
   itemSlots:
   - {fileID: 3256622514417053269}
   - {fileID: 4952041417181384688}

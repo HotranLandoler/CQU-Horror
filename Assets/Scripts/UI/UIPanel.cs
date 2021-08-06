@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UIPanel : MonoBehaviour, IWindow
 {
@@ -16,11 +17,13 @@ public class UIPanel : MonoBehaviour, IWindow
     [SerializeField]
     private MotionType motionType = MotionType.Fade;
 
+    //public event UnityAction Closed;
+
     private Animator anim;
 
     private CanvasGroup cg;
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         anim = GetComponent<Animator>();
         cg = GetComponent<CanvasGroup>();
@@ -36,13 +39,13 @@ public class UIPanel : MonoBehaviour, IWindow
                 anim.SetBool("FadeIn", true);
                 break;
             case MotionType.Down:
-                anim.Play("UI_FadeIn_Down");
+                anim.SetBool("FadeIn_Down", true);
                 break;
             case MotionType.Left:
                 anim.Play("UI_FadeIn_Left");
                 break;
             case MotionType.Right:
-                anim.Play("UI_FadeIn_Right");
+                anim.SetBool("FadeIn_Right", true);
                 break;
             case MotionType.Up:
                 anim.Play("UI_FadeIn_Up");
@@ -63,13 +66,13 @@ public class UIPanel : MonoBehaviour, IWindow
                 anim.SetBool("FadeIn", false);
                 break;
             case MotionType.Down:
-                anim.Play("UI_FadeOut_Down");
+                anim.SetBool("FadeIn_Down", false);
                 break;
             case MotionType.Left:
                 anim.Play("UI_FadeOut_Left");
                 break;
             case MotionType.Right:
-                anim.Play("UI_FadeOut_Right");
+                anim.SetBool("FadeIn_Right", false);
                 break;
             case MotionType.Up:
                 anim.Play("UI_FadeOut_Up");
