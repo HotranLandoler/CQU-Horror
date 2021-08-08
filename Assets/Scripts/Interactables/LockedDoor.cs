@@ -14,7 +14,19 @@ public class LockedDoor : Door
     private AudioClip lockedSound;
 
     [SerializeField]
+    private AudioClip unlockSound;
+
+    [SerializeField]
     private string[] lockedDialog;
+
+    [SerializeField]
+    private GameFlag unlockedFlag;
+
+    private void Start()
+    {
+        if (unlockedFlag.Has())
+            isLocked = false;
+    }
 
     public override void Interact()
     {
@@ -23,8 +35,11 @@ public class LockedDoor : Door
             if (key != null && GameManager.Instance.inventory.HasItem(key) > 0)
             {
                 //开锁
+                if (unlockSound) AudioManager.Instance.PlaySound(unlockSound);
                 isLocked = false;
-                //#进入
+                unlockedFlag.Set();
+                GameManager.Instance.StartDialogue($"使用 {key.Name} 打开了锁。");
+                GameManager.Instance.inventory.RemoveItem(key);
             }
             else
             {

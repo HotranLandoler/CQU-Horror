@@ -26676,6 +26676,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6138606598394001694, guid: fff75ba0fa3652643abfa7c38bd5bd95, type: 3}
+      propertyPath: unlockSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7fb930b1a3f828a45971accbb941b195, type: 3}
+    - target: {fileID: 6138606598394001694, guid: fff75ba0fa3652643abfa7c38bd5bd95, type: 3}
+      propertyPath: unlockedFlag
+      value: 
+      objectReference: {fileID: 11400000, guid: be5b744843130694189da0538e95d2de, type: 2}
+    - target: {fileID: 6138606598394001694, guid: fff75ba0fa3652643abfa7c38bd5bd95, type: 3}
       propertyPath: lockedDialog.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -27992,7 +28000,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -41260,7 +41268,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -44348,7 +44356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881040855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.90900224, y: -2.2777, z: -10}
+  m_LocalPosition: {x: -0.9160184, y: -2.2777, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
