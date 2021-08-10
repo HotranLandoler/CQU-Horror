@@ -13,16 +13,17 @@ public class AttackState : State
     public override void OnEnter()
     {
         //time = 0;
+        //enemy.SetDirection(enemy.Target.transform.position - enemy.transform.position);
         enemy.PrepareLightAttack();
         enemy.PlayAttackSound();
-        enemy.animator.SetTrigger("Attack");
-        enemy.Nav.speed = enemy.data.FastSpeed;
-        enemy.Nav.SetDestination(enemy.Target.transform.position);      
+        enemy.animator.SetBool("Attack",true);
+        //enemy.Nav.speed = enemy.data.FastSpeed;
+        //enemy.Nav.SetDestination(enemy.Target.transform.position);      
     }
 
     public override void OnExit()
     {
-        
+        enemy.animator.SetBool("Attack", false);
     }
 
     public override void OnUpdate()

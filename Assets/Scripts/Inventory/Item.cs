@@ -29,4 +29,8 @@ public class Item : ScriptableObject
     public ItemType itemType;
 
     public int val;
+
+    public AudioClip pickSound;
+
+    public AudioClip useSound;
 }

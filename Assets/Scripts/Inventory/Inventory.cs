@@ -104,8 +104,11 @@ public class Inventory
 			//没有空余格子，是否已有该物品（可堆叠）
 			if (!ItemNums.ContainsKey(item))
 				return false; //背包已满
-		}			
-		AudioManager.Instance.PlayPickItemSound(item);
+		}		
+		if (item.pickSound)
+			AudioManager.Instance.PlaySound(item.pickSound);
+		else
+			AudioManager.Instance.PlayPickItemSound(item);
 		if (ItemNums.ContainsKey(item))
 			ItemNums[item] += num;
 		else

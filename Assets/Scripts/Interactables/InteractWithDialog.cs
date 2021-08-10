@@ -11,10 +11,15 @@ public class InteractWithDialog : InteractObjects
     [SerializeField]
     private AudioClip se;
 
+    [SerializeField]
+    private GameFlag setFlag;
+
     public override void Interact()
     {
         if (se != null)
             AudioManager.Instance.PlaySound(se);
+        if (setFlag && !setFlag.Has())
+            setFlag.Set();
         GameManager.Instance.StartDialogue(phraseName);
         //UIManager.Instance.ShowDialogue(phraseName, false);
         //if (itemGet != null)

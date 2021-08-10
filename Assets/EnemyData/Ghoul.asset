@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Ghoul
   m_EditorClassIdentifier: 
   hp: 4
-  damage: 0f00000014000000
+  damage: 0a00000014000000
   attackRangeSqr:
-  - 2
+  - 1.5
   - 5
   moveSpeed:
   - 4

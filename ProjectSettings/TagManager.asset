@@ -10,6 +10,7 @@ TagManager:
   - PlayerTrigger
   - PlayerAttack
   - EnemyTrigger
+  - Ghost
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,7 @@ public class LockedDoor : Door
 
     private void Start()
     {
-        if (unlockedFlag.Has())
+        if (unlockedFlag && unlockedFlag.Has())
             isLocked = false;
     }
 

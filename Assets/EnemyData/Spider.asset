@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2125efe671c70e429e4922cad8a2091, type: 3}
   m_Name: Spider
   m_EditorClassIdentifier: 
-  hp: 0
-  damage: 0000000000000000
+  hp: 1
+  damage: 0500000005000000
   attackRangeSqr:
   - 0
   - 0
   moveSpeed:
-  - 5
-  - 5
-  - 5
+  - 7
+  - 7
+  - 7
+  gold: 0
   diagSpeedMod: 0.7
   StepSound: {fileID: 0}
   AttackSound: {fileID: 0}

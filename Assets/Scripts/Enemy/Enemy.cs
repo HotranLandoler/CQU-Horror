@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Flag))]
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IActor
 {
     public EnemyData data;
 
@@ -27,7 +28,21 @@ public class Enemy : MonoBehaviour
 
     //移动方向
     protected Vector2 move;
+    public Vector2 Move
+    {
+        get => move;
+        set
+        {
+            if (move != value)
+                DirChanged?.Invoke(value);
+            move = value;
+        }
+    }
 
+    public bool IsMoving => Nav.velocity != Vector2.zero;
+
+    public event UnityAction<Vector2> DirChanged;
+    
     protected Collider2D collider2d;
 
     //自动寻路
@@ -35,10 +50,13 @@ public class Enemy : MonoBehaviour
 
     public Animator animator { get; private set; }
 
+
     /// <summary>
     /// 当前生命值
     /// </summary>
     private float hp;
+
+
     public float Hp
     {
         get => hp;
@@ -51,6 +69,8 @@ public class Enemy : MonoBehaviour
     }
 
     public bool IsDead { get; private set; }
+
+    public Vector2 Dir => move;
 
     private void Awake()
     {
@@ -73,26 +93,36 @@ public class Enemy : MonoBehaviour
     {
         Hp = data.MaxHp;
         Nav.speed = data.SlowSpeed;
+        foreach (var trigger in enemyTriggers)
+        {
+            trigger.DamageTaken += TakeDamage;
+        }
+        PrepareLightAttack();
+    }
 
+    private void TakeDamage(float damage)
+    {
+        Hp -= damage;
+        if (!Target) Target = GameManager.Instance.player;
     }
 
     public virtual void Follow()
     {
         Nav.SetDestination(Target.transform.position);
         //move = (GameManager.Instance.player.transform.position - transform.position).normalized;
-        move = Nav.velocity;
+        if (Nav.velocity != Vector2.zero) Move = Nav.velocity.normalized;
         animator.SetBool("Move", true);
-        Vector3 scale;
-        if (move.x < 0)
-            scale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-        else
-            scale = new Vector3(1, transform.localScale.y, transform.localScale.z);
-        transform.localScale = scale;
+        //Vector3 scale;
+        //if (move.x < 0)
+        //    scale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        //else
+        //    scale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        //transform.localScale = scale;
     }
 
     public virtual void Attack()
     {
-        animator.SetTrigger("Attack");
+        //animator.SetTrigger("Attack");
     }
 
     //public void MoveToPos(Vector3 pos, float speed)
@@ -102,10 +132,15 @@ public class Enemy : MonoBehaviour
 
     public void StopFollow(bool stop)
     {
-        if (stop) Nav.velocity = Vector2.zero;
+        if (stop)
+        {
+            Nav.velocity = Vector2.zero;
+            Nav.ResetPath();
+        }
         //move = Vector2.zero;
+        
         Nav.isStopped = stop;
-        animator.SetBool("Move", false);
+        //animator.SetBool("Move", false);
     }
 
     public virtual int Damage()
@@ -115,12 +150,22 @@ public class Enemy : MonoBehaviour
 
     public void SetDirection(Vector2 val)
     {
-        move = Direction.NormalDir(val);
+        Move = Direction.NormalDir(val);
     }
 
     public virtual void Die()
     {
+        if (IsDead) return;
         flag.flag.Set();
+        StopFollow(true);
+        IsDead = true;
+        attackShape.gameObject.SetActive(false);
+        //IMPORTANT 手动触发敌人离开，停止减San
+        collider2d.enabled = false;
+        foreach (var trigger in enemyTriggers)
+        {
+            trigger.gameObject.SetActive(false);
+        }
         //掉落奖励
         if (data.Gold > 0) Loot();
         if (data.DieSound)
@@ -128,11 +173,7 @@ public class Enemy : MonoBehaviour
             //Debug.Log("diesound");
             ad.PlayOneShot(data.DieSound);
         }
-        StopFollow(true);
-        IsDead = true;
-        animator.SetTrigger("Die");
-        //IMPORTANT 手动触发敌人离开，停止减San
-        collider2d.enabled = false;
+        animator.SetTrigger("Die");      
         StartCoroutine(DoDissolveDeath());      
         //Destroy(gameObject, 2);
     }

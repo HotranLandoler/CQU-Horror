@@ -26,7 +26,8 @@ public class PlayerTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (timer <= 0 && collision.CompareTag("EnemyAttack"))
+        if (timer <= 0 && GameManager.Instance.CurGameMode == GameMode.Gameplay 
+            && collision.CompareTag("EnemyAttack"))
         {
             isProtect = true;
             timer = 1;

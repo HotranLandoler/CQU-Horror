@@ -454,6 +454,8 @@ public class GameManager : MonoBehaviour
             inventory.StoreItem(item);
             return;
         }
+        if (item.useSound)
+            AudioManager.Instance.PlaySound(item.useSound);
         switch (item.itemType)
         {
             case ItemType.AddHp:

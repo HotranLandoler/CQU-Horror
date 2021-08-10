@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
         }
     }
 
+
     public bool IsDead = false;
 
     private readonly float reloadTime = 1;
@@ -63,6 +64,8 @@ public class Player : MonoBehaviour
     public event UnityAction StartReloading;
 
     public event UnityAction StopReloading;
+
+    public GameObject Light;
 
     /// <summary>
     /// 更新面向，Invoked by controller

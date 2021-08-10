@@ -1089,12 +1089,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b97096b2f40e93c4f9cfce3e541d9a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
   move: {x: 0, y: 0}
   direction: {x: 0, y: 1}
   IsAiming: 0
   IsRunning: 0
-  reloadTime: 1
+  IsDead: 0
   reloadTimer: 0
+  Light: {fileID: 69822270}
   Equip: {fileID: 0}
 --- !u!114 &3982715885718380553
 MonoBehaviour:

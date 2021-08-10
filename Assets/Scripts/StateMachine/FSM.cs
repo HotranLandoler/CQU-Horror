@@ -31,7 +31,7 @@ public class FSM : MonoBehaviour
 
     public void TransitState(StateType type)
     {
-        Debug.Log(type.ToString());
+        //Debug.Log(type.ToString());
         currentState?.OnExit();
         currentState = states[type];
         currentState.OnEnter();
