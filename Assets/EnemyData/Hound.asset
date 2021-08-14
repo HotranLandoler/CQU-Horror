@@ -12,16 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2125efe671c70e429e4922cad8a2091, type: 3}
   m_Name: Hound
   m_EditorClassIdentifier: 
-  hp: 0
-  damage: 0000000000000000
+  hp: 50
+  damage: 2300000023000000
   attackRangeSqr:
-  - 0
-  - 0
+  - 2
+  - 2
   moveSpeed:
-  - 5
-  - 5
-  - 5
+  - 8
+  - 8
+  - 8
+  gold: 0
   diagSpeedMod: 0.7
+  SpecialCd:
+  - 5
+  - 12
   StepSound: {fileID: 0}
-  AttackSound: {fileID: 0}
+  AttackSound: {fileID: 8300000, guid: fd29cbe52f7a74540a8f369e3ca19bf6, type: 3}
   DieSound: {fileID: 0}

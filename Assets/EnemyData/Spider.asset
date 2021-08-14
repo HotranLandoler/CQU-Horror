@@ -18,11 +18,14 @@ MonoBehaviour:
   - 0
   - 0
   moveSpeed:
-  - 7
-  - 7
-  - 7
+  - 6
+  - 6
+  - 6
   gold: 0
   diagSpeedMod: 0.7
+  SpecialCd:
+  - 5
+  - 12
   StepSound: {fileID: 0}
   AttackSound: {fileID: 0}
   DieSound: {fileID: 0}

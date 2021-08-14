@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 275207431933491729}
   - component: {fileID: 1277782165592358827}
   - component: {fileID: 505968930150602925}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Spider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -462,7 +462,8 @@ MonoBehaviour:
   enemyTriggers:
   - {fileID: 3917299001979621986}
   - {fileID: 3544862894698684959}
-  attackShape: {fileID: 5723733781362443274}
+  attackShape:
+  - {fileID: 5723733781362443274}
 --- !u!114 &1277782165592358827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,7 +559,7 @@ GameObject:
   - component: {fileID: 5681088784033934127}
   - component: {fileID: 606109683657413873}
   - component: {fileID: 3544862894698684959}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Trigger (1)
   m_TagString: EnemyTrigger
   m_Icon: {fileID: 0}

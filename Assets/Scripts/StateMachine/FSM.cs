@@ -8,11 +8,15 @@ public enum StateType
     Patrol,
     Chase,
     Attack,
+    Shoot,
 }
 
 public class FSM : MonoBehaviour
 {
     protected Enemy enemy;
+
+    [SerializeField]
+    private StateType currType;
 
     protected State currentState;
 
@@ -34,6 +38,7 @@ public class FSM : MonoBehaviour
         //Debug.Log(type.ToString());
         currentState?.OnExit();
         currentState = states[type];
+        currType = type;
         currentState.OnEnter();
     }
 

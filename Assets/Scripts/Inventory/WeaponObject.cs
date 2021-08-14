@@ -41,7 +41,7 @@ public abstract class WeaponObject : MonoBehaviour
         _spriteRenderer.enabled = show;
     }
 
-    protected void FlipSprite(bool flip)
+    public void FlipSprite(bool flip)
     {
         _animator.SetFloat("Flip", flip ? 1 : 0);
         _spriteRenderer.flipY = flip;

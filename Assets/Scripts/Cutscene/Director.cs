@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Director : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class Director : MonoBehaviour
     public void ChangeSanity(int val)
     {
         GameManager.Instance.Sanity += val;
+    }
+
+    public void GotoScene(int sceneID)
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

@@ -67,6 +67,8 @@ public class Player : MonoBehaviour
 
     public GameObject Light;
 
+    public float SpeedModEffect { get; set; } = 1f;
+
     /// <summary>
     /// 更新面向，Invoked by controller
     /// </summary>

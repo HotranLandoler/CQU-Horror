@@ -15,13 +15,23 @@ public class ModeSelect : UIPanel
     [SerializeField]
     private Button hardButton;
 
+    [SerializeField]
+    private Button exitButton;
+
     public event UnityAction<Game.Difficulty> GameStart;
+
+    public event UnityAction Closed;
 
     private void Start()
     {
         easyButton.onClick.AddListener(() => GameStart?.Invoke(Game.Difficulty.Easy));
         normalButton.onClick.AddListener(() => GameStart?.Invoke(Game.Difficulty.Normal));
         hardButton.onClick.AddListener(() => GameStart?.Invoke(Game.Difficulty.Hard));
+        exitButton.onClick.AddListener(() =>
+        {
+            Hide();
+            Closed?.Invoke();
+        });
     }
 
 }

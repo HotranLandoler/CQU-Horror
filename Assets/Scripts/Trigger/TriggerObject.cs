@@ -14,7 +14,7 @@ public class TriggerObject : MonoBehaviour
 
     private void Awake()
     {
-        if (triggeredFlag.Has())
+        if (triggeredFlag && triggeredFlag.Has())
         {
             //Debug.Log("destroy");
             Destroy(gameObject);
@@ -26,9 +26,9 @@ public class TriggerObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //IMPORTANT 必须首先设置flag，否则flag无法被保存
-            GameManager.Instance.gameVariables.SetFlag(triggeredFlag);
+            if (triggeredFlag) triggeredFlag.Set();
             onTrigger?.Invoke();
-            Destroy(gameObject);
+            if (triggeredFlag) Destroy(gameObject);
         }
     }
 }

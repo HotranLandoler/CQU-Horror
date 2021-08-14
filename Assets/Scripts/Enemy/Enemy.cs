@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour, IActor
     private EnemyTrigger[] enemyTriggers;
 
     [SerializeField]
-    private EnemyAttack attackShape;
+    private EnemyAttack[] attackShape;
 
     //溶解特效
     private Material material;
@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour, IActor
     protected Rigidbody2D rb;
 
     //移动方向
+    [SerializeField]
     protected Vector2 move;
     public Vector2 Move
     {
@@ -70,12 +71,18 @@ public class Enemy : MonoBehaviour, IActor
 
     public bool IsDead { get; private set; }
 
+    public float[] SpecialTimer { get; private set; } = new float[2];
+
+    public UnityEvent OnDeath;
+
+    public void ResetTimer(int i) => SpecialTimer[i] = data.SpecialCd[i];
+
     public Vector2 Dir => move;
 
     private void Awake()
     {
         flag = GetComponent<Flag>();
-        if (flag.flag.Has())
+        if (flag.flag && flag.flag.Has())
         {
             Destroy(gameObject);
             return;
@@ -98,6 +105,14 @@ public class Enemy : MonoBehaviour, IActor
             trigger.DamageTaken += TakeDamage;
         }
         PrepareLightAttack();
+    }
+
+    private void Update()
+    {
+        if (SpecialTimer[0] > 0)
+            SpecialTimer[0] -= Time.deltaTime;
+        if (SpecialTimer[1] > 0)
+            SpecialTimer[1] -= Time.deltaTime;
     }
 
     private void TakeDamage(float damage)
@@ -156,10 +171,11 @@ public class Enemy : MonoBehaviour, IActor
     public virtual void Die()
     {
         if (IsDead) return;
-        flag.flag.Set();
+        if (flag.flag) flag.flag.Set();
         StopFollow(true);
         IsDead = true;
-        attackShape.gameObject.SetActive(false);
+        foreach (var shape in attackShape)
+            shape.gameObject.SetActive(false);
         //IMPORTANT 手动触发敌人离开，停止减San
         collider2d.enabled = false;
         foreach (var trigger in enemyTriggers)
@@ -174,16 +190,29 @@ public class Enemy : MonoBehaviour, IActor
             ad.PlayOneShot(data.DieSound);
         }
         animator.SetTrigger("Die");      
-        StartCoroutine(DoDissolveDeath());      
+        StartCoroutine(DoDissolveDeath());
+        OnDeath?.Invoke();
         //Destroy(gameObject, 2);
     }
 
-    public void ShowAttackBox(int show)
+    public void ShowAttackBox()
     {
-        if (show == 1)
-            attackShape.gameObject.SetActive(true);
-        else
-            attackShape.gameObject.SetActive(false);
+        attackShape[0].gameObject.SetActive(true);
+    }
+
+    public void ShowAttackBoxByDir(int dir)
+    {
+        if (dir == Direction.NormalDirInt(move))
+            attackShape[dir].gameObject.SetActive(true);
+    }
+
+    public void HideAttackBox()
+    {
+        foreach (var item in attackShape)
+        {
+            item.gameObject.SetActive(false);
+        }
+        //attackShapes[dir].gameObject.SetActive(false);
     }
 
     public void PlayAttackSound()
@@ -196,11 +225,21 @@ public class Enemy : MonoBehaviour, IActor
         if (data.StepSound) ad.PlayOneShot(data.StepSound);
     }
 
-    public void PrepareLightAttack() =>
-        attackShape.Damage = data.LightDamage;
+    public void PrepareLightAttack()
+    {
+        foreach (var shape in attackShape)
+        {
+            shape.Damage = data.LightDamage;
+        }
+    }
 
-    public void PrepareHeavyAttack() =>
-        attackShape.Damage = data.HeavyDamage;
+    public void PrepareHeavyAttack()
+    {
+        foreach (var shape in attackShape)
+        {
+            shape.Damage = data.HeavyDamage;
+        }
+    }
 
     //生成战利品
     private void Loot()

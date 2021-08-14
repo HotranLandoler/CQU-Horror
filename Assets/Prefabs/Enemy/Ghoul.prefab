@@ -161,7 +161,7 @@ GameObject:
   - component: {fileID: 1658226874891779684}
   - component: {fileID: 1475857534643335443}
   - component: {fileID: 7555885232923380352}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Ghoul
   m_TagString: Enemy
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -452,7 +452,8 @@ MonoBehaviour:
   - {fileID: 5636672702776102753}
   - {fileID: 3572672846923580637}
   - {fileID: 2347786561253685382}
-  attackShape: {fileID: 3966185595765758217}
+  attackShape:
+  - {fileID: 3966185595765758217}
 --- !u!114 &1475857534643335443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +656,7 @@ GameObject:
   - component: {fileID: 8348728573299636798}
   - component: {fileID: 8133531461313625766}
   - component: {fileID: 5636672702776102753}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: MeleeTrigger
   m_TagString: EnemyTrigger
   m_Icon: {fileID: 0}

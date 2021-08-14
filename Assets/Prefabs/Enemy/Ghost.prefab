@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 3862837216523663963}
   - component: {fileID: 2878273316551557089}
   - component: {fileID: 3553241456418134247}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Ghost
   m_TagString: Ghost
   m_Icon: {fileID: 0}
@@ -364,7 +364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 1ec366535a971084aa460b4bdb55e1c4, type: 2}
   enemyTriggers: []
-  attackShape: {fileID: 8729383197663511616}
+  attackShape:
+  - {fileID: 8729383197663511616}
 --- !u!114 &2878273316551557089
 MonoBehaviour:
   m_ObjectHideFlags: 0

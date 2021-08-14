@@ -589,6 +589,12 @@ SpriteAtlas:
   - {fileID: -6153207270797854783, guid: 84d43ca68b15d3e4da9dd1c551236412, type: 3}
   - {fileID: -5763174271915824713, guid: 84d43ca68b15d3e4da9dd1c551236412, type: 3}
   - {fileID: -3879039204974361331, guid: 84d43ca68b15d3e4da9dd1c551236412, type: 3}
+  - {fileID: 3565315890001036689, guid: 58d33f089ec840340a21b71c51a4eca0, type: 3}
+  - {fileID: -3838497224932617442, guid: 58d33f089ec840340a21b71c51a4eca0, type: 3}
+  - {fileID: -3674686714390046254, guid: 58d33f089ec840340a21b71c51a4eca0, type: 3}
+  - {fileID: -5571595826456760733, guid: 58d33f089ec840340a21b71c51a4eca0, type: 3}
+  - {fileID: -2653830925174578812, guid: 58d33f089ec840340a21b71c51a4eca0, type: 3}
+  - {fileID: -7417407845227737598, guid: 58d33f089ec840340a21b71c51a4eca0, type: 3}
   - {fileID: 6230939399127136488, guid: d3f623ba1a1f2cf478d29be05df09ae6, type: 3}
   - {fileID: -3810043936597590950, guid: d3f623ba1a1f2cf478d29be05df09ae6, type: 3}
   - {fileID: -2862460587899255017, guid: d3f623ba1a1f2cf478d29be05df09ae6, type: 3}
@@ -2461,6 +2467,12 @@ SpriteAtlas:
   - Chen's Home_11
   - Chen's Home_18
   - Chen's Home_19
+  - B5_Roof_0
+  - B5_Roof_1
+  - B5_Roof_2
+  - B5_Roof_3
+  - B5_Roof_4
+  - B5_Roof_5
   - B5Dorm_2_19
   - B5Dorm_2_18
   - B5Dorm_2_11

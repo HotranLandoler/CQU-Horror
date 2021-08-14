@@ -27,9 +27,9 @@ TagManager:
   - MapUI
   - EnemyAttack
   - PlayerDetect
-  - 
-  - 
-  - 
+  - MeleeOnly
+  - MeleeAttack
+  - EnemyProjectile
   - 
   - 
   - 

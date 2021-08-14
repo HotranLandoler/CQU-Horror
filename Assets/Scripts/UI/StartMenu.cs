@@ -51,7 +51,7 @@ public class StartMenu : MonoBehaviour
 
     [Header("Options")]
     [SerializeField]
-    private GameObject optionsPanel;
+    private UIPanel optionsPanel;
 
     [SerializeField]
     private Toggle cnToggle;
@@ -91,7 +91,12 @@ public class StartMenu : MonoBehaviour
     private void Start()
     {
         Init();
-        EventSystem.current.SetSelectedGameObject(startButton.gameObject);
+        ModeSelectPanel.Closed += () =>
+        {
+            if (window is ModeSelect)
+                window = null;
+        };
+        //EventSystem.current.SetSelectedGameObject(startButton.gameObject);
     }
 
     private void Init()
@@ -118,6 +123,7 @@ public class StartMenu : MonoBehaviour
 
     private void StartGame(Game.Difficulty difficulty)
     {
+        AudioManager.Instance.PlayStartGameSound();
         Game.difficulty = difficulty;
         StartCoroutine(LoadScene(1));
     }
@@ -126,7 +132,7 @@ public class StartMenu : MonoBehaviour
     {
         if (optionUI)
         {
-            TogglePanel(optionsPanel, false);
+            optionsPanel.Hide();
             optionUI = false;
         }
         if (loadUI)
@@ -152,13 +158,13 @@ public class StartMenu : MonoBehaviour
         }
         if (optionUI)
         {
-            TogglePanel(optionsPanel, false);
+            optionsPanel.Hide();
             optionUI = false;
         }
         else
         {
             optionUI = true;
-            TogglePanel(optionsPanel, true);
+            optionsPanel.Show();
         }
         
         //cam3.Priority = 15;
@@ -173,19 +179,19 @@ public class StartMenu : MonoBehaviour
 #endif
     }
 
-    private void TogglePanel(GameObject panel, bool active)
-    {
-        if (active)
-        {
-            panel.GetComponent<Animator>().Play("Bag_Open");
-            panel.GetComponent<CanvasGroup>().blocksRaycasts = true;
-        }
-        else
-        {
-            panel.GetComponent<Animator>().Play("Bag_Close");
-            panel.GetComponent<CanvasGroup>().blocksRaycasts = false;
-        }
-    }
+    //private void TogglePanel(GameObject panel, bool active)
+    //{
+    //    if (active)
+    //    {
+    //        panel.GetComponent<Animator>().Play("Bag_Open");
+    //        panel.GetComponent<CanvasGroup>().blocksRaycasts = true;
+    //    }
+    //    else
+    //    {
+    //        panel.GetComponent<Animator>().Play("Bag_Close");
+    //        panel.GetComponent<CanvasGroup>().blocksRaycasts = false;
+    //    }
+    //}
 
 
 

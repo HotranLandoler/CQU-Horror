@@ -19,6 +19,16 @@ public class ConfirmDialog : UIPanel
     private void Start()
     {
         confirmButton.onClick.AddListener(() => Confirmed?.Invoke());
-        cancelButton.onClick.AddListener(() => Canceled?.Invoke());
+        cancelButton.onClick.AddListener(() =>
+        {
+            UIManager.Instance.CloseWindows();
+            Canceled?.Invoke();
+        });
+    }
+
+    public override void Open()
+    {
+        base.Open();
+        UIManager.Instance.AddWindow(this);
     }
 }

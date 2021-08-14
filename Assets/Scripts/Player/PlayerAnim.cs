@@ -72,6 +72,16 @@ public class PlayerAnim : MonoBehaviour
     //    UpdateDir();
     //}
 
+    public void SetFootstepSound1(AudioClip sound)
+    {
+        footStepSounds[0] = sound;
+    }
+
+    public void SetFootstepSound2(AudioClip sound)
+    {
+        footStepSounds[1] = sound;
+    }
+
     public void PlayFootstepSound1(int dir)
     {
         //if (idx >= footStepSounds.Length)

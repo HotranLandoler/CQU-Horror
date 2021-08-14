@@ -44,8 +44,10 @@ public class Scene1Director : MonoBehaviour
             aim = new Vector2(Random.Range(-1, 1), Random.Range(0, dir.y));
         else
             aim = new Vector2(Random.Range(0, dir.x), Random.Range(-1, 1));
-
         Gun.transform.right = aim;
+        if (aim.x < 0)
+            Gun.FlipSprite(true);
+        else Gun.FlipSprite(false);
         yield return new WaitForSeconds(0.2f);
         Gun.Attack();
         yield return new WaitForSeconds(1f);
@@ -66,6 +68,9 @@ public class Scene1Director : MonoBehaviour
         Gun.Show(true);
         var aim = (FireTarget.transform.position - Gun.transform.position).normalized;
         Gun.transform.right = aim;
+        if (aim.x < 0)
+            Gun.FlipSprite(true);
+        else Gun.FlipSprite(false);
         yield return new WaitForSeconds(0.2f);
         Gun.Attack();
         yield return new WaitForSeconds(1f);

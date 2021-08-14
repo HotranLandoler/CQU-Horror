@@ -32,7 +32,12 @@ public class EnemyData : ScriptableObject
     /// </summary>
     public float diagSpeedMod = 0.7f;
 
-    
+    /// <summary>
+    /// Ãÿ ‚––∂ØCD
+    /// </summary>
+    public float[] SpecialCd = new float[] { 5, 12 };
+
+
 
     [Header("Sounds")]
     /// <summary>

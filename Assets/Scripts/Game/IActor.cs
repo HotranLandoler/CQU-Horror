@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public interface IActor
 {
+    Animator animator { get; }
+
     bool IsMoving { get; }
 
     Vector2 Dir { get; }

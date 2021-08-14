@@ -391,7 +391,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnCgStarted()
     {
+        if (bag)
+        {
+            UIManager.Instance.ToggleBag(!bag);
+            bag = false;
+        }
         player.StopMove();
+        player.StopAction?.Invoke();
         player.Equip?.Show(false);
         CurGameMode = GameMode.Timeline;
     }

@@ -31,6 +31,12 @@ public class AudioManager : Singleton<AudioManager>
     [SerializeField]
     private AudioClip learnSkillFailed;
 
+    [SerializeField]
+    private AudioClip startGame;
+
+    [SerializeField]
+    private AudioClip saveGame;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -95,4 +101,10 @@ public class AudioManager : Singleton<AudioManager>
     {
         _as.PlayOneShot(learnSkillFailed);
     }
+
+    public void PlayStartGameSound()
+        => _as.PlayOneShot(startGame);
+
+    public void PlaySaveGameSound()
+        => _as.PlayOneShot(saveGame);
 }

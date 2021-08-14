@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
         if (player.move.x != 0 && player.move.y != 0)
             trueSpeed *= speedMod;
 
+        trueSpeed *= player.SpeedModEffect;
         //½øÐÐÒÆ¶¯
         rgbody.velocity = player.move * trueSpeed;
     }

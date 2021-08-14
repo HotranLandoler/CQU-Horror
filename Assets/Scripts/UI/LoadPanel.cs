@@ -46,6 +46,7 @@ public class LoadPanel : UIPanel
 
     private void LoadSlot(int slotId)
     {
+        AudioManager.Instance.PlayStartGameSound();
         SaveData data = saveDatas[slotId];
         //blackScreen.FadeOut();
         //loadingIcon.gameObject.SetActive(true);

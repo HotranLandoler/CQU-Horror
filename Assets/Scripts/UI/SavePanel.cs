@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SavePanel : UIPanel
 {
@@ -16,15 +17,19 @@ public class SavePanel : UIPanel
     [SerializeField]
     private SaveSlot[] saveSlots;
 
+    [SerializeField]
+    private Button exitButton;
+
     private void Start()
     {
         confirm.Confirmed += ConfirmSave;
-        confirm.Canceled += CancelSave;
+        //confirm.Canceled += CancelSave;
         UpdateSlots();
         for (int j = 0; j < saveSlots.Length; j++)
         {
             saveSlots[j].Clicked += SaveSlot;
         }
+        exitButton.onClick.AddListener(() => UIManager.Instance.CloseWindows());
     }
 
     private void UpdateSlots()
@@ -55,7 +60,7 @@ public class SavePanel : UIPanel
     {
         GameManager.Instance.CurGameMode = GameMode.Timeline;
         this.sceneName = sceneName;
-        Show();
+        Open();
     }
 
     private async void SaveSlot(int slotId)
@@ -65,32 +70,46 @@ public class SavePanel : UIPanel
         //Ã· æ∏≤∏«
         if (saveDatas[slotId+1] != null)
         {   
-            confirm.Show();
+            confirm.Open();
             return;
         }
         
         await SaveManager.SaveAsync(sceneName, false, savingSlot+1);
+        AudioManager.Instance.PlaySaveGameSound();
         UpdateSlot(savingSlot);
-        EndSave();
+        Close();
         //UpdateSlots();
     }
 
     private async void ConfirmSave()
     {
-        confirm.Hide();
+        confirm.Close();
         await SaveManager.SaveAsync(sceneName, false, savingSlot+1);
+        AudioManager.Instance.PlaySaveGameSound();
         UpdateSlot(savingSlot);
-        EndSave();
+        Close();
     }
 
-    private void CancelSave()
-    {
-        confirm.Hide();
-    }
+    //private void CancelSave()
+    //{
+    //    confirm.Hide();
+    //}
 
     private void EndSave()
     {
         GameManager.Instance.CurGameMode = GameMode.Gameplay;
-        Hide();
+        //Close();
+    }
+
+    public override void Open()
+    {
+        base.Open();
+        UIManager.Instance.AddWindow(this);
+    }
+
+    public override void Close()
+    {
+        EndSave();
+        base.Close();
     }
 }

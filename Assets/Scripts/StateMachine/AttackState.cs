@@ -24,6 +24,7 @@ public class AttackState : State
     public override void OnExit()
     {
         enemy.animator.SetBool("Attack", false);
+        enemy.HideAttackBox();
     }
 
     public override void OnUpdate()
