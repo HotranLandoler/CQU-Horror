@@ -17,6 +17,11 @@ public static class Game
     public static readonly int MaxSan = 100;
 
     /// <summary>
+    /// 重伤对应Hp百分比
+    /// </summary>
+    public static readonly float SevereHpPercent = 0.4f;
+
+    /// <summary>
     /// 游戏难度
     /// </summary>
     public enum Difficulty

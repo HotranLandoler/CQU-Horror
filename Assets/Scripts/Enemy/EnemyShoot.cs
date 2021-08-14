@@ -33,6 +33,7 @@ public class EnemyShoot : MonoBehaviour
             var chance = Random.Range(0, bulletPrefab.Length);
             prefab = bulletPrefab[chance];
         }
+        enemy.PlaySpecialSound(0);
         Instantiate(prefab, transform.position, Quaternion.identity)
             .GetComponent<Projectile>().Shoot(target);
     }

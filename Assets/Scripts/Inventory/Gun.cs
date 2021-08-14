@@ -115,7 +115,7 @@ public class Gun : WeaponObject
         bullet.transform.position = gunHole.transform.position;
         bullet.transform.rotation = Quaternion.Euler(transform.eulerAngles);
         bullet.transform.eulerAngles += angleMod;
-        bullet.GetComponent<Bullet>().SetSpeed();
+        bullet.GetComponent<Bullet>().SetSpeed(data.Damage);
     }
 
     private IEnumerator ShowGunLight()

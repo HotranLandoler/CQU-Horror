@@ -58,7 +58,7 @@ public class Trap : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             var player = collision.GetComponent<Player>();
-            player.SpeedModEffect += speedMod;
+            player.SpeedModEffect = 1+speedMod;
             if (damage > 0)
                 player.TakeDamage((int)damage);
         }
@@ -68,7 +68,8 @@ public class Trap : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player>().SpeedModEffect -= speedMod;
+            //TODO »®“À÷Æº∆
+            collision.GetComponent<Player>().SpeedModEffect = 1f;
         }
     }
 }

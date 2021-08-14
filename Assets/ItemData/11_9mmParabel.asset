@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 11
   itemSprite: {fileID: 2029542551908640097, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
-  Name: "9mm\u5E15\u62C9\u8D1D\u9C81\u59C6\u5F39"
-  Desc: "MP5\u51B2\u950B\u67AA\u4F7F\u7528\u7684\u5B50\u5F39\u3002"
+  Name: "9mm\u51B2\u950B\u67AA\u5F39"
+  Desc: "MP5\u51B2\u950B\u67AA\u4F7F\u7528\u76849mm\u5E15\u62C9\u8D1D\u9C81\u59C6\u5F39\u3002"
   itemType: 2
   val: 0
+  pickSound: {fileID: 8300000, guid: e53180d64b16f2e48b950bc908c780d3, type: 3}
+  useSound: {fileID: 0}

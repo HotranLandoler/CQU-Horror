@@ -77,16 +77,20 @@ public class SavePanel : UIPanel
         await SaveManager.SaveAsync(sceneName, false, savingSlot+1);
         AudioManager.Instance.PlaySaveGameSound();
         UpdateSlot(savingSlot);
+        //TODO »®“À÷Æº∆
+        UIManager.Instance.CloseWindows();
         Close();
         //UpdateSlots();
     }
 
     private async void ConfirmSave()
     {
+        UIManager.Instance.CloseWindows();
         confirm.Close();
         await SaveManager.SaveAsync(sceneName, false, savingSlot+1);
         AudioManager.Instance.PlaySaveGameSound();
         UpdateSlot(savingSlot);
+        UIManager.Instance.CloseWindows();
         Close();
     }
 

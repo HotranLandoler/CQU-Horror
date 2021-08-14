@@ -27,6 +27,7 @@ public class Director : MonoBehaviour
 
     public void GotoScene(int sceneID)
     {
+        if (sceneID == 0) Destroy(GameManager.Instance.gameObject);
         SceneManager.LoadScene(0);
     }
 

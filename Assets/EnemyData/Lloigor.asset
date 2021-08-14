@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2125efe671c70e429e4922cad8a2091, type: 3}
   m_Name: Lloigor
   m_EditorClassIdentifier: 
-  hp: 8
-  damage: 010000000f000000
+  hp: 10
+  damage: 0f0000000f000000
   attackRangeSqr:
   - 1.5
   - 2
@@ -23,6 +23,10 @@ MonoBehaviour:
   - 4
   gold: 3
   diagSpeedMod: 0.7
-  StepSound: {fileID: 8300000, guid: d29cc47247ad6d14a9f0a386e5fedbf9, type: 3}
-  AttackSound: {fileID: 8300000, guid: fd29cbe52f7a74540a8f369e3ca19bf6, type: 3}
-  DieSound: {fileID: 0}
+  SpecialCd:
+  - 5
+  - 12
+  AttackInterval: 2.5
+  StepSound: {fileID: 8300000, guid: 0901454d9cc3a37488bf92915f6d97e7, type: 3}
+  AttackSound: {fileID: 8300000, guid: d4edc26990f382743a50a9d07637603d, type: 3}
+  DieSound: {fileID: 8300000, guid: ef897f65936cf9a489d7688a2909b643, type: 3}

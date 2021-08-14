@@ -28,7 +28,9 @@ public class Item : ScriptableObject
     //public Sprite ItemSprite;
     public ItemType itemType;
 
-    public int val;
+    public float val;
+
+    public bool IsFood;
 
     public AudioClip pickSound;
 

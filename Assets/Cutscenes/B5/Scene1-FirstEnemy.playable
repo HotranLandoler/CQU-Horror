@@ -167,7 +167,7 @@ MonoBehaviour:
     m_Start: 3.3833333333333333
     m_ClipIn: 0
     m_Asset: {fileID: -108482317543339896}
-    m_Duration: 0.44999999999999996
+    m_Duration: 0.44999999999999973
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4754899977818405520}
     m_EaseInDuration: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
   template:
-    phrase: "\u7A0B\uFF1A\u770B\u6765\u4E0D\u53EA\u662F\u5916\u9762\uFF0C\u8FD9\u4E5F\u4E0D\u662F\u4EC0\u4E48\u597D\u5730\u65B9\u2026\u2026"
+    phrase: "\u7A0B\uFF1A\u770B\u6765\u8FD9\u4E5F\u4E0D\u662F\u4EC0\u4E48\u597D\u5730\u65B9\u3002\u63A2\u7D22\u4E00\u4E0B\uFF0C\u7136\u540E\u8D76\u7D27\u79BB\u5F00\u5427\u3002"
     IsSystemTip: 0
     hasToPause: 1
 --- !u!114 &11400000
@@ -534,7 +534,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -561,7 +579,25 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4

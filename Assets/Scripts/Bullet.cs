@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     private int releaseTime = 3;
     private float timer = 3;
 
-    public int damage = 1;
+    public float damage = 1;
 
     private void Awake()
     {
@@ -24,8 +24,9 @@ public class Bullet : MonoBehaviour
     //    SetSpeed();
     //}
 
-    public void SetSpeed()
+    public void SetSpeed(float damage = 1f)
     {
+        this.damage = damage;
         rb.velocity = transform.right * speed;
         timer = releaseTime;
     }

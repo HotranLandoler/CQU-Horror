@@ -147,6 +147,7 @@ public class Enemy : MonoBehaviour, IActor
 
     public void StopFollow(bool stop)
     {
+        if (!Nav.enabled) return;
         if (stop)
         {
             Nav.velocity = Vector2.zero;
@@ -174,6 +175,7 @@ public class Enemy : MonoBehaviour, IActor
         if (flag.flag) flag.flag.Set();
         StopFollow(true);
         IsDead = true;
+        Nav.enabled = false;
         foreach (var shape in attackShape)
             shape.gameObject.SetActive(false);
         //IMPORTANT ÊÖ¶¯´¥·¢µÐÈËÀë¿ª£¬Í£Ö¹¼õSan
@@ -182,6 +184,7 @@ public class Enemy : MonoBehaviour, IActor
         {
             trigger.gameObject.SetActive(false);
         }
+        ad.Stop();
         //µôÂä½±Àø
         if (data.Gold > 0) Loot();
         if (data.DieSound)
@@ -218,6 +221,12 @@ public class Enemy : MonoBehaviour, IActor
     public void PlayAttackSound()
     {
         if (data.AttackSound) ad.PlayOneShot(data.AttackSound); //AudioManager.Instance.PlaySound(attackSound);
+    }
+
+    public void PlaySpecialSound(int idx)
+    {
+        if (data.SpecialSounds.Length > 0) 
+            ad.PlayOneShot(data.SpecialSounds[idx]);
     }
 
     public void PlayFootStepSound()

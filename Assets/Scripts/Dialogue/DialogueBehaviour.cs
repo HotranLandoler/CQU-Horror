@@ -19,7 +19,7 @@ public class DialogueBehaviour : PlayableBehaviour
     public bool hasToPause = true;
 
     private bool clipPlayed = false;
-    private bool pauseScheduled = false;
+    //private bool pauseScheduled = false;
     
     private PlayableDirector _director;
 

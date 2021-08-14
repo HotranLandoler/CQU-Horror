@@ -17,6 +17,7 @@ MonoBehaviour:
   Name: "\u6025\u6551\u5305"
   Desc: "\u53EF\u5728\u7D27\u6025\u60C5\u51B5\u4E0B\u6CBB\u7597\u4E25\u91CD\u7684\u4F24\u52BF\uFF0C\u56DE\u590D\u5168\u90E8\u751F\u547D\u503C\u3002"
   itemType: 0
-  val: 200
+  val: 1
+  IsFood: 0
   pickSound: {fileID: 0}
-  useSound: {fileID: 0}
+  useSound: {fileID: 8300000, guid: c12cddc2908196d4fa1d5146eb59d47e, type: 3}

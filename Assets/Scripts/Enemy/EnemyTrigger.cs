@@ -31,15 +31,20 @@ public class EnemyTrigger : MonoBehaviour
         //if (enemy.IsDead) return;
         if (!isMeleeOnly && collision.CompareTag("Bullet"))
         {
-            DamageTaken?.Invoke(collision.GetComponent<Bullet>().damage * damageMod);
+            var damage = collision.GetComponent<Bullet>().damage 
+                * damageMod * GameManager.Instance.playerSkills.CriticDamageMod;
+            DamageTaken?.Invoke(damage);
             //enemy.Hp -= collision.GetComponent<Bullet>().damage * damageMod;
             Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
             //enemy.Target = GameManager.Instance.player;
         }
         else if (isMeleeOnly && collision.CompareTag("PlayerAttack"))
         {
-            DamageTaken?.Invoke(collision.GetComponent<AttackShape>().damage);
+            var damage = collision.GetComponent<AttackShape>().damage * GameManager.Instance.playerSkills
+                .MeleeDamageMod;
+            DamageTaken?.Invoke(damage);
             Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
+            GameManager.Instance.ChangeSanity(GameManager.Instance.playerSkills.MeleeAtkAddSanity);
             //if (enemy.Hp < 0)
             //    Destroy(enemy.gameObject);
         }

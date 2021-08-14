@@ -96,7 +96,7 @@ public class Box503 : InteractObjects
             }
             return true;
         }
-        GameManager.Instance.StartDialogue(Game.gameStrings.BagFull);
+        GameManager.Instance.StartDialogue(bagFullDialog);
         return false;
     }
 

@@ -259,7 +259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: -216.58002}
+  m_AnchoredPosition: {x: -669, y: -75.93002}
   m_SizeDelta: {x: 698.59, y: 217.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &85844063
@@ -362,7 +362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: 0.70999}
+  m_AnchoredPosition: {x: -669, y: 141.36}
   m_SizeDelta: {x: 698.59, y: 217.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &126362804
@@ -713,7 +713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: -141.36}
+  m_AnchoredPosition: {x: -669, y: 0.71001}
   m_SizeDelta: {x: 698.59, y: 217.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &322089973
@@ -1728,7 +1728,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: 217.99997}
+  m_AnchoredPosition: {x: -669, y: -260}
   m_SizeDelta: {x: 698.59, y: 217.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &569630517
@@ -4651,7 +4651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669, y: 108.65}
+  m_AnchoredPosition: {x: -669, y: 260}
   m_SizeDelta: {x: 698.59, y: 217.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1366560352
@@ -5996,8 +5996,8 @@ MonoBehaviour:
   IsAiming: 0
   IsRunning: 0
   IsDead: 0
-  reloadTime: 1
   reloadTimer: 0
+  Light: {fileID: 0}
   Equip: {fileID: 0}
 --- !u!82 &1820490633
 AudioSource:

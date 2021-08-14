@@ -25,7 +25,8 @@ public class KeyBind : MonoBehaviour
     {
         bindAnim.gameObject.SetActive(false);
         button = GetComponent<Button>();
-        button.onClick.AddListener(StartRebinding);
+        //TODO 实现绑定键位
+        //button.onClick.AddListener(StartRebinding);
         if (keyRef == null) return;
         SetBindText();
     }

@@ -178,6 +178,7 @@ MonoBehaviour:
   tipAnimator: {fileID: 195341637732872037}
   targetPos: {fileID: 0}
   direction: {x: 0, y: -1}
+  moveSound: {fileID: 8300000, guid: 2365f5918dcc15b4fbe25f7194b13e28, type: 3}
 --- !u!1 &8311381305694759559
 GameObject:
   m_ObjectHideFlags: 0

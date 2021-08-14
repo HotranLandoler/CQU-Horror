@@ -12,7 +12,7 @@ public class LootGold : PickableItem
 
     public void Initialize(int goldNum)
     {
-        Debug.Log("Gold Init");
+        //Debug.Log("Gold Init");
         numInModes = new int[3] { goldNum, goldNum, goldNum };
         flag.GenerateFlag();
         goldLight.Fade(lightIntensity);

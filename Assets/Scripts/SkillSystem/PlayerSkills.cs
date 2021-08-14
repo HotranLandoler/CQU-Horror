@@ -57,6 +57,7 @@ public class PlayerSkills
     /// </summary>
     public int RunSanityDrop { get; private set; } = 0;
 
+    public readonly float RunSanityDropInterval = 1f;
     //private GameManager gm = GameManager.Instance;
 
     public PlayerSkills()

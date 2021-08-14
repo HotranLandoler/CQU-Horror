@@ -209,6 +209,7 @@ public class Inventory
 			BoxItems[item] += num;
 		else
 			BoxItems.Add(item, num);
+		AudioManager.Instance.PlayStoreItemSound();
 		UIManager.Instance.UpdateItemBox();
 		RemoveItem(item, num);
 		UIManager.Instance.UpdateInventory();

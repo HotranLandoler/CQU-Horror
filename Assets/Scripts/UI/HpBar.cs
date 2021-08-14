@@ -9,7 +9,7 @@ public class HpBar : UIBar
     protected override void Awake()
     {
         base.Awake();
-        Debug.Log(GameManager.Instance == null);
+        //Debug.Log(GameManager.Instance == null);
         GameManager.Instance.HpChanged += UpdateValue;
     }
 

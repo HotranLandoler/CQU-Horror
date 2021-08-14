@@ -53,6 +53,7 @@ MonoBehaviour:
   tip: {fileID: 0}
   dialogArrow: {fileID: 0}
   redScreen: {fileID: 0}
+  bloodScreen: {fileID: 0}
   blackScreen: {fileID: 0}
   bagUI: {fileID: 0}
   itemBoxUI: {fileID: 0}
@@ -204,6 +205,7 @@ MonoBehaviour:
   pickItem:
   - {fileID: 8300000, guid: 9f695f3a98a6b90428faca4274fc2999, type: 3}
   - {fileID: 8300000, guid: 5f659c20b6c8ffd4aa36d86a5e678e30, type: 3}
+  storeItem: {fileID: 8300000, guid: 32399a67ed570ef47948d99641dbb4d4, type: 3}
   equip: {fileID: 8300000, guid: 06a3edd121d8afd45a5d98552006090a, type: 3}
   heartBeat: {fileID: 8300000, guid: b7b384c714b2aff4a9fb275695629ef0, type: 3}
   bulletShell: {fileID: 8300000, guid: fbd16fd12cb77e74ea0364487d90ea17, type: 3}

@@ -67,7 +67,15 @@ public class Player : MonoBehaviour
 
     public GameObject Light;
 
+    /// <summary>
+    /// 受到的临时加减速效果
+    /// </summary>
     public float SpeedModEffect { get; set; } = 1f;
+
+    ///// <summary>
+    ///// 跑步速度的临时修正
+    ///// </summary>
+    //public float RunSpeedModEffect { get; set; } = 1f;
 
     /// <summary>
     /// 更新面向，Invoked by controller

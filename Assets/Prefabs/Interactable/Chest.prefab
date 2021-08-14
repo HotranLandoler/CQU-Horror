@@ -384,7 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemGet: {fileID: 11400000, guid: c7ae2c53c81933147aa1c1bbc7b79b02, type: 2}
   numInModes: 010000000100000001000000
-  openSound: {fileID: 8300000, guid: 10679ffe7c5f2ee478bc27111a200e63, type: 3}
+  openSound: {fileID: 8300000, guid: 86160022cab3d824cb671199899ddddc, type: 3}
   tipAnim: {fileID: 990441330326103143}
   pointAnim: {fileID: 990441329465252254}
 --- !u!114 &7873477997500111884

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChaseState : State
 {
-    private readonly float AttackInterval = 1f;
+    //private readonly float AttackInterval = 1f;
 
     private float AttackTimer = 0;
 
@@ -31,6 +31,13 @@ public class ChaseState : State
     {
         if (AttackTimer > 0)
             AttackTimer -= Time.deltaTime;
+        if (GameManager.Instance.CurGameMode == GameMode.Timeline)
+        {
+            //TODO ·ÀÖ¹ÉÏÂ¥»¹×·
+            fsm.TransitState(StateType.Idle);
+            enemy.Target = null;
+            return;
+        }
         if (enemy.Target == null || enemy.IsDead || enemy.Target.IsDead)
         {
             fsm.TransitState(StateType.Idle);
@@ -41,7 +48,7 @@ public class ChaseState : State
         {
             if (AttackTimer <= 0)
             {
-                AttackTimer = AttackInterval;
+                AttackTimer = enemy.data.AttackInterval;
                 fsm.TransitState(StateType.Attack);
                 return;
             }

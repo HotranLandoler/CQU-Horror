@@ -28,6 +28,9 @@ public class UIManager : Singleton<UIManager>
     private Image redScreen;
 
     [SerializeField]
+    private Image bloodScreen;
+
+    [SerializeField]
     private BlackScreen blackScreen;
 
     [Header("HUD")]
@@ -59,7 +62,7 @@ public class UIManager : Singleton<UIManager>
     private Image GameOver;
 
     [SerializeField]
-    private Lean.Localization.LeanLocalizedText GameOverText;
+    private Text GameOverText;
 
     [SerializeField]
     private float redFlashTime = 0.2f;
@@ -127,7 +130,7 @@ public class UIManager : Singleton<UIManager>
     public void Initialize()
     {
         SetAimCursor();
-        Debug.Log("UI Init.");
+        //Debug.Log("UI Init.");
         ToggleEquipment(false);
         if (bagUI != null)
         {
@@ -299,9 +302,9 @@ public class UIManager : Singleton<UIManager>
     {
         GameOver.gameObject.SetActive(true);
         if (stat == 0)
-            GameOverText.TranslationName = "NoHp";
+            GameOverText.text = Game.gameStrings.NoHp;
         else
-            GameOverText.TranslationName = "NoSan";
+            GameOverText.text = Game.gameStrings.NoSan;
     }
 
     public void ToggleSaving(bool active)
@@ -333,6 +336,15 @@ public class UIManager : Singleton<UIManager>
             return false;
         windows.Pop().Close();
         return true;
+    }
+
+    public void ToggleBloodScreen(bool active)
+    {
+        if (!active)
+        {
+            if (bloodScreen == null) return;
+        }
+        bloodScreen.gameObject.SetActive(active);
     }
 
     private IEnumerator DoShowSavedTip()

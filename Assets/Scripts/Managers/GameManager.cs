@@ -77,6 +77,10 @@ public class GameManager : MonoBehaviour
 
     private float sanTime => 1 * playerSkills.SanityDropIntervalMod;
 
+    private float specialTimer = 0;
+
+    private float SpecialTime => playerSkills.RunSanityDropInterval;
+
     public Item[] startItems;
 
     private string[] dialogs;
@@ -110,6 +114,9 @@ public class GameManager : MonoBehaviour
                 GameOver(0);
             }
             hp = value;
+            if (value <= MaxHp * Game.SevereHpPercent)
+                UIManager.Instance.ToggleBloodScreen(true);
+            else UIManager.Instance.ToggleBloodScreen(false);
             //HP改变时UI血条改变
             //Debug.Log(value);
             HpChanged?.Invoke(value);
@@ -190,7 +197,19 @@ public class GameManager : MonoBehaviour
             Sanity -= 1;
             sanTimer = sanTime;
         }
-        //#简单自动回血
+        
+        if (player.IsRunning)
+        {
+            if (specialTimer > 0)
+            {
+                specialTimer -= Time.deltaTime;               
+            }
+            else
+            {
+                Sanity -= playerSkills.RunSanityDrop;
+                specialTimer = SpecialTime;
+            }
+        }
     }
 
     //每个场景开始
@@ -200,7 +219,7 @@ public class GameManager : MonoBehaviour
         //{
         //    Debug.Log(item.Key.Name);
         //}
-        Debug.Log("Scene Loaded");
+        //Debug.Log("Scene Loaded");
         enemyDetected = false;
         _player = null;
         if (player != null)
@@ -466,13 +485,19 @@ public class GameManager : MonoBehaviour
         {
             case ItemType.AddHp:
                 {
-                    Hp += item.val;
+                    var add = item.val * MaxHp;
+                    if (Hp <= Game.SevereHpPercent * MaxHp) add *= playerSkills.LowHpHealMod;
+                    if (item.IsFood) add *= playerSkills.SnackEffectMod;
+                    Hp += (int)(add);
                     inventory.RemoveItem(item);
                 }
                 break;
             case ItemType.AddSan:
                 {
-                    Sanity += item.val;
+                    var add = item.val * MaxHp;
+                    add *= playerSkills.SanityRecoverMod;
+                    if (item.IsFood) add *= playerSkills.SnackEffectMod;
+                    Sanity += (int)add;
                     inventory.RemoveItem(item);
                 }
                 break;
@@ -566,9 +591,9 @@ public class GameManager : MonoBehaviour
         weaponObj.Setup(weapon);
         player.Equip = weaponObj;
         EquippedWeaponData = weapon;
-        Debug.Log("Equip Init.");
+        //Debug.Log("Equip Init.");
         UIManager.Instance.ToggleEquipment(true, weapon.itemSprite, weaponObj.GetVal());
-        Debug.Log(weaponObj.data.Name);
+        //Debug.Log(weaponObj.data.Name);
     }
 
     public void SpecialItem(int id)

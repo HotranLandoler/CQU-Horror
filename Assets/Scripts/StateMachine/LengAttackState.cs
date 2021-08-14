@@ -23,6 +23,7 @@ public class LengAttackState : State
                 //Ãÿ ‚––∂Ø
                 enemy.ResetTimer(0);
                 enemy.PrepareHeavyAttack();
+                enemy.PlaySpecialSound(1);
                 enemy.animator.SetBool("Special", true);
                 return;
             }

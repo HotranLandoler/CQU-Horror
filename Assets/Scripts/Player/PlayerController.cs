@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     //private float angle;
 
     [SerializeField]
-    private int speed = 6;
+    private int speed;
 
     private readonly float runSpeedMod = 1.5f;
 
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (player.IsRunning)
-            trueSpeed = speed * runSpeedMod;
+            trueSpeed = speed * runSpeedMod * GameManager.Instance.playerSkills.RunSpeedMod;
         else
             trueSpeed = speed;
         if (player.move.x != 0 && player.move.y != 0)

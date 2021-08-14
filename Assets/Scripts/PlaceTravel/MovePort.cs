@@ -10,8 +10,12 @@ public class MovePort : InteractObjects
     [SerializeField]
     private Vector2 direction = Vector2.down;
 
+    [SerializeField]
+    private AudioClip moveSound;
+
     public override void Interact()
     {
+        AudioManager.Instance.PlaySound(moveSound);
         GameManager.Instance.MovePlayer(targetPos.position, direction);       
     }
 

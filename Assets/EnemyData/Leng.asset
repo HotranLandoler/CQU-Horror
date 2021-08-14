@@ -26,6 +26,10 @@ MonoBehaviour:
   SpecialCd:
   - 5
   - 12
+  AttackInterval: 1
   StepSound: {fileID: 0}
-  AttackSound: {fileID: 0}
-  DieSound: {fileID: 0}
+  AttackSound: {fileID: 8300000, guid: e2671433f3cfdc947b00413744754651, type: 3}
+  SpecialSounds:
+  - {fileID: 8300000, guid: 3219e6f3bc6bc69489acb42fcbfc8ced, type: 3}
+  - {fileID: 8300000, guid: d47aebda2df473341aa676bc122b0ab2, type: 3}
+  DieSound: {fileID: 8300000, guid: 839290f27bc6d1b4c8f74abca14359af, type: 3}

@@ -12,8 +12,11 @@ public class EnemyDetect : MonoBehaviour
         enemy = GetComponentInParent<Enemy>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        if (GameManager.Instance.CurGameMode != GameMode.Gameplay)
+            return;
+        if (enemy.Target != null) return;
         if (collision.CompareTag("Player"))
         {
             enemy.Target = collision.GetComponent<Player>();

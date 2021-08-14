@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_CursorBlinkOnLineEnd: 1
   m_InstantDisplaySpace: 1
   m_InstantDisplayTab: 1
-  m_DelayBetweenLetters: 0.05
+  m_DelayBetweenLetters: 0.04
   m_InterLettersCount: 1
   m_UseSpecificCharacters: 0
   m_FollowSpecificCharactersOrder: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

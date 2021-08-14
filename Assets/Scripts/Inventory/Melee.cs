@@ -25,7 +25,8 @@ public class Melee : WeaponObject
     {
         if (timer <= 0)
         {
-            AudioManager.Instance.PlaySound(data.Sound);
+            _audioSource.PlayOneShot(data.Sound);
+            //AudioManager.Instance.PlaySound(data.Sound);
             _animator.SetTrigger("Attack");
             timer = data.ShootInterval;
         } 

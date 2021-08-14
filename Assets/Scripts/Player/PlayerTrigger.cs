@@ -5,16 +5,16 @@ using UnityEngine;
 public class PlayerTrigger : MonoBehaviour
 {
     private Player player;
-    private CapsuleCollider2D trigger;
+    //private CapsuleCollider2D trigger;
     //ÎÞµÐ×´Ì¬
-    private bool isProtect = false;
+    //private bool isProtect = false;
     private float timer = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponentInParent<Player>();
-        trigger = GetComponent<CapsuleCollider2D>();
+        //trigger = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class PlayerTrigger : MonoBehaviour
         if (timer <= 0 && GameManager.Instance.CurGameMode == GameMode.Gameplay 
             && collision.CompareTag("EnemyAttack"))
         {
-            isProtect = true;
+            //isProtect = true;
             timer = 1;
             player.TakeDamage(collision.GetComponent<EnemyAttack>().Damage);
             //GameManager.Instance.ChangeHp(-1 * collision.GetComponent<EnemyAttack>().damage);
@@ -54,9 +54,9 @@ public class PlayerTrigger : MonoBehaviour
         player.TakeDamage(damage);
     }
 
-    private IEnumerator DamageProtect()
-    {    
-        yield return new WaitForSeconds(0.4f);
-        isProtect = false;
-    }
+    //private IEnumerator DamageProtect()
+    //{    
+    //    yield return new WaitForSeconds(0.4f);
+    //    isProtect = false;
+    //}
 }

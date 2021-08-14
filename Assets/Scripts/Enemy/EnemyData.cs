@@ -37,7 +37,10 @@ public class EnemyData : ScriptableObject
     /// </summary>
     public float[] SpecialCd = new float[] { 5, 12 };
 
-
+    /// <summary>
+    /// ÆÕÍ¨¹¥»÷¼ä¸ô
+    /// </summary>
+    public float AttackInterval = 1f;
 
     [Header("Sounds")]
     /// <summary>
@@ -49,6 +52,11 @@ public class EnemyData : ScriptableObject
     /// ¹¥»÷ÉùÒô
     /// </summary>
     public AudioClip AttackSound;
+
+    /// <summary>
+    /// ÌØÊâĞĞ¶¯ÉùÒô
+    /// </summary>
+    public AudioClip[] SpecialSounds;
 
     /// <summary>
     /// ËÀÍöÉùÒô

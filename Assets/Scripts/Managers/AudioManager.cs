@@ -13,6 +13,9 @@ public class AudioManager : Singleton<AudioManager>
     private AudioClip[] pickItem;
 
     [SerializeField]
+    private AudioClip storeItem;
+
+    [SerializeField]
     private AudioClip equip;
 
     [SerializeField]
@@ -85,6 +88,11 @@ public class AudioManager : Singleton<AudioManager>
                 _as.PlayOneShot(pickItem[1]);
         }
         else _as.PlayOneShot(pickItem[0]);
+    }
+
+    public void PlayStoreItemSound()
+    {
+        _as.PlayOneShot(storeItem);
     }
 
     public void PlayEquipSound()

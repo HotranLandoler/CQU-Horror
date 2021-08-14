@@ -18,3 +18,5 @@ MonoBehaviour:
   Desc: "\u4E00\u90E8\u4EE5\u6570\u5B66\u5BB6\u4E3A\u4E3B\u89D2\u7684\u60AC\u7591\u5C0F\u8BF4\u3002"
   itemType: 4
   val: 0
+  pickSound: {fileID: 8300000, guid: 9c0717a139f44ef4fae40e16b1a9cf9e, type: 3}
+  useSound: {fileID: 0}

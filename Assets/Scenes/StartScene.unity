@@ -710,6 +710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bagSound: {fileID: 0}
   pickItem: []
+  storeItem: {fileID: 0}
   equip: {fileID: 0}
   heartBeat: {fileID: 0}
   bulletShell: {fileID: 0}
@@ -991,7 +992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F00\u59CB\u6E38\u620F"
+  m_Text: "\u65B0\u6E38\u620F"
 --- !u!222 &238422246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3584,7 +3585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581460399224670208, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Text
-      value: "\u63A7\u5236"
+      value: "\u4E0B\u79FB"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
@@ -3971,7 +3972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581460399224670208, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Text
-      value: "\u63A7\u5236"
+      value: "\u5DE6\u79FB"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
@@ -6392,7 +6393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581460399224670208, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Text
-      value: "\u63A7\u5236"
+      value: "\u53F3\u79FB"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
@@ -6936,7 +6937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5581460399224670208, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Text
-      value: "\u63A7\u5236"
+      value: "\u4E0A\u79FB"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}

@@ -18,6 +18,8 @@ MonoBehaviour:
   Desc: "\u804A\u80DC\u4E8E\u65E0\u7684\u9632\u8EAB\u6B66\u5668\u3002"
   itemType: 3
   val: 0
+  pickSound: {fileID: 8300000, guid: 0c85396df167af041b670d911f92dcfa, type: 3}
+  useSound: {fileID: 0}
   weaponType: 1
   BulletId: 0
   MaxAmmo: 0
