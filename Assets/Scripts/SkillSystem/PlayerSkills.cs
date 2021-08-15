@@ -38,9 +38,9 @@ public class PlayerSkills
     public float SanityRecoverMod { get; private set; } = 1f;
 
     /// <summary>
-    /// 生命值低于50%时获得治疗量修正
+    /// 生命值低于40%时减伤
     /// </summary>
-    public float LowHpHealMod { get; private set; } = 1f;
+    public float LowHpDamageMod { get; private set; } = 1f;
 
     /// <summary>
     /// 吃零食效果修正
@@ -149,9 +149,9 @@ public class PlayerSkills
                     SanityRecoverMod += 0.2f;
                     break;
                 }
-            case 6: //急救
+            case 6: //坚韧
                 {
-                    LowHpHealMod += 0.5f;
+                    LowHpDamageMod -= 0.15f;
                     break;
                 }
             case 7: //美食家
@@ -208,9 +208,9 @@ public class PlayerSkills
                     SanityRecoverMod -= 0.2f;
                     break;
                 }
-            case 6: //急救
+            case 6: //坚韧
                 {
-                    LowHpHealMod -= 0.5f;
+                    LowHpDamageMod += 0.15f;
                     break;
                 }
             case 7: //美食家

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23ce28d41f654ce4d9725c4b8df02195, type: 3}
-  m_Name: 6_FirstAid
+  m_Name: 6_Tough
   m_EditorClassIdentifier: 
   SkillID: 6
   SkillSprite: {fileID: -1388515766092869844, guid: abfdcb3e171db2f4fa3fcec8ebc4111f, type: 3}
-  SkillName: "\u6025\u6551"
-  SkillDesc: "\u751F\u547D\u503C\u4F4E\u4E8E40%\u65F6\uFF0C\u83B7\u5F97\u7684\u6CBB\u7597\u91CF\u589E\u52A0<color=#72c292>50%</color>"
+  SkillName: "\u575A\u97E7"
+  SkillDesc: "\u751F\u547D\u503C\u4F4E\u4E8E40%\u65F6\uFF0C\u53D7\u5230\u7684\u4F24\u5BB3\u964D\u4F4E<color=#72c292>15%</color>"
   Cost: 10
   preSkills:
   - {fileID: 11400000, guid: f5e72797a7b908449a66c53aa06955dd, type: 2}

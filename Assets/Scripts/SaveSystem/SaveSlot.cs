@@ -40,7 +40,7 @@ public class SaveSlot : MonoBehaviour
         //this.saveData = saveData;
         if (saveData == null)
         {
-            sceneNameText.text = string.Empty;
+            sceneNameText.text = Game.gameStrings.EmptySave;
             DateTimeText.text = string.Empty;
             ModeText.text = string.Empty;
             return;

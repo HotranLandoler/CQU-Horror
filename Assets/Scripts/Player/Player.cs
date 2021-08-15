@@ -158,7 +158,7 @@ public class Player : MonoBehaviour
     {
         if (!nearbyEnemies.Contains(enemy))
         {
-            Debug.Log($"Detected enemy {enemy.name}");
+            //Debug.Log($"Detected enemy {enemy.name}");
             if (nearbyEnemies.Count == 0)
                 GameManager.Instance.OnEnemyDetected(true);
             nearbyEnemies.Add(enemy);
@@ -169,7 +169,7 @@ public class Player : MonoBehaviour
     {
         if (nearbyEnemies.Contains(enemy))
         {
-            Debug.Log($"enemy {enemy.name} left");
+            //Debug.Log($"enemy {enemy.name} left");
             nearbyEnemies.Remove(enemy);
             if (nearbyEnemies.Count == 0)
                 GameManager.Instance.OnEnemyDetected(false);

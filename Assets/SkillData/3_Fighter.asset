@@ -15,7 +15,7 @@ MonoBehaviour:
   SkillID: 3
   SkillSprite: {fileID: 8685077388864575728, guid: abfdcb3e171db2f4fa3fcec8ebc4111f, type: 3}
   SkillName: "\u640F\u51FB\u8005"
-  SkillDesc: "\u8FD1\u6218\u653B\u51FB\u9020\u6210\u7684\u4F24\u5BB3\u589E\u52A0<color=#72c292>40%</color>"
+  SkillDesc: "\u8FD1\u6218\u653B\u51FB\u4F24\u5BB3\u589E\u52A0<color=#72c292>40%</color>"
   Cost: 10
   preSkills:
   - {fileID: 11400000, guid: 2983010f54ac4c24cbd5427f7b0ea682, type: 2}

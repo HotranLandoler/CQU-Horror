@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: -6712684000001025906
     second: Skills_8
+  - first:
+      213: 1430504741990559472
+    second: Skills_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -314,6 +317,27 @@ TextureImporter:
       bones: []
       spriteID: e889d72a771c7d2a0800000000000000
       internalID: -6712684000001025906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skills_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feebd3db7c2ad310800000000000000
+      internalID: 1430504741990559472
       vertices: []
       indices: 
       edges: []

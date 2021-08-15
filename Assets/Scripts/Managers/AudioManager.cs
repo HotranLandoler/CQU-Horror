@@ -44,6 +44,9 @@ public class AudioManager : Singleton<AudioManager>
     private AudioClip startGame;
 
     [SerializeField]
+    private AudioClip saveUI;
+
+    [SerializeField]
     private AudioClip saveGame;
 
     // Start is called before the first frame update
@@ -118,6 +121,9 @@ public class AudioManager : Singleton<AudioManager>
 
     public void PlayStartGameSound()
         => _as.PlayOneShot(startGame);
+
+    public void PlaySaveUISound()
+        => _as.PlayOneShot(saveUI);
 
     public void PlaySaveGameSound()
         => _as.PlayOneShot(saveGame);

@@ -128,13 +128,13 @@ public class SkillLearn : UIPanel
         if (data.Cost > playerGold)
         {
             //金钱不足
-            Debug.Log("No enough cash!");
+            //Debug.Log("No enough cash!");
             OnLearnFailed();
             return;
         }
         //学习技能
         ui.Unlock();
-        Debug.Log($"学会了 {data.SkillName}!");
+        //Debug.Log($"学会了 {data.SkillName}!");
         if (data.Cost > 0)
         {
             GameManager.Instance.inventory.RemoveGold(data.Cost);

@@ -215,6 +215,7 @@ MonoBehaviour:
   learnSkillFailed: {fileID: 8300000, guid: 967a8398415c9894993561b76b419f08, type: 3}
   closeItemBox: {fileID: 8300000, guid: a591bd79d9576d546a35679ee9bf1677, type: 3}
   startGame: {fileID: 8300000, guid: 9a9172a169dd3514894b460252df9984, type: 3}
+  saveUI: {fileID: 8300000, guid: 09043563694e0604c8fd0dfc576373ed, type: 3}
   saveGame: {fileID: 8300000, guid: 058dc073aa20f734dbf61e490a9281cd, type: 3}
 --- !u!114 &1161287333
 MonoBehaviour:

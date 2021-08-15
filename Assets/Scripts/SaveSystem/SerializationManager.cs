@@ -25,7 +25,7 @@ public class SerializationManager<T>
     /// 从目录下所有文件中读取数据
     /// </summary>
     /// <param name="exclude">排除的文件名</param>
-    /// <returns></returns>
+    /// <returns>Data数组，空元素为null</returns>
     public static T[] LoadAll(int excludeName = -1)
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SaveFolder);

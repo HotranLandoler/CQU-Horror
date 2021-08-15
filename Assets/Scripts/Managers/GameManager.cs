@@ -114,9 +114,7 @@ public class GameManager : MonoBehaviour
                 GameOver(0);
             }
             hp = value;
-            if (value <= MaxHp * Game.SevereHpPercent)
-                UIManager.Instance.ToggleBloodScreen(true);
-            else UIManager.Instance.ToggleBloodScreen(false);
+            
             //HP改变时UI血条改变
             //Debug.Log(value);
             HpChanged?.Invoke(value);
@@ -165,6 +163,12 @@ public class GameManager : MonoBehaviour
             InitFromData(SaveManager.currentSave);
             SaveManager.currentSave = null;
             SceneManager.sceneLoaded += OnSceneLoaded;
+            HpChanged += (value) =>
+            {
+                if (value <= MaxHp * Game.SevereHpPercent)
+                    UIManager.Instance.ToggleBloodScreen(true);
+                else UIManager.Instance.ToggleBloodScreen(false);
+            };
         }
         else if (_instance != this)
         {
@@ -307,7 +311,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangeHp(int change)
     {
-        Hp += change;
+        if (change < 0)
+        {
+            //扣血
+            if (Hp <= Game.SevereHpPercent * MaxHp) change = (int)(change * playerSkills.LowHpDamageMod);
+        }
+        Hp += change;    
     }
 
     public void ChangeSanity(int change)
@@ -410,6 +419,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnCgStarted()
     {
+        CurGameMode = GameMode.Timeline;
         if (bag)
         {
             UIManager.Instance.ToggleBag(!bag);
@@ -418,7 +428,6 @@ public class GameManager : MonoBehaviour
         player.StopMove();
         player.StopAction?.Invoke();
         player.Equip?.Show(false);
-        CurGameMode = GameMode.Timeline;
     }
 
     public void OnCgFinished()
@@ -486,7 +495,7 @@ public class GameManager : MonoBehaviour
             case ItemType.AddHp:
                 {
                     var add = item.val * MaxHp;
-                    if (Hp <= Game.SevereHpPercent * MaxHp) add *= playerSkills.LowHpHealMod;
+                    //if (Hp <= Game.SevereHpPercent * MaxHp) add *= playerSkills.LowHpHealMod;
                     if (item.IsFood) add *= playerSkills.SnackEffectMod;
                     Hp += (int)(add);
                     inventory.RemoveItem(item);

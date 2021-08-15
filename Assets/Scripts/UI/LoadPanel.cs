@@ -35,13 +35,24 @@ public class LoadPanel : UIPanel
             for (; i < saveDatas.Length; i++)
             {
                 saveSlots[i].SetUI(saveDatas[i]);
-                saveSlots[i].Clicked += LoadSlot;
+                if (saveDatas[i] == null)
+                    saveSlots[i].Lock();
+                else
+                    saveSlots[i].Clicked += LoadSlot;
             }
         }
-        for (; i < saveSlots.Length; i++)
+        else
         {
-            saveSlots[i].Lock();
+            foreach (var slot in saveSlots)
+            {
+                slot.Lock();
+            }
         }
+        //Debug.Log(i);
+        //for (; i < saveSlots.Length; i++)
+        //{
+        //    saveSlots[i].Lock();
+        //}
     }
 
     private void LoadSlot(int slotId)

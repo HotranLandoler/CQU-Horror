@@ -13,6 +13,8 @@ public class GameString
         "噩梦之旅",
     };
 
+    public readonly string EmptySave = "空位";
+
     public readonly string NoHp = "程佑受伤过重。";
 
     public readonly string NoSan = "程佑失去了理智，永久陷入了癫狂。";

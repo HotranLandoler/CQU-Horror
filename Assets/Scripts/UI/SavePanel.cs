@@ -60,6 +60,7 @@ public class SavePanel : UIPanel
     {
         GameManager.Instance.CurGameMode = GameMode.Timeline;
         this.sceneName = sceneName;
+        AudioManager.Instance.PlaySaveUISound();
         Open();
     }
 

@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -720,6 +720,7 @@ MonoBehaviour:
   learnSkillFailed: {fileID: 0}
   closeItemBox: {fileID: 0}
   startGame: {fileID: 8300000, guid: 9a9172a169dd3514894b460252df9984, type: 3}
+  saveUI: {fileID: 0}
   saveGame: {fileID: 8300000, guid: 058dc073aa20f734dbf61e490a9281cd, type: 3}
 --- !u!4 &92610321
 Transform:
@@ -786,7 +787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -975,7 +976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1054,7 +1055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1389,7 +1390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1468,7 +1469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3497,6 +3498,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672979263}
     m_Modifications:
+    - target: {fileID: 2625114668902045585, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
+      propertyPath: m_Text
+      value: S
+      objectReference: {fileID: 0}
     - target: {fileID: 3597833966548236721, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3884,6 +3889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672979263}
     m_Modifications:
+    - target: {fileID: 2625114668902045585, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
+      propertyPath: m_Text
+      value: A
+      objectReference: {fileID: 0}
     - target: {fileID: 3597833966548236721, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4201,7 +4210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5323,7 +5332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5668,7 +5677,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 1162185201}
   m_PlaneDistance: 100
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -5831,7 +5840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6040,7 +6049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6270,7 +6279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6305,6 +6314,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672979263}
     m_Modifications:
+    - target: {fileID: 2625114668902045585, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
+      propertyPath: m_Text
+      value: 'D
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 3597833966548236721, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6845,10 +6860,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672979263}
     m_Modifications:
+    - target: {fileID: 2625114668902045585, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
+      propertyPath: m_Text
+      value: W
+      objectReference: {fileID: 0}
     - target: {fileID: 3241537175668206742, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: keyRef
       value: 
-      objectReference: {fileID: -5781893233222443798, guid: 96205a58c4220d042aef6a686fda12ec, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3597833966548236721, guid: 5ce5360f085a3e042828b2dd02daab71, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
