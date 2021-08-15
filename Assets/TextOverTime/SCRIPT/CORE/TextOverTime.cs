@@ -268,6 +268,8 @@
 					while (m_TargetText[m_CurrentIndex] == (char)10 || m_TargetText[m_CurrentIndex] == (char)13)
 					{
 						m_CurrentTextToDisplay += m_TargetText[m_CurrentIndex++];
+						//MOD 修复Index out of boundary
+						if (m_CurrentIndex >= m_TargetText.Length) break;
 					}
 				}
 				if(m_TargetText.Length >= m_CurrentIndex + 1)

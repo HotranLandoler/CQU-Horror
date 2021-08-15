@@ -570,8 +570,8 @@ MonoBehaviour:
   _stoppingDistance: 1
   _autoBraking: 1
   _radius: 0.5
-  _quality: 4
-  _priority: 50
+  _quality: 0
+  _priority: 60
   _autoRepath: 1
 --- !u!114 &3530052650048889224
 MonoBehaviour:

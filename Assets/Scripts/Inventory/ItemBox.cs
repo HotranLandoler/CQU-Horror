@@ -43,6 +43,7 @@ public class ItemBox : InventoryPanel
     public override void Close()
     {
         base.Close();
+        AudioManager.Instance.PlayCloseBoxSound();
         //GameManager.Instance.SwitchGameMode(GameMode.Gameplay);
         GameManager.Instance.ToggleItemBox(false);
         Closed?.Invoke();

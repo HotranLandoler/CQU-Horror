@@ -18,5 +18,8 @@ MonoBehaviour:
   Desc: "\u6807\u7B7E\u5199\u7740\u201C4\u697C\u201D\u3002"
   itemType: 4
   val: 0
+  IsFood: 0
   pickSound: {fileID: 8300000, guid: d4e9cd87bd1e49e45b3777ed6b15f6a6, type: 3}
   useSound: {fileID: 0}
+  Usages:
+  - {fileID: 11400000, guid: 47343fe65da065d438ed3880101c80c9, type: 2}

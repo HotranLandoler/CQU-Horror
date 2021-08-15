@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class BloodEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private ParticleSystem ps;
+
+    private float timer = 0f;
+    public void Play()
     {
-        Destroy(gameObject, 1);
+        if (!ps)
+            ps = GetComponent<ParticleSystem>();
+        ps.Play();
+        timer = ps.main.duration;    
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+                PoolManager.Instance.bloodPool.Release(this);
+        }
     }
 }

@@ -73,10 +73,7 @@ public class StartMenu : MonoBehaviour
         optionsButton.onClick.AddListener(Options);
         exitButton.onClick.AddListener(Quit);        
         audioSource = GetComponent<AudioSource>();
-    }
 
-    private void OnEnable()
-    {
         controls.GamePlay.Menu.started += ctx =>
         {
             if (window != null)
@@ -85,7 +82,16 @@ public class StartMenu : MonoBehaviour
                 window = null;
             }
         };
+    }
+
+    private void OnEnable()
+    {      
         controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
     }
 
     private void Start()

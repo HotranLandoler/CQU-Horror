@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] WeaponPrefabs;
 
-    public GameObject bloodPrefab;
+    //public GameObject bloodPrefab;
 
     public GameObject goldPrefab;
 
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     //private bool isBagEnabled = false;
 
-    private bool enemyDetected = false;
+    public bool EnemyDetected { get; private set; } = false;
 
     private float sanTimer = 0;
 
@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
         //有敌人时持续减少San值
         if (sanTimer > 0)
             sanTimer -= Time.deltaTime;
-        if (sanTimer <= 0 && enemyDetected)
+        if (sanTimer <= 0 && EnemyDetected)
         {
             Sanity -= 1;
             sanTimer = sanTime;
@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
         //    Debug.Log(item.Key.Name);
         //}
         //Debug.Log("Scene Loaded");
-        enemyDetected = false;
+        EnemyDetected = false;
         _player = null;
         if (player != null)
             player.DamageTaken += () => UIManager.Instance.FlashRed();
@@ -619,7 +619,7 @@ public class GameManager : MonoBehaviour
         //    return;
         if (detect)
         {
-            if (!enemyDetected)
+            if (!EnemyDetected)
             {
                 //播放心跳声
                 AudioManager.Instance.PlayHeartBeat(true);
@@ -627,7 +627,7 @@ public class GameManager : MonoBehaviour
         }
         else
             AudioManager.Instance.PlayHeartBeat(false);
-        enemyDetected = detect;
+        EnemyDetected = detect;
         
         //StartCoroutine(effectAudioSource.FadeOut(1));
 

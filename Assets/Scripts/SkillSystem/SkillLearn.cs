@@ -63,6 +63,7 @@ public class SkillLearn : UIPanel
     public override void Open()
     {
         base.Open();
+        AudioManager.Instance.PlayOpenShopSound();
         GameManager.Instance.SwitchGameMode(GameMode.Timeline);
         UIManager.Instance.AddWindow(this);
         UpdatePlayerGold();

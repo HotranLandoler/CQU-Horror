@@ -99,7 +99,7 @@ public class Enemy : MonoBehaviour, IActor
     protected virtual void Start()
     {
         Hp = data.MaxHp;
-        Nav.speed = data.SlowSpeed;
+        if (Nav) Nav.speed = data.SlowSpeed;
         foreach (var trigger in enemyTriggers)
         {
             trigger.DamageTaken += TakeDamage;

@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2125efe671c70e429e4922cad8a2091, type: 3}
   m_Name: Leng
   m_EditorClassIdentifier: 
-  hp: 30
+  hp: 40
   damage: 0a00000014000000
   attackRangeSqr:
   - 9
   - 81
   moveSpeed:
-  - 3
-  - 3
-  - 3
+  - 4
+  - 4
+  - 4
   gold: 10
   diagSpeedMod: 0.7
   SpecialCd:

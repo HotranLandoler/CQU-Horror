@@ -5,6 +5,22 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    private HashSet<Enemy> nearbyEnemies = new HashSet<Enemy>();
+    //public HashSet<Enemy> NearbyEnemies
+    //{
+    //    get => nearbyEnemies;
+    //    set
+    //    {
+    //        //if (nearbyEnemies.Count == 0)
+    //        //    GameManager.Instance.OnEnemyDetected(true);
+    //        nearbyEnemies = value;
+    //        Debug.Log("set");
+    //        if (nearbyEnemies.Count == 0)
+    //            GameManager.Instance.OnEnemyDetected(false);
+    //        else GameManager.Instance.OnEnemyDetected(true);
+    //    }
+    //}
+
     public PlayerState state = PlayerState.Walk;
 
     /// <summary>
@@ -136,6 +152,28 @@ public class Player : MonoBehaviour
                 StopReload(true);
             }       
         }      
+    }
+
+    public void DetectEnemy(Enemy enemy)
+    {
+        if (!nearbyEnemies.Contains(enemy))
+        {
+            Debug.Log($"Detected enemy {enemy.name}");
+            if (nearbyEnemies.Count == 0)
+                GameManager.Instance.OnEnemyDetected(true);
+            nearbyEnemies.Add(enemy);
+        }
+    }
+
+    public void EnemyLeft(Enemy enemy)
+    {
+        if (nearbyEnemies.Contains(enemy))
+        {
+            Debug.Log($"enemy {enemy.name} left");
+            nearbyEnemies.Remove(enemy);
+            if (nearbyEnemies.Count == 0)
+                GameManager.Instance.OnEnemyDetected(false);
+        }
     }
 
     public void Reload()

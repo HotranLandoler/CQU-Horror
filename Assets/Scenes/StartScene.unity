@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 78584120}
   - component: {fileID: 78584119}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Version
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: v0.2.0 Alpha
+  m_Text: v0.2.0 Alpha2
 --- !u!222 &78584120
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -715,8 +715,10 @@ MonoBehaviour:
   heartBeat: {fileID: 0}
   bulletShell: {fileID: 0}
   gunNoAmmo: {fileID: 0}
+  skillShop: {fileID: 0}
   skillUnlocked: {fileID: 0}
   learnSkillFailed: {fileID: 0}
+  closeItemBox: {fileID: 0}
   startGame: {fileID: 8300000, guid: 9a9172a169dd3514894b460252df9984, type: 3}
   saveGame: {fileID: 8300000, guid: 058dc073aa20f734dbf61e490a9281cd, type: 3}
 --- !u!4 &92610321

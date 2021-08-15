@@ -14,13 +14,13 @@ public class InputManager : MonoBehaviour
     private void Awake()
     {
 		Controls = new GameControls();
-    }
-
-    private void OnEnable()
-	{
 		Controls.GamePlay.Accept.started += OnAcceptPressed;
 		Controls.GamePlay.Bag.started += Bag;
 		Controls.GamePlay.Menu.started += Menu;
+	}
+
+    private void OnEnable()
+	{		
 		Controls.Enable();
 	}
 

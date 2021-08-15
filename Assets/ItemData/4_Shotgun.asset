@@ -18,10 +18,14 @@ MonoBehaviour:
   Desc: "\u4E2D\u56FD\u5317\u65B9\u5DE5\u4E1A\u751F\u4EA7\u7684\u77ED\u7BA1\u6CF5\u52A8\u5F0F\u9730\u5F39\u67AA\uFF0C\u53D1\u5C0412\u53F7\u53E3\u5F84\u9730\u5F39\u3002"
   itemType: 3
   val: 0
+  IsFood: 0
+  pickSound: {fileID: 0}
+  useSound: {fileID: 0}
+  Usages: []
   weaponType: 0
   BulletId: 5
   MaxAmmo: 5
   ShootInterval: 1
   Damage: 1
-  BulletsPerShot: 5
+  BulletsPerShot: 4
   Sound: {fileID: 8300000, guid: 713155db3f55b354ea114b866a3864e8, type: 3}

@@ -29,10 +29,16 @@ public class AudioManager : Singleton<AudioManager>
 
     [Header("UI")]
     [SerializeField]
+    private AudioClip skillShop;
+
+    [SerializeField]
     private AudioClip skillUnlocked;
 
     [SerializeField]
     private AudioClip learnSkillFailed;
+
+    [SerializeField]
+    private AudioClip closeItemBox;
 
     [SerializeField]
     private AudioClip startGame;
@@ -115,4 +121,10 @@ public class AudioManager : Singleton<AudioManager>
 
     public void PlaySaveGameSound()
         => _as.PlayOneShot(saveGame);
+
+    public void PlayOpenShopSound()
+        => _as.PlayOneShot(skillShop);
+
+    public void PlayCloseBoxSound()
+        => _as.PlayOneShot(closeItemBox);
 }

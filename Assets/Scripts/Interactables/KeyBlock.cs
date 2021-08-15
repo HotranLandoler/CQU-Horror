@@ -32,6 +32,12 @@ public class KeyBlock : InteractObjects
 	[SerializeField]
 	private AudioClip nokeySound;
 
+	[SerializeField]
+	private GameFlag specialFlag;
+
+	[SerializeField]
+	private string[] specialDialog;
+
 	public UnityEvent Unlocked;
 
 	private SpriteRenderer spRenderer;
@@ -62,9 +68,20 @@ public class KeyBlock : InteractObjects
 			blockAnim.SetTrigger("Unlock");
 			Unlocked?.Invoke();
 			GameManager.Instance.StartDialogue(keyDialog);
-			//TODO 灭火器不消耗
-			if (key.Id != 26)
-				GameManager.Instance.inventory.RemoveItem(key);
+			//钥匙已经没用了？
+			bool doneUsed = true;
+			foreach (var usage in key.Usages)
+            {
+				if (!usage.Has())
+				{
+					doneUsed = false;
+					break;
+				}
+            }
+			if (doneUsed) GameManager.Instance.inventory.RemoveItem(key);
+			////TODO 灭火器不消耗
+			//if (key.Id != 26)
+			//	GameManager.Instance.inventory.RemoveItem(key);
 			blockCollider.enabled = false;	
 			Destroy(tipAnimator.gameObject);
 			spRenderer.enabled = false;
@@ -75,7 +92,15 @@ public class KeyBlock : InteractObjects
 		else
 		{
 			GameManager.Instance.StartDialogue(nokeyDialog);
+			if (specialFlag && !specialFlag.Has()) 
+				GameManager.Instance.DialogueEnded += StartSpecialDialog;
 			if (nokeySound) AudioManager.Instance.PlaySound(nokeySound);
 		}
+	}
+
+	private void StartSpecialDialog()
+    {
+		GameManager.Instance.DialogueEnded -= StartSpecialDialog;
+		GameManager.Instance.StartDialogue(specialDialog);
 	}
 }

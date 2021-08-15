@@ -36,7 +36,7 @@ public class Inventory
 		{
 			if (data.itemNums[i] > 0)
 				ItemNums.Add(GetItemData(i), data.itemNums[i]);
-			if (data.gunAmmos[i] > 0)
+			if (data.gunAmmos[i] > -1) //注意包含弹仓为空的武器
 				GunAmmos.Add(GetItemData(i) as Weapon, data.gunAmmos[i]);
 			if (data.boxItems[i] > 0)
 				BoxItems.Add(GetItemData(i), data.boxItems[i]);
@@ -241,6 +241,10 @@ public class Inventory
 		where T : Item
     {
 		int[] itemNums = new int[GameManager.Instance.ItemData.Length];
+        for (int i = 0; i < itemNums.Length; i++)
+        {
+			itemNums[i] = -1;
+        }
 		foreach (var pair in data)
 		{
 			itemNums[pair.Key.Id] = pair.Value;

@@ -210,8 +210,10 @@ MonoBehaviour:
   heartBeat: {fileID: 8300000, guid: b7b384c714b2aff4a9fb275695629ef0, type: 3}
   bulletShell: {fileID: 8300000, guid: fbd16fd12cb77e74ea0364487d90ea17, type: 3}
   gunNoAmmo: {fileID: 8300000, guid: 38d6f430c3a990a43a450ae8355b2e52, type: 3}
+  skillShop: {fileID: 8300000, guid: 7a8f4f1a556a78649a745ead01d4ea6c, type: 3}
   skillUnlocked: {fileID: 8300000, guid: 91201bb487dd8c94a93e79f624d867a3, type: 3}
   learnSkillFailed: {fileID: 8300000, guid: 967a8398415c9894993561b76b419f08, type: 3}
+  closeItemBox: {fileID: 8300000, guid: a591bd79d9576d546a35679ee9bf1677, type: 3}
   startGame: {fileID: 8300000, guid: 9a9172a169dd3514894b460252df9984, type: 3}
   saveGame: {fileID: 8300000, guid: 058dc073aa20f734dbf61e490a9281cd, type: 3}
 --- !u!114 &1161287333
@@ -228,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4516451666580223234, guid: 9363fe67b201157409aa05e6d9942a8f, type: 3}
   bulletShellPrefab: {fileID: 5940172961918102216, guid: 9e151fe6fb6cc6a46b831d9fd821fedd, type: 3}
+  bloodPrefab: {fileID: 5510233262304678125, guid: a484b4ce4710c034d8ad17fd058bdec1, type: 3}
 --- !u!114 &1655246001288854429
 MonoBehaviour:
   m_ObjectHideFlags: 0

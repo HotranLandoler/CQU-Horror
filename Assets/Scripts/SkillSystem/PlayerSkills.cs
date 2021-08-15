@@ -161,7 +161,7 @@ public class PlayerSkills
                 }
             case 8: //ПёдъжЂ
                 {
-                    RunSpeedMod += 0.3f;
+                    RunSpeedMod += 0.2f;
                     RunSanityDrop += 1;
                     break;
                 }
@@ -220,7 +220,7 @@ public class PlayerSkills
                 }
             case 8: //ПёдъжЂ
                 {
-                    RunSpeedMod -= 0.3f;
+                    RunSpeedMod -= 0.2f;
                     RunSanityDrop -= 1;
                     break;
                 }

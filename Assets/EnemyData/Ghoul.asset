@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2125efe671c70e429e4922cad8a2091, type: 3}
   m_Name: Ghoul
   m_EditorClassIdentifier: 
-  hp: 4
+  hp: 6
   damage: 0a00000014000000
   attackRangeSqr:
   - 1.5
@@ -23,6 +23,11 @@ MonoBehaviour:
   - 7
   gold: 1
   diagSpeedMod: 0.7
+  SpecialCd:
+  - 5
+  - 12
+  AttackInterval: 1
   StepSound: {fileID: 8300000, guid: 1afda04bda9be9e41a3b99fe75b94bed, type: 3}
   AttackSound: {fileID: 8300000, guid: a777e2c93333d9e41a2a6449d67891e9, type: 3}
+  SpecialSounds: []
   DieSound: {fileID: 8300000, guid: 1bd9c0b5cd393514e9a633e7af2ff6fe, type: 3}

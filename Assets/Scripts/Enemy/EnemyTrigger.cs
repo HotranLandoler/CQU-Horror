@@ -35,7 +35,11 @@ public class EnemyTrigger : MonoBehaviour
                 * damageMod * GameManager.Instance.playerSkills.CriticDamageMod;
             DamageTaken?.Invoke(damage);
             //enemy.Hp -= collision.GetComponent<Bullet>().damage * damageMod;
-            Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
+            //Instantiate(GameManager.Instance.bloodPrefab, transform);
+            BloodEffect bloodEffect = PoolManager.Instance.bloodPool.Get();
+            bloodEffect.transform.position = transform.position;
+            bloodEffect.Play();
+            //Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
             //enemy.Target = GameManager.Instance.player;
         }
         else if (isMeleeOnly && collision.CompareTag("PlayerAttack"))
@@ -43,7 +47,11 @@ public class EnemyTrigger : MonoBehaviour
             var damage = collision.GetComponent<AttackShape>().damage * GameManager.Instance.playerSkills
                 .MeleeDamageMod;
             DamageTaken?.Invoke(damage);
-            Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
+            //Instantiate(GameManager.Instance.bloodPrefab, transform);
+            //Instantiate(GameManager.Instance.bloodPrefab, transform.position, Quaternion.identity);
+            BloodEffect bloodEffect = PoolManager.Instance.bloodPool.Get();
+            bloodEffect.transform.position = transform.position;
+            bloodEffect.Play();
             GameManager.Instance.ChangeSanity(GameManager.Instance.playerSkills.MeleeAtkAddSanity);
             //if (enemy.Hp < 0)
             //    Destroy(enemy.gameObject);

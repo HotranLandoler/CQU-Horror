@@ -18,3 +18,9 @@ MonoBehaviour:
   Desc: "\u7AF9\u4E94\u6D88\u9632\u8BBE\u65BD\u914D\u5907\u7684\u6CE1\u6CAB\u706D\u706B\u5668\u3002"
   itemType: 4
   val: 0
+  IsFood: 0
+  pickSound: {fileID: 0}
+  useSound: {fileID: 0}
+  Usages:
+  - {fileID: 11400000, guid: 0f4be81b10d7e3b49b5b1aa5ec3bf7e4, type: 2}
+  - {fileID: 11400000, guid: 348dcdeff93ba4e44a120328b22c8cf7, type: 2}

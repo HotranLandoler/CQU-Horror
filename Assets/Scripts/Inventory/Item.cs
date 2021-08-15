@@ -35,4 +35,6 @@ public class Item : ScriptableObject
     public AudioClip pickSound;
 
     public AudioClip useSound;
+
+    public GameFlag[] Usages;
 }
