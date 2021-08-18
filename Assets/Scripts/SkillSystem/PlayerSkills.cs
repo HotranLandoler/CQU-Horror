@@ -126,7 +126,7 @@ public class PlayerSkills
                 }
             case 1: //精准打击
                 {
-                    CriticDamageMod += 0.2f;
+                    CriticDamageMod += 0.4f;
                     break;
                 }
             case 2: //战士信条
@@ -185,7 +185,7 @@ public class PlayerSkills
                 }
             case 1: //精准打击
                 {
-                    CriticDamageMod -= 0.2f;
+                    CriticDamageMod -= 0.4f;
                     break;
                 }
             case 2: //战士信条

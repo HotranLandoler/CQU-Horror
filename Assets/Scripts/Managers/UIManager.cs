@@ -38,6 +38,9 @@ public class UIManager : Singleton<UIManager>
     private InventoryPanel bagUI;
 
     [SerializeField]
+    private UIPanel controlTip;
+
+    [SerializeField]
     private ItemBox itemBoxUI;
 
     [SerializeField]
@@ -217,9 +220,28 @@ public class UIManager : Singleton<UIManager>
     public void ToggleBag(bool active)
     {
         if (active)
+        {
             bagUI.Show();
+            //controlTip.Show();
+        }    
         else
+        {
             bagUI.Hide();
+            //controlTip.Hide();
+        }            
+        //bagUI.gameObject.SetActive(active);
+    }
+
+    public void ToggleControlTip(bool active)
+    {
+        if (active)
+        {
+            controlTip.Show();
+        }
+        else
+        {
+            controlTip.Hide();
+        }
         //bagUI.gameObject.SetActive(active);
     }
 

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Lloigor
   m_EditorClassIdentifier: 
   hp: 24
-  damage: 0f0000000f000000
+  damage: 140000000f000000
   attackRangeSqr:
-  - 1.5
+  - 3
   - 2
   moveSpeed:
   - 4
@@ -23,9 +23,7 @@ MonoBehaviour:
   - 4
   gold: 3
   diagSpeedMod: 0.7
-  SpecialCd:
-  - 5
-  - 12
+  SpecialCd: []
   AttackInterval: 2.5
   StepSound: {fileID: 8300000, guid: 0901454d9cc3a37488bf92915f6d97e7, type: 3}
   AttackSound: {fileID: 8300000, guid: 2c0563e967094054b9e9de306b971492, type: 3}

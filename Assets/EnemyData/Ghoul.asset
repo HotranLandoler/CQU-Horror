@@ -15,7 +15,7 @@ MonoBehaviour:
   hp: 6
   damage: 0a00000014000000
   attackRangeSqr:
-  - 1.5
+  - 2
   - 5
   moveSpeed:
   - 4
@@ -23,9 +23,7 @@ MonoBehaviour:
   - 7
   gold: 1
   diagSpeedMod: 0.7
-  SpecialCd:
-  - 5
-  - 12
+  SpecialCd: []
   AttackInterval: 1
   StepSound: {fileID: 8300000, guid: 1afda04bda9be9e41a3b99fe75b94bed, type: 3}
   AttackSound: {fileID: 8300000, guid: a777e2c93333d9e41a2a6449d67891e9, type: 3}

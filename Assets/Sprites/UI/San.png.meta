@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 5121267194115760895
     second: San_2
+  - first:
+      213: 310832340551461229
+    second: San_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -158,6 +161,27 @@ TextureImporter:
       bones: []
       spriteID: ff2a1212165621740800000000000000
       internalID: 5121267194115760895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: San_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69e54bed5c405400800000000000000
+      internalID: 310832340551461229
       vertices: []
       indices: 
       edges: []

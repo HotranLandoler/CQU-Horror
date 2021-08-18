@@ -23,6 +23,9 @@ MonoBehaviour:
   - 3
   gold: 0
   diagSpeedMod: 0.7
+  SpecialCd: []
+  AttackInterval: 1
   StepSound: {fileID: 0}
   AttackSound: {fileID: 0}
+  SpecialSounds: []
   DieSound: {fileID: 0}

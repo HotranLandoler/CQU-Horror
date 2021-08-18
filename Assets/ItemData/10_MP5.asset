@@ -16,8 +16,13 @@ MonoBehaviour:
   itemSprite: {fileID: -3694533877916086887, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "MP5\u51B2\u950B\u67AA"
   Desc: "HK-MP5\u51B2\u950B\u67AA\uFF0C\u4F7F\u75289mm\u5E15\u62C9\u8D1D\u9C81\u59C6\u5F39\u3002"
-  itemType: 3
+  itemType: 2
   val: 0
+  IsFood: 0
+  Effects: []
+  pickSound: {fileID: 0}
+  useSound: {fileID: 0}
+  Usages: []
   weaponType: 0
   BulletId: 11
   MaxAmmo: 30
@@ -25,3 +30,4 @@ MonoBehaviour:
   Damage: 0.5
   BulletsPerShot: 1
   Sound: {fileID: 8300000, guid: 7fc92ac0ff627e048933c4d05a3c9906, type: 3}
+  Prefab: {fileID: 4532516631696598214, guid: 1990aa6dc4f97fe48a98aee9ed08b0b8, type: 3}

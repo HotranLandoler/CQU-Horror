@@ -15,9 +15,13 @@ MonoBehaviour:
   Id: 13
   itemSprite: {fileID: -4261047623482395726, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u53EF\u4E50"
-  Desc: "\u7F8E\u5473\u7684\u53EF\u4E50\uFF0C\u53EF\u4EE5\u6062\u590D\u7406\u667A\u503C\u3002"
-  itemType: 1
-  val: 0.1
+  Desc: "\u7F8E\u5473\u7684\u53EF\u4E50\uFF0C\u53EF\u4EE5\u56DE\u590D\u5C11\u91CF\u7406\u667A\u503C\u3002"
+  itemType: 0
+  val: 0.15
   IsFood: 1
+  Effects:
+  - type: 1
+    value: 0.15
   pickSound: {fileID: 0}
   useSound: {fileID: 8300000, guid: edfba25cc5c1c744ba577dd6b2f802ef, type: 3}
+  Usages: []

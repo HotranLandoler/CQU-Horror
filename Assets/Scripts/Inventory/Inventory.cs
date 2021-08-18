@@ -34,12 +34,17 @@ public class Inventory
 		if (data == null) return;
 		for (int i = 0; i < data.itemNums.Length; i++)
 		{
+			var item = GetItemData(i);
 			if (data.itemNums[i] > 0)
-				ItemNums.Add(GetItemData(i), data.itemNums[i]);
+			{
+				ItemNums.Add(item, data.itemNums[i]);
+				if (item.itemType == ItemType.Weapon)
+					GameManager.Instance.AddWeapon(item as Weapon);
+			}
 			if (data.gunAmmos[i] > -1) //注意包含弹仓为空的武器
-				GunAmmos.Add(GetItemData(i) as Weapon, data.gunAmmos[i]);
+				GunAmmos.Add(item as Weapon, data.gunAmmos[i]);
 			if (data.boxItems[i] > 0)
-				BoxItems.Add(GetItemData(i), data.boxItems[i]);
+				BoxItems.Add(item, data.boxItems[i]);
 		}
 	}
 
@@ -116,6 +121,7 @@ public class Inventory
 		if (item.itemType == ItemType.Weapon)
 		{
 			var weapon = item as Weapon;
+			GameManager.Instance.AddWeapon(weapon);
 			if (weapon.weaponType == WeaponType.Gun)
 			{
 				if (!GunAmmos.ContainsKey(weapon))
@@ -141,6 +147,8 @@ public class Inventory
 		if (ItemNums[item] == 0)
 			//if (item.itemType != ItemType.Weapon)
 			ItemNums.Remove(item);
+		if (item.itemType == ItemType.Weapon)
+			GameManager.Instance.RemoveWeapon(item as Weapon);
 		UIManager.Instance.UpdateInventory();
 	}
 

@@ -5,8 +5,7 @@ using UnityEngine;
 public enum ItemType
 {
     //补给类消耗品
-    AddHp,
-    AddSan,
+    Supply,
     Bullet,
     //非消耗品
     Weapon,
@@ -31,6 +30,8 @@ public class Item : ScriptableObject
     public float val;
 
     public bool IsFood;
+
+    public Effect[] Effects;
 
     public AudioClip pickSound;
 

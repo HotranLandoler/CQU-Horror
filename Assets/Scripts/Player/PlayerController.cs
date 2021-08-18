@@ -99,9 +99,10 @@ public class PlayerController : MonoBehaviour
         //Debug.Log($"InteractNum:{player.interactObjs.Count}");
         if (player.interactObjs.Count == 0)
             return;
-        if (GameManager.Instance.CurGameMode != GameMode.Gameplay || GameManager.Instance.bag
-            || GameManager.Instance.paused)
+        if (GameManager.Instance.CurGameMode != GameMode.Gameplay || GameManager.Instance.paused)
             return;
+        if (GameManager.Instance.bag)
+            GameManager.Instance.ToggleBag(false);
         StopAction();
         var obj = player.interactObjs[player.interactObjs.Count - 1];
         obj.Interact();

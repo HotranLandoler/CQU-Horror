@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     private float sanTimer = 0;
 
-    private float sanTime => 1 * playerSkills.SanityDropIntervalMod;
+    private float sanTime => 0.8f * playerSkills.SanityDropIntervalMod;
 
     private float specialTimer = 0;
 
@@ -87,6 +87,10 @@ public class GameManager : MonoBehaviour
     private int dialogIndex = 0;
 
     public event UnityAction DialogueEnded;
+
+    public event UnityAction PanicStarted;
+
+    public event UnityAction PanicEnded;
     //private AudioSource effectAudioSource;
 
     //[SerializeField]
@@ -146,6 +150,10 @@ public class GameManager : MonoBehaviour
             SanChanged?.Invoke(value);
         }
     }
+
+    private List<Weapon> weapons = new List<Weapon>(5);
+
+    private int equippedWeaponIndex = -1;
 
     private Weapon EquippedWeaponData;
 
@@ -216,6 +224,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AddWeapon(Weapon weapon)
+    {
+        if (weapons.Contains(weapon))
+            Debug.LogError($"Already has weapon {weapon.Name}");
+        weapons.Add(weapon);
+        player.CreateWeaponObj(weapon);
+    }
+
+    public void RemoveWeapon(Weapon weapon)
+    {
+        if (!weapons.Contains(weapon))
+        {
+            Debug.LogError($"No weapon {weapon.Name}");
+            return;
+        }   
+        weapons.Remove(weapon);
+    }
+
+    public void NextWeapon()
+    {
+        if (CurGameMode != GameMode.Gameplay) return;
+        if (weapons.Count <= 1) return;
+        equippedWeaponIndex++;
+        if (equippedWeaponIndex >= weapons.Count) equippedWeaponIndex = 0;
+        Equip(weapons[equippedWeaponIndex]);
+    }
+
     //每个场景开始
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -231,7 +266,12 @@ public class GameManager : MonoBehaviour
         HpChanged?.Invoke(hp);
         SanChanged?.Invoke(san);
         UIManager.Instance.Initialize();
-        Equip(EquippedWeaponData, false);
+        foreach (var weapon in weapons)
+        {
+            player.CreateWeaponObj(weapon);
+        }
+        if (equippedWeaponIndex != -1)
+            Equip(weapons[equippedWeaponIndex], false);
     }
 
     private void InitFromData(SaveData data)
@@ -269,6 +309,8 @@ public class GameManager : MonoBehaviour
         Sanity = data.Sanity;
         if (data.EquipId > 0)
             EquippedWeaponData = ItemData[data.EquipId] as Weapon;
+        if (EquippedWeaponData != null)
+            equippedWeaponIndex = weapons.IndexOf(EquippedWeaponData);
         //Equip(data.EquipId, false);
         player.transform.position = new Vector2(data.playerPosX, data.playerPosY);
         player.SetDirection(data.playerDir);
@@ -458,7 +500,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 打开/关闭背包
     /// </summary>
-    public void ToggleBag()
+    public void ToggleBag(bool playSound = true)
     {
         if (paused) return;
         if (CurGameMode == GameMode.Gameplay)
@@ -472,8 +514,9 @@ public class GameManager : MonoBehaviour
                 //player.StopAction?.Invoke(); //#
             }
             UIManager.Instance.ToggleBag(!bag);
+            UIManager.Instance.ToggleControlTip(!bag);
             bag = !bag;
-            AudioManager.Instance.PlayBagSound();
+            if (playSound) AudioManager.Instance.PlayBagSound();
             //SwitchGameMode(GameMode.Items);
         }
     }
@@ -490,37 +533,82 @@ public class GameManager : MonoBehaviour
         }
         if (item.useSound)
             AudioManager.Instance.PlaySound(item.useSound);
-        switch (item.itemType)
+        if (item.itemType == ItemType.Weapon)
         {
-            case ItemType.AddHp:
+            var weapon = item as Weapon;
+            Equip(weapon);
+            return;
+        }
+        foreach (var effect in item.Effects)
+        {
+            TakeEffect(effect, item);
+        }
+        if (item.itemType == ItemType.Supply)
+            inventory.RemoveItem(item);
+        //switch (item.itemType)
+        //{
+        //    case ItemType.AddHp:
+        //        {
+        //            var add = item.val * MaxHp;
+        //            //if (Hp <= Game.SevereHpPercent * MaxHp) add *= playerSkills.LowHpHealMod;
+        //            if (item.IsFood) add *= playerSkills.SnackEffectMod;
+        //            Hp += (int)(add);
+        //            inventory.RemoveItem(item);
+        //        }
+        //        break;
+        //    case ItemType.AddSan:
+        //        {
+        //            var add = item.val * MaxHp;
+        //            add *= playerSkills.SanityRecoverMod;
+        //            if (item.IsFood) add *= playerSkills.SnackEffectMod;
+        //            Sanity += (int)add;
+        //            inventory.RemoveItem(item);
+        //        }
+        //        break;
+        //    case ItemType.Bullet:
+        //        break;
+        //    case ItemType.Weapon:
+        //        {
+        //            var weapon = item as Weapon;
+        //            Equip(weapon);
+        //        }
+        //        break;
+        //    case ItemType.Other:
+        //        {
+        //            SpecialItem(item.Id);
+        //        }
+        //        break;
+        //    default:
+        //        break;
+        //}
+    }
+
+    public void TakeEffect(Effect effect, Item useItem = null)
+    {
+        switch (effect.type)
+        {
+            case Effect.Type.AddHp:
                 {
-                    var add = item.val * MaxHp;
+                    var add = effect.value * MaxHp;
                     //if (Hp <= Game.SevereHpPercent * MaxHp) add *= playerSkills.LowHpHealMod;
-                    if (item.IsFood) add *= playerSkills.SnackEffectMod;
+                    if (useItem && useItem.IsFood) 
+                        add *= playerSkills.SnackEffectMod;
                     Hp += (int)(add);
-                    inventory.RemoveItem(item);
                 }
                 break;
-            case ItemType.AddSan:
+            case Effect.Type.AddSan:
                 {
-                    var add = item.val * MaxHp;
+                    var add = effect.value * Game.MaxSan;
                     add *= playerSkills.SanityRecoverMod;
-                    if (item.IsFood) add *= playerSkills.SnackEffectMod;
+                    if (useItem && useItem.IsFood) 
+                        add *= playerSkills.SnackEffectMod;
                     Sanity += (int)add;
-                    inventory.RemoveItem(item);
                 }
                 break;
-            case ItemType.Bullet:
-                break;
-            case ItemType.Weapon:
+            case Effect.Type.Special:
                 {
-                    var weapon = item as Weapon;
-                    Equip(weapon);
-                }
-                break;
-            case ItemType.Other:
-                {
-                    SpecialItem(item.Id);
+                    if (!useItem) throw new System.ArgumentNullException();
+                    SpecialItem(useItem.Id);
                 }
                 break;
             default:
@@ -546,62 +634,24 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlayEquipSound();
         if (player.Equip != null)
         {
-            Destroy(player.Equip.gameObject);
+            //player.Equip.gameObject.SetActive(false);
+            //Destroy(player.Equip.gameObject);
             if (player.Equip.data == weapon)
             {
                 //解除装备
                 UIManager.Instance.ToggleEquipment(false);
+                player.SetEquip(null);
                 EquippedWeaponData = null;
+                equippedWeaponIndex = -1;
                 return;
             }
         }
-        WeaponObject weaponObj = default;
-        switch (weapon.weaponType)
-        {
-            case WeaponType.Gun:
-                {
-                    switch (weapon.Id)
-                    {
-                        case 1:
-                            weaponObj = Instantiate(WeaponPrefabs[0], player.transform).GetComponent<Gun>();
-                            break;
-                        case 4:
-                            weaponObj = Instantiate(WeaponPrefabs[2], player.transform).GetComponent<Gun>();
-                            break;
-                        case 10:
-                            weaponObj = Instantiate(WeaponPrefabs[3], player.transform).GetComponent<Gun>();
-                            break;
-                    }
-                }
-                break;
-            case WeaponType.Melee:
-                switch (weapon.Id)
-                {
-                    case 3:
-                        weaponObj = Instantiate(WeaponPrefabs[1], player.transform).GetComponent<Melee>();
-                        break;
-                    case 7:
-                        weaponObj = Instantiate(WeaponPrefabs[4], player.transform).GetComponent<Melee>();
-                        break;
-                }
-                break;
-            case WeaponType.Magic:
-                weaponObj = Instantiate(WeaponPrefabs[0], player.transform).GetComponent<WeaponObject>(); //#
-                break;
-            default:
-                break;
-        }
-        if (weaponObj == null)
-        {
-            Debug.LogError("weaponType not valid");
-            return;
-        }
-        weaponObj.Show(false);
-        weaponObj.Setup(weapon);
-        player.Equip = weaponObj;
+        player.SetEquip(weapon);
+        //player.Equip = weaponObj;
         EquippedWeaponData = weapon;
+        equippedWeaponIndex = weapons.IndexOf(EquippedWeaponData);
         //Debug.Log("Equip Init.");
-        UIManager.Instance.ToggleEquipment(true, weapon.itemSprite, weaponObj.GetVal());
+        UIManager.Instance.ToggleEquipment(true, weapon.itemSprite, player.Equip.GetVal());
         //Debug.Log(weaponObj.data.Name);
     }
 
@@ -632,10 +682,14 @@ public class GameManager : MonoBehaviour
             {
                 //播放心跳声
                 AudioManager.Instance.PlayHeartBeat(true);
-            }    
+                PanicStarted?.Invoke();
+            }
         }
         else
+        {
             AudioManager.Instance.PlayHeartBeat(false);
+            PanicEnded?.Invoke();
+        }
         EnemyDetected = detect;
         
         //StartCoroutine(effectAudioSource.FadeOut(1));

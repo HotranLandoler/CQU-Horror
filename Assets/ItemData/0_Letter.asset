@@ -16,5 +16,12 @@ MonoBehaviour:
   itemSprite: {fileID: 8033092973025764044, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u59D4\u6258\u4FE1"
   Desc: "\u59D4\u6258\u7A0B\u4F51\u524D\u6765\u8C03\u67E5\u91CD\u5927\u6848\u4EF6\u7684\u4FE1\u4EF6\u3002 "
-  itemType: 4
+  itemType: 3
   val: 0
+  IsFood: 0
+  Effects:
+  - type: 2
+    value: 0
+  pickSound: {fileID: 0}
+  useSound: {fileID: 0}
+  Usages: []

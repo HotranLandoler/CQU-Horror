@@ -19,5 +19,9 @@ MonoBehaviour:
   itemType: 0
   val: 0.1
   IsFood: 1
+  Effects:
+  - type: 0
+    value: 0.1
   pickSound: {fileID: 0}
   useSound: {fileID: 8300000, guid: d7f0a815d4fc5c94a8b7b4ee3c96aa19, type: 3}
+  Usages: []

@@ -17,6 +17,7 @@ public class InputManager : MonoBehaviour
 		Controls.GamePlay.Accept.started += OnAcceptPressed;
 		Controls.GamePlay.Bag.started += Bag;
 		Controls.GamePlay.Menu.started += Menu;
+		Controls.GamePlay.SwitchWeapon.started += ctx => GameManager.Instance.NextWeapon();
 	}
 
     private void OnEnable()

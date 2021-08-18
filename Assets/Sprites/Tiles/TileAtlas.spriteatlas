@@ -880,6 +880,11 @@ SpriteAtlas:
   - {fileID: -4767644898285139997, guid: 3606769c4c2153f49b8310e2635d68b1, type: 3}
   - {fileID: -2986680965598813027, guid: 3606769c4c2153f49b8310e2635d68b1, type: 3}
   - {fileID: 2555819880183438916, guid: 3606769c4c2153f49b8310e2635d68b1, type: 3}
+  - {fileID: 1270869090040111291, guid: 04c9478d2ba45d94799b822c60221242, type: 3}
+  - {fileID: 1729531296007786948, guid: 04c9478d2ba45d94799b822c60221242, type: 3}
+  - {fileID: -8244888770730221588, guid: 04c9478d2ba45d94799b822c60221242, type: 3}
+  - {fileID: -8182218478561332626, guid: 04c9478d2ba45d94799b822c60221242, type: 3}
+  - {fileID: 7103731792780143340, guid: 04c9478d2ba45d94799b822c60221242, type: 3}
   - {fileID: -1236478552925791675, guid: aa2ce07e539ed30408be7932ffe24062, type: 3}
   - {fileID: -2713338720882452079, guid: aa2ce07e539ed30408be7932ffe24062, type: 3}
   - {fileID: 1476841977747400866, guid: aa2ce07e539ed30408be7932ffe24062, type: 3}
@@ -2758,6 +2763,11 @@ SpriteAtlas:
   - Dorm601_13
   - Dorm601_10
   - Dorm601_11
+  - B5_couplets_4
+  - B5_couplets_1
+  - B5_couplets_0
+  - B5_couplets_3
+  - B5_couplets_2
   - NorthGate_799
   - NorthGate_785
   - NorthGate_719

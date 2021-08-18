@@ -52,24 +52,33 @@ public class Box503 : InteractObjects
 
     public override void Interact()
     {
-        bool hasAnyBook = false;
+        //bool hasAnyBook = false;
+        int bookNum = 0;
         for (int i = 0; i < books.Length; i++)
         {
-            if (GameManager.Instance.inventory.HasItem(books[i]) <= 0)
-            {
-                if (hasAnyBook)
-                {
-                    //书不够
-                    GameManager.Instance.StartDialogue(moreBookDialog);
-                    return;
-                }
-            }
-            else hasAnyBook = true;
+            if (GameManager.Instance.inventory.HasItem(books[i]) > 0)
+                bookNum++;
+            //if (GameManager.Instance.inventory.HasItem(books[i]) <= 0)
+            //{
+            //    if (hasAnyBook)
+            //    {
+            //        //书不够
+            //        GameManager.Instance.StartDialogue(moreBookDialog);
+            //        return;
+            //    }
+            //}
+            //else hasAnyBook = true;
         }
-        if (!hasAnyBook)
+        if (bookNum == 0)
         {
             //没书
             GameManager.Instance.StartDialogue(noBookDialog);
+            return;
+        }
+        else if (bookNum < books.Length)
+        {
+            //书不够
+            GameManager.Instance.StartDialogue(moreBookDialog);
             return;
         }
         GameManager.Instance.StartDialogue(enoughBookDialog);

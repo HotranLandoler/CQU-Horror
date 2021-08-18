@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Leng
   m_EditorClassIdentifier: 
   hp: 40
-  damage: 0a00000014000000
+  damage: 0a00000019000000
   attackRangeSqr:
   - 9
   - 81

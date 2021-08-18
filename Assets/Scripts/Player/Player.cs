@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     private HashSet<Enemy> nearbyEnemies = new HashSet<Enemy>();
+
+    private Dictionary<Weapon, WeaponObject> weapons = new Dictionary<Weapon, WeaponObject>(5);
     //public HashSet<Enemy> NearbyEnemies
     //{
     //    get => nearbyEnemies;
@@ -126,7 +128,7 @@ public class Player : MonoBehaviour
     [System.NonSerialized]
     public UnityAction OnDeath;
 
-    public WeaponObject Equip;
+    public WeaponObject Equip { get; private set; }
 
     public List<IInteractable> interactObjs = new List<IInteractable>(3);
 
@@ -271,6 +273,38 @@ public class Player : MonoBehaviour
         IsDead = true;
         //GameManager.Instance.SwitchGameMode(GameMode.Timeline);
         OnDeath?.Invoke();
+    }
+
+    public WeaponObject CreateWeaponObj(Weapon weapon)
+    {
+        if (weapons.ContainsKey(weapon)) return weapons[weapon];
+        WeaponObject weaponObj = Instantiate(weapon.Prefab, transform).GetComponent<WeaponObject>();
+        if (weaponObj == null)
+        {
+            Debug.LogError("weaponType not valid");
+            return null;
+        }
+        weaponObj.Show(false);
+        weaponObj.Setup(weapon);
+        //weaponObj.gameObject.SetActive(false);
+        weapons.Add(weapon, weaponObj);
+        return weaponObj;
+    }
+
+    public void SetEquip(Weapon weapon)
+    {
+        if (Equip) Equip.Show(false);
+        if (weapon == null)
+        {
+            //foreach (var pair in weapons)
+            //{
+            //    pair.Value.gameObject.SetActive(false);
+            //} 
+            Equip = null;
+            return;
+        }
+        //weapons[weapon].Show(true);
+        Equip = weapons[weapon];
     }
 
 }

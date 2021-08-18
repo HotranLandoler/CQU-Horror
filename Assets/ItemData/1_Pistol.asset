@@ -16,8 +16,13 @@ MonoBehaviour:
   itemSprite: {fileID: 4337684191699249041, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "G37\u624B\u67AA"
   Desc: "\u683C\u6D1B\u514B37\u5F0F\u81EA\u52A8\u624B\u67AA\uFF0C\u4F7F\u7528.45\u82F1\u5BF8GAP\u5F39\u3002"
-  itemType: 3
+  itemType: 2
   val: 0
+  IsFood: 0
+  Effects: []
+  pickSound: {fileID: 0}
+  useSound: {fileID: 0}
+  Usages: []
   weaponType: 0
   BulletId: 2
   MaxAmmo: 10
@@ -25,3 +30,4 @@ MonoBehaviour:
   Damage: 1
   BulletsPerShot: 1
   Sound: {fileID: 8300000, guid: 48fff5b5c1bb89b4baa2a54a31ba4ab9, type: 3}
+  Prefab: {fileID: 5351950884264839131, guid: 8a9cd2312d00bbf449a95b9312ea2df2, type: 3}

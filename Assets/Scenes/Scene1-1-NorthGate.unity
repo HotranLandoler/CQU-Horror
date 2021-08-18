@@ -27591,6 +27591,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8434917088677760162, guid: aeffffeafd5c0c34fba31bb5807292b5, type: 3}
   m_PrefabInstance: {fileID: 8434917088923149088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &403322411 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5405506895364985614, guid: cb7d22f9280e47d42a592afb1c544e44, type: 3}
+  m_PrefabInstance: {fileID: 5278860991985439987}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573226e2e3f81c047a7366b97942e9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &407213316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27674,6 +27685,10 @@ PrefabInstance:
       propertyPath: redScreen
       value: 
       objectReference: {fileID: 1637512912}
+    - target: {fileID: 4917740948373578876, guid: 54dbd873f1c038a44967cd6c76f09db0, type: 3}
+      propertyPath: controlTip
+      value: 
+      objectReference: {fileID: 403322411}
     - target: {fileID: 4917740948373578876, guid: 54dbd873f1c038a44967cd6c76f09db0, type: 3}
       propertyPath: blackScreen
       value: 

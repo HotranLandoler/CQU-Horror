@@ -16,8 +16,13 @@ MonoBehaviour:
   itemSprite: {fileID: -6099050445329199328, guid: 254965f03f61afe4bb2765321685ef63, type: 3}
   Name: "\u6D88\u9632\u65A7"
   Desc: "\u867D\u7136\u8F83\u91CD\uFF0C\u4F46\u6740\u4F24\u529B\u4E0D\u4FD7\u7684\u6B66\u5668\u3002"
-  itemType: 3
+  itemType: 2
   val: 0
+  IsFood: 0
+  Effects: []
+  pickSound: {fileID: 0}
+  useSound: {fileID: 0}
+  Usages: []
   weaponType: 1
   BulletId: 0
   MaxAmmo: 0
@@ -25,3 +30,4 @@ MonoBehaviour:
   Damage: 3
   BulletsPerShot: 1
   Sound: {fileID: 8300000, guid: 6d5ce2c7ad3acd940b693c9f5a9c15eb, type: 3}
+  Prefab: {fileID: 2855907826786756328, guid: 78e6eac8e0421cc4c969cb2139200e2a, type: 3}

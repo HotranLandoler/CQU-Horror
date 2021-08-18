@@ -86,6 +86,9 @@ TextureImporter:
   - first:
       213: -586250976929357127
     second: Items_27
+  - first:
+      213: 1623647345179350462
+    second: Items_28
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -171,18 +174,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -191,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
+        y: 140
         width: 20
         height: 20
       alignment: 0
@@ -212,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 120
+        y: 140
         width: 20
         height: 20
       alignment: 0
@@ -233,7 +224,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 120
+        y: 140
         width: 20
         height: 20
       alignment: 0
@@ -254,7 +245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 120
+        y: 140
         width: 20
         height: 20
       alignment: 0
@@ -275,7 +266,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
+        y: 120
         width: 20
         height: 20
       alignment: 0
@@ -296,7 +287,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 100
+        y: 120
         width: 20
         height: 20
       alignment: 0
@@ -317,7 +308,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 100
+        y: 120
         width: 20
         height: 20
       alignment: 0
@@ -338,7 +329,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 100
+        y: 120
         width: 20
         height: 20
       alignment: 0
@@ -359,7 +350,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 100
         width: 20
         height: 20
       alignment: 0
@@ -380,7 +371,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 80
+        y: 100
         width: 20
         height: 20
       alignment: 0
@@ -401,7 +392,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 80
+        y: 100
         width: 20
         height: 20
       alignment: 0
@@ -422,7 +413,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 80
+        y: 100
         width: 20
         height: 20
       alignment: 0
@@ -443,7 +434,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 60
+        y: 80
         width: 20
         height: 20
       alignment: 0
@@ -464,7 +455,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 60
+        y: 80
         width: 20
         height: 20
       alignment: 0
@@ -485,7 +476,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 60
+        y: 80
         width: 20
         height: 20
       alignment: 0
@@ -506,7 +497,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 60
+        y: 80
         width: 20
         height: 20
       alignment: 0
@@ -527,7 +518,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 40
+        y: 60
         width: 20
         height: 20
       alignment: 0
@@ -548,7 +539,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 40
+        y: 60
         width: 20
         height: 20
       alignment: 0
@@ -569,7 +560,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 40
+        y: 60
         width: 20
         height: 20
       alignment: 0
@@ -590,7 +581,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 40
+        y: 60
         width: 20
         height: 20
       alignment: 0
@@ -611,7 +602,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 20
+        y: 40
         width: 20
         height: 20
       alignment: 0
@@ -632,7 +623,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 20
+        y: 40
         width: 20
         height: 20
       alignment: 0
@@ -653,7 +644,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 20
+        y: 40
         width: 20
         height: 20
       alignment: 0
@@ -674,7 +665,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 20
+        y: 40
         width: 20
         height: 20
       alignment: 0
@@ -695,7 +686,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 20
         width: 20
         height: 20
       alignment: 0
@@ -716,7 +707,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 20
-        y: 0
+        y: 20
         width: 20
         height: 20
       alignment: 0
@@ -737,7 +728,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 0
+        y: 20
         width: 20
         height: 20
       alignment: 0
@@ -758,7 +749,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 0
+        y: 20
         width: 20
         height: 20
       alignment: 0
@@ -770,6 +761,27 @@ TextureImporter:
       bones: []
       spriteID: 9b266e2b7d73dd7f0800000000000000
       internalID: -586250976929357127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Items_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5dbe178aa588610800000000000000
+      internalID: 1623647345179350462
       vertices: []
       indices: 
       edges: []

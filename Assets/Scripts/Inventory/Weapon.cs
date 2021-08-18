@@ -25,4 +25,6 @@ public class Weapon : Item
     public int BulletsPerShot = 1;
 
     public AudioClip Sound;
+
+    public GameObject Prefab;
 }
