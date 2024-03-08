@@ -71,3 +71,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 ClassDiagram1.cd
+
+# For macOS
+.DS_Store
+**/.DS_Store
+.DS_Store?
