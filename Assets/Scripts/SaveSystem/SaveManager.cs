@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,7 +20,7 @@ public static class SaveManager
     //[SerializeField]
     //private Type type = Type.Load; 
 
-    public static async Task<bool> SaveAsync(string sceneName, bool autoSave = false, int saveId = 0)
+    public static async UniTask<bool> SaveAsync(string sceneName, bool autoSave = false, int saveId = 0)
     {
         Debug.Log("Save Started.");
         UIManager.Instance.ToggleSaving(true);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class SerializationManager<T>
@@ -22,10 +23,10 @@ public class SerializationManager<T>
     }
 
     /// <summary>
-    /// ´ÓÄ¿Â¼ÏÂËùÓÐÎÄ¼þÖÐ¶ÁÈ¡Êý¾Ý
+    /// ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ð¶ï¿½È¡ï¿½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="exclude">ÅÅ³ýµÄÎÄ¼þÃû</param>
-    /// <returns>DataÊý×é£¬¿ÕÔªËØÎªnull</returns>
+    /// <param name="exclude">ï¿½Å³ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½</param>
+    /// <returns>Dataï¿½ï¿½ï¿½é£¬ï¿½ï¿½Ôªï¿½ï¿½Îªnull</returns>
     public static T[] LoadAll(int excludeName = -1)
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SaveFolder);
@@ -37,7 +38,7 @@ public class SerializationManager<T>
         BinaryFormatter formatter = new BinaryFormatter();
         for (int i = 0; i < ts.Length; i++)
         {
-            //Ìø¹ýÅÅ³ýÎÄ¼þ(fileinfo.name°üº¬ºó×º)
+            //ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ï¿½Ä¼ï¿½(fileinfo.nameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×º)
             if (i == excludeName) continue;
 
             var path = $"{SaveFolder}/{i.ToString()}{FileExtension}";
@@ -62,25 +63,23 @@ public class SerializationManager<T>
         return ts;
     }
 
-    public static async Task<bool> SaveAsync(string saveName, T saveData)
+    public static async UniTask<bool> SaveAsync(string saveName, T saveData)
     {
-        await Task.Run(() =>
+        Debug.Log("Saving async...");
+        BinaryFormatter serializer = new();
+        string path = $"{SaveFolder}/{saveName}{FileExtension}";
+        Debug.Log(path);
+        await using FileStream file = File.Create(path);
+        try
         {
-            BinaryFormatter serializaer = new BinaryFormatter();
-            string path = $"{SaveFolder}/{saveName}{FileExtension}";
-            using (FileStream file = File.Create(path))
-            {
-                try
-                {
-                    serializaer.Serialize(file, saveData);
-                }
-                catch (System.Exception e)
-                {
-                    Debug.LogError(e.Message);
-                    Debug.LogError($"Failed to save file at {path}");
-                }
-            }
-        });
+            serializer.Serialize(file, saveData);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError(e.Message);
+            Debug.LogError($"Failed to save file at {path}");
+        }
+
         return true;
     }
 
