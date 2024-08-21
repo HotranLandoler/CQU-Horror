@@ -61,6 +61,7 @@ public class StartMenu : MonoBehaviour
 
     private IWindow window;
 
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -82,6 +83,10 @@ public class StartMenu : MonoBehaviour
                 window = null;
             }
         };
+        
+        #if UNITY_WEBGL
+        exitButton.gameObject.SetActive(false);
+        #endif
     }
 
     private void OnEnable()
@@ -184,22 +189,6 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
 #endif
     }
-
-    //private void TogglePanel(GameObject panel, bool active)
-    //{
-    //    if (active)
-    //    {
-    //        panel.GetComponent<Animator>().Play("Bag_Open");
-    //        panel.GetComponent<CanvasGroup>().blocksRaycasts = true;
-    //    }
-    //    else
-    //    {
-    //        panel.GetComponent<Animator>().Play("Bag_Close");
-    //        panel.GetComponent<CanvasGroup>().blocksRaycasts = false;
-    //    }
-    //}
-
-
 
     private void LangOptionChanged(bool active)
     {
