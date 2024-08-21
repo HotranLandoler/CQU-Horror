@@ -453,7 +453,7 @@ TextureImporter:
       213: -2559525843741322538
     second: Police_149
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -470,10 +470,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -512,6 +514,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -523,6 +527,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -535,6 +540,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -3700,9 +3719,159 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Police_0: -3749740228694047907
+      Police_1: -6712887891866188406
+      Police_10: -2518277709004515230
+      Police_100: -3175948396619072029
+      Police_101: 2685653816111361855
+      Police_102: -990588999707343177
+      Police_103: 7725992397493056845
+      Police_104: 5976156208963256511
+      Police_105: 2923696793514886150
+      Police_106: -7102248460576384601
+      Police_107: -2738730413771450130
+      Police_108: -6517675219188815735
+      Police_109: 8490076374897215959
+      Police_11: -2741297246837535757
+      Police_110: 1029983045583794153
+      Police_111: 8658004711692013674
+      Police_112: -8707678319860757413
+      Police_113: -78272804236635126
+      Police_114: 6613104860595562131
+      Police_115: 6356698978364150971
+      Police_116: -643382752013012182
+      Police_117: 3683984090205030201
+      Police_118: 6724762547212760209
+      Police_119: -1448259048439785401
+      Police_12: 3108425692477877358
+      Police_120: -5339591835517504273
+      Police_121: -5470190712540330876
+      Police_122: 3513157768871968442
+      Police_123: -5642512480072112628
+      Police_124: 8319477970328214625
+      Police_125: 609756587292438161
+      Police_126: -6477989048927814909
+      Police_127: 8395936143901315534
+      Police_128: 3496861504405096101
+      Police_129: 1796424362037776813
+      Police_13: 6564316278392235548
+      Police_130: -8415992677242699973
+      Police_131: -969556105514727606
+      Police_132: 6786255913595771435
+      Police_133: 1679545824274293451
+      Police_134: -6765250752030532004
+      Police_135: 4695104020316588015
+      Police_136: -7120858250427455523
+      Police_137: 2672637185859198115
+      Police_138: -4225430675369325481
+      Police_139: -4093906296005713180
+      Police_14: -4065243377366519743
+      Police_140: 2055931331883724780
+      Police_141: -3304334654493361325
+      Police_142: -2562985668265317178
+      Police_143: -6045144999313064711
+      Police_144: -2874656659312495623
+      Police_145: 2164033841902903613
+      Police_146: -742593428388032804
+      Police_147: -1964022703186844047
+      Police_148: -4403591906474987047
+      Police_149: -2559525843741322538
+      Police_15: 7662154023289556999
+      Police_16: 3915587502915824733
+      Police_17: 3231827773513179252
+      Police_18: 4209122266631158878
+      Police_19: 966779791888089287
+      Police_2: -1958938018622547132
+      Police_20: -8865713128244321213
+      Police_21: -4398434940374794862
+      Police_22: -4648014888881723731
+      Police_23: 1208944580341453675
+      Police_24: -3986280282783805720
+      Police_25: -2975758504068446359
+      Police_26: 2033310232113609862
+      Police_27: -6403265948498032429
+      Police_28: 1858729179743485423
+      Police_29: 263476487247946498
+      Police_3: 6628964215206883979
+      Police_30: 1469481444221473821
+      Police_31: 2541914324985479507
+      Police_32: 3354808282676929544
+      Police_33: 3208208002265162100
+      Police_34: -8352452242790976226
+      Police_35: 6682201690964430667
+      Police_36: 546293000032702292
+      Police_37: 8395247285782984646
+      Police_38: -6950635001360364871
+      Police_39: -2272715178759984548
+      Police_4: 9178799777358681972
+      Police_40: 6866210708687019198
+      Police_41: -7457071899853237828
+      Police_42: -8484720449021010451
+      Police_43: -1549174275934463480
+      Police_44: -3782736778609379829
+      Police_45: -8158959361478189610
+      Police_46: 613216581802866990
+      Police_47: 676906148994452040
+      Police_48: 3045892875372276540
+      Police_49: 5414464867596739573
+      Police_5: -7940327361788584862
+      Police_50: -4615993044837114761
+      Police_51: 3736525304187677495
+      Police_52: 5515818592440405508
+      Police_53: 5356863210326597655
+      Police_54: 7837467223992337163
+      Police_55: -6171261306541786676
+      Police_56: 9151740441014397451
+      Police_57: 273899418249637557
+      Police_58: -7311152581142536379
+      Police_59: -1187048966820857208
+      Police_6: 3702863575619520129
+      Police_60: 7831176755818822705
+      Police_61: -6719841571890533798
+      Police_62: -5474750869397391668
+      Police_63: 7632832128925534989
+      Police_64: -1507748494353256459
+      Police_65: 4600800523639183565
+      Police_66: -1521238462149531018
+      Police_67: 4913734500368065869
+      Police_68: 2535609101568714385
+      Police_69: -7336413444973358507
+      Police_7: 1885353791222077521
+      Police_70: -3622148829127707845
+      Police_71: 4672237039575863357
+      Police_72: -4949043667704279990
+      Police_73: 3732791179018726511
+      Police_74: -5250099149837394761
+      Police_75: 6524019046290679409
+      Police_76: -5088395262992787849
+      Police_77: 9180579005075666758
+      Police_78: 1214808588980221530
+      Police_79: -2004814483479711819
+      Police_8: -2214034502796586735
+      Police_80: -7349792252940398212
+      Police_81: 4913419348367310520
+      Police_82: -4312373724329824962
+      Police_83: 186194395524400335
+      Police_84: -4849448057135724398
+      Police_85: -5629669451997484147
+      Police_86: -1695390231537786507
+      Police_87: -1867398139005027575
+      Police_88: 7736319774401512866
+      Police_89: -1361413307857203559
+      Police_9: -4221981205533977120
+      Police_90: 5498398406327013342
+      Police_91: 954348284120809503
+      Police_92: 762265322511090916
+      Police_93: -508228288638631021
+      Police_94: 7955162549334607240
+      Police_95: -435094970274250391
+      Police_96: 1594368572258485651
+      Police_97: 215863230925739307
+      Police_98: 1091508118406428171
+      Police_99: -5116727340732642480
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

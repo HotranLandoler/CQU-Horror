@@ -147,7 +147,7 @@ TextureImporter:
       213: 3518772928821564245
     second: Chen's Home_47
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -164,10 +164,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -206,6 +208,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -217,6 +221,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -229,6 +234,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1252,9 +1271,57 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Chen's Home_0: -1351460134589050883
+      Chen's Home_1: 891998387566820881
+      Chen's Home_10: 1673242615870112618
+      Chen's Home_11: -6153207270797854783
+      Chen's Home_12: 7819900872784937002
+      Chen's Home_13: -4283195459973400577
+      Chen's Home_14: -411586992597687279
+      Chen's Home_15: -5142045656271046625
+      Chen's Home_16: -4494892508160207124
+      Chen's Home_17: -5703354857217893642
+      Chen's Home_18: -5763174271915824713
+      Chen's Home_19: -3879039204974361331
+      Chen's Home_2: 243294838536786171
+      Chen's Home_20: 828255114886563198
+      Chen's Home_21: -8426254812752972704
+      Chen's Home_22: -3089843977122667726
+      Chen's Home_23: 2458675160826889348
+      Chen's Home_24: 3415064354600421124
+      Chen's Home_25: -2152058652873840640
+      Chen's Home_26: -8113127831623382237
+      Chen's Home_27: -5421801246157060097
+      Chen's Home_28: -723230012213733609
+      Chen's Home_29: -3983126514049150531
+      Chen's Home_3: -981350219993978483
+      Chen's Home_30: 6729151596524923961
+      Chen's Home_31: 526061885464796743
+      Chen's Home_32: 1598387834474179380
+      Chen's Home_33: 865033016058909602
+      Chen's Home_34: 4327331268304605018
+      Chen's Home_35: -6744159595483470586
+      Chen's Home_36: 221315743563573749
+      Chen's Home_37: 6828910594259277978
+      Chen's Home_38: 5152819413101666867
+      Chen's Home_39: 2474786184434687201
+      Chen's Home_4: -8520211497859512423
+      Chen's Home_40: -8536817415309366536
+      Chen's Home_41: -8333512020516397948
+      Chen's Home_42: -969438090004888786
+      Chen's Home_43: 6480793342920950347
+      Chen's Home_44: -3157153224732685480
+      Chen's Home_45: -8411952213779850656
+      Chen's Home_46: 1664324184764794304
+      Chen's Home_47: 3518772928821564245
+      Chen's Home_5: 5166388239254836489
+      Chen's Home_6: 6951570542187369499
+      Chen's Home_7: -4895018385208629039
+      Chen's Home_8: -5717569204999499867
+      Chen's Home_9: -133720658088227074
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

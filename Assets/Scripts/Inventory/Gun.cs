@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine.InputSystem;
 
 public class Gun : WeaponObject
@@ -19,10 +19,10 @@ public class Gun : WeaponObject
     //private GameObject shellPrefab;
 
     [SerializeField]
-    private Light2D gunLight;
+    private UnityEngine.Rendering.Universal.Light2D gunLight;
 
     /// <summary>
-    /// µ¯²ÖÄÚ×Óµ¯Êý
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½
     /// </summary>
     //public int AmmoOnLoad = 10;
 
@@ -47,13 +47,13 @@ public class Gun : WeaponObject
 
 
     /// <summary>
-    /// ¸üÐÂÃé×¼·½Ïò
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public override void UpdateAim(Vector3 mousePos)
     {
         //mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 place = (mousePos - transform.position).normalized;
-        //¼ÆËã½Ç¶È
+        //ï¿½ï¿½ï¿½ï¿½Ç¶ï¿½
         float angle = Mathf.Atan2(place.y, place.x) * Mathf.Rad2Deg;
         //angle = Vector2.SignedAngle(Vector2.right, place);
         transform.eulerAngles = new Vector3(0, 0, angle);
@@ -70,7 +70,7 @@ public class Gun : WeaponObject
         {
             if (GameManager.Instance.inventory.GetGunAmmoLoaded(data) > 0)
             {
-                //¿ª»ð
+                //ï¿½ï¿½ï¿½ï¿½
                 _animator.SetTrigger("Attack");
                 PlayGunSound();
                 if (data.BulletsPerShot > 0)
@@ -101,7 +101,7 @@ public class Gun : WeaponObject
             }
             else
             {
-                //Ã»×Óµ¯
+                //Ã»ï¿½Óµï¿½
                 AudioManager.Instance.PlayNoAmmoSound();
                 
             }

@@ -117,7 +117,7 @@ TextureImporter:
       213: -8084249555830293121
     second: ToB5_1_37
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -134,10 +134,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -176,6 +178,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -187,6 +191,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -199,6 +204,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1012,9 +1031,47 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      ToB5_1_0: 2994976286031424096
+      ToB5_1_1: 2074415499642248388
+      ToB5_1_10: 7374388642221619079
+      ToB5_1_11: -1149515085228261587
+      ToB5_1_12: 5514289874106009641
+      ToB5_1_13: -307988318562349346
+      ToB5_1_14: 5527790463520915950
+      ToB5_1_15: 3721879529342070116
+      ToB5_1_16: 890013367620801614
+      ToB5_1_17: -8939398340454465925
+      ToB5_1_18: -889015184118518461
+      ToB5_1_19: -7282693919690657507
+      ToB5_1_2: -7744013269874484960
+      ToB5_1_20: -6521440975839128889
+      ToB5_1_21: 581643663453059171
+      ToB5_1_22: 4571122240309926740
+      ToB5_1_23: 5338396445799427974
+      ToB5_1_24: 171900602801556368
+      ToB5_1_25: -2325646132696002781
+      ToB5_1_26: -3426144919039498448
+      ToB5_1_27: -5418896860434416134
+      ToB5_1_28: 8656988523370026337
+      ToB5_1_29: 3688337553415831694
+      ToB5_1_3: 2210176352139083823
+      ToB5_1_30: 7879452848714802363
+      ToB5_1_31: -4733667456158030323
+      ToB5_1_32: -1075998204922931246
+      ToB5_1_33: -4608007597535160833
+      ToB5_1_34: -1342227378815284016
+      ToB5_1_35: 7361883806419928371
+      ToB5_1_36: 2827581817396008413
+      ToB5_1_37: -8084249555830293121
+      ToB5_1_4: -6703174818369997615
+      ToB5_1_5: 60598706786181074
+      ToB5_1_6: 7185347303944296052
+      ToB5_1_7: 427578279893738093
+      ToB5_1_8: 3773306548786486390
+      ToB5_1_9: 3995691418364665309
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

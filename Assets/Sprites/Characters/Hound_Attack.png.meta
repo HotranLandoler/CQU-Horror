@@ -87,7 +87,7 @@ TextureImporter:
       213: -5023517591227735501
     second: Hound_Attack_27
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -104,10 +104,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -146,6 +148,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -157,6 +161,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -169,6 +174,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -772,9 +791,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Hound_Attack_0: 1344533631048531656
+      Hound_Attack_1: 3530258034379750240
+      Hound_Attack_10: -4016264963337191211
+      Hound_Attack_11: 9097274717529051664
+      Hound_Attack_12: -6813172141876968680
+      Hound_Attack_13: -7118541540783834155
+      Hound_Attack_14: 6591827118003874974
+      Hound_Attack_15: 6136156267470820822
+      Hound_Attack_16: 3704848097167652242
+      Hound_Attack_17: -6609154652548222270
+      Hound_Attack_18: 8753239618116448500
+      Hound_Attack_19: -255328972183672337
+      Hound_Attack_2: -6544421776444313953
+      Hound_Attack_20: -7447092050389855804
+      Hound_Attack_21: -5595832872401094286
+      Hound_Attack_22: -4344142901429443008
+      Hound_Attack_23: 8578965926078477620
+      Hound_Attack_24: 1232279295516341340
+      Hound_Attack_25: -4661033633297854776
+      Hound_Attack_26: 2232425178148339515
+      Hound_Attack_27: -5023517591227735501
+      Hound_Attack_3: -658090704361681794
+      Hound_Attack_4: -4010605673815501453
+      Hound_Attack_5: -4269640446222909751
+      Hound_Attack_6: 4878424963235799465
+      Hound_Attack_7: -2041816374787132657
+      Hound_Attack_8: -2530886936910226462
+      Hound_Attack_9: -5062664232727052367
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

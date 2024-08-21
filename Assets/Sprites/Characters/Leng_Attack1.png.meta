@@ -87,7 +87,7 @@ TextureImporter:
       213: -7582156525181130281
     second: Leng_Attack1_27
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -104,10 +104,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -146,6 +148,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -157,6 +161,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -169,6 +174,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -181,6 +187,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -784,9 +804,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Leng_Attack1_0: -7418640588947695531
+      Leng_Attack1_1: -5367958613546359513
+      Leng_Attack1_10: 3051701906105608845
+      Leng_Attack1_11: 4079372624652244322
+      Leng_Attack1_12: -2073757490616248979
+      Leng_Attack1_13: -1782274435883007910
+      Leng_Attack1_14: 7396933017224106746
+      Leng_Attack1_15: 7467971378182008044
+      Leng_Attack1_16: 4517000024220392423
+      Leng_Attack1_17: 6155772012616472720
+      Leng_Attack1_18: 2338266470817223133
+      Leng_Attack1_19: 7723790124524867565
+      Leng_Attack1_2: -2881961297992319198
+      Leng_Attack1_20: -2806498260151591349
+      Leng_Attack1_21: 3143540539676356211
+      Leng_Attack1_22: -129057655505970843
+      Leng_Attack1_23: -5128169685387983464
+      Leng_Attack1_24: -8072626187675028575
+      Leng_Attack1_25: 9184478202317613871
+      Leng_Attack1_26: 980706004267361857
+      Leng_Attack1_27: -7582156525181130281
+      Leng_Attack1_3: 2598529552139301223
+      Leng_Attack1_4: -3918413797273936481
+      Leng_Attack1_5: 6254917875247053492
+      Leng_Attack1_6: -7894360869161050171
+      Leng_Attack1_7: 5105789108431020413
+      Leng_Attack1_8: 8522025529966084535
+      Leng_Attack1_9: 3492566963520783111
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

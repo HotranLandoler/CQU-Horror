@@ -99,7 +99,7 @@ TextureImporter:
       213: 6228318237473196692
     second: b5Dorm_4_31
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -116,10 +116,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -158,6 +160,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -169,6 +173,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -181,6 +186,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -193,6 +199,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -880,9 +900,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      b5Dorm_4_0: 5026661871188013461
+      b5Dorm_4_1: -6854181641838214116
+      b5Dorm_4_10: -292323944948602263
+      b5Dorm_4_11: 7316394357771874078
+      b5Dorm_4_12: -8883694379581715396
+      b5Dorm_4_13: 2502035145997125329
+      b5Dorm_4_14: -1584776402343799804
+      b5Dorm_4_15: 6712502668582431451
+      b5Dorm_4_16: -6818799469978287937
+      b5Dorm_4_17: -8945455641621522769
+      b5Dorm_4_18: 1356726326872309526
+      b5Dorm_4_19: 677859139396863541
+      b5Dorm_4_2: -4875598960636912648
+      b5Dorm_4_20: 4274555352081235252
+      b5Dorm_4_21: -2216496808042212831
+      b5Dorm_4_22: 2414935060518737975
+      b5Dorm_4_23: 6560089848450064612
+      b5Dorm_4_24: -6744845173445882649
+      b5Dorm_4_25: -925327505072620808
+      b5Dorm_4_26: 3984664885923169378
+      b5Dorm_4_27: -8468908799522585833
+      b5Dorm_4_28: 9166147796618312877
+      b5Dorm_4_29: -144389585865050162
+      b5Dorm_4_3: -8329481955970525332
+      b5Dorm_4_30: 8056180785771548585
+      b5Dorm_4_31: 6228318237473196692
+      b5Dorm_4_4: -5012370242202485560
+      b5Dorm_4_5: 9038877390670560210
+      b5Dorm_4_6: 8334826515113253453
+      b5Dorm_4_7: -3183136118787617307
+      b5Dorm_4_8: 3543620693314940306
+      b5Dorm_4_9: 2468328045946878464
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

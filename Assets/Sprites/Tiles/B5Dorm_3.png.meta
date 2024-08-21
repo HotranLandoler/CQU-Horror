@@ -153,7 +153,7 @@ TextureImporter:
       213: 4756056432083671576
     second: B5Dorm_3_49
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -170,10 +170,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -212,6 +214,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -223,6 +227,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -235,6 +240,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -247,6 +253,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1312,9 +1332,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      B5Dorm_3_0: 7154434336304405199
+      B5Dorm_3_1: -2381423792266455474
+      B5Dorm_3_10: 3788122881748628387
+      B5Dorm_3_11: 5718349924994539111
+      B5Dorm_3_12: 3210978325505642986
+      B5Dorm_3_13: 3959922835902739557
+      B5Dorm_3_14: 4850398490029157142
+      B5Dorm_3_15: 1302260826159039447
+      B5Dorm_3_16: 3673014657867069992
+      B5Dorm_3_17: 1691898143540214375
+      B5Dorm_3_18: -8892584356887071954
+      B5Dorm_3_19: 3723248603458748722
+      B5Dorm_3_2: 8466572048924892423
+      B5Dorm_3_20: 245179412958793196
+      B5Dorm_3_21: -832119951936396728
+      B5Dorm_3_22: 1614814371039450490
+      B5Dorm_3_23: -8676365788838372693
+      B5Dorm_3_24: 6273029680668728882
+      B5Dorm_3_25: 6872196706833399720
+      B5Dorm_3_26: 8983085495115144902
+      B5Dorm_3_27: 3259423510079858831
+      B5Dorm_3_28: -3939581980330297056
+      B5Dorm_3_29: -5315618952056343658
+      B5Dorm_3_3: -2253670829002025442
+      B5Dorm_3_30: 5948714315476543334
+      B5Dorm_3_31: -2532315059173372903
+      B5Dorm_3_32: 6954862767233056951
+      B5Dorm_3_33: -1709640160090978133
+      B5Dorm_3_34: 2337329565081047263
+      B5Dorm_3_35: 5244372044149335526
+      B5Dorm_3_36: -1569077464335949842
+      B5Dorm_3_37: 8052868874931341262
+      B5Dorm_3_38: 4900616304876544857
+      B5Dorm_3_39: 3523153588062449322
+      B5Dorm_3_4: -4926774397195777509
+      B5Dorm_3_40: -5141139466156142113
+      B5Dorm_3_41: 8856547164079607624
+      B5Dorm_3_42: 4076596333384614955
+      B5Dorm_3_43: -4115576735969595856
+      B5Dorm_3_44: -2737741055632656939
+      B5Dorm_3_45: 4754207300560984703
+      B5Dorm_3_46: 8499636237928114696
+      B5Dorm_3_47: -1722464752454537882
+      B5Dorm_3_48: -853071945040057517
+      B5Dorm_3_49: 4756056432083671576
+      B5Dorm_3_5: -2358597690338732712
+      B5Dorm_3_6: -5113255119196835349
+      B5Dorm_3_7: -2808871177117075460
+      B5Dorm_3_8: 6111239714047448956
+      B5Dorm_3_9: -5579922275838233393
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

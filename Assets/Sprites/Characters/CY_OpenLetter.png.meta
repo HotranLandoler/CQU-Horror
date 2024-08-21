@@ -69,7 +69,7 @@ TextureImporter:
       213: -7116874897077386611
     second: CY_OpenLetter_21
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -86,10 +86,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -128,6 +130,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -139,6 +143,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -151,6 +156,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -628,9 +647,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      CY_OpenLetter_0: -6592376194213061126
+      CY_OpenLetter_1: -1953824904027007133
+      CY_OpenLetter_10: 5357685603702112176
+      CY_OpenLetter_11: 1488933294556574815
+      CY_OpenLetter_12: 4153030718134393692
+      CY_OpenLetter_13: -9130013436564122695
+      CY_OpenLetter_14: -8413337422928029313
+      CY_OpenLetter_15: 1503357700228096093
+      CY_OpenLetter_16: -6702581699250942014
+      CY_OpenLetter_17: -5768992697975423669
+      CY_OpenLetter_18: -6452485502567236419
+      CY_OpenLetter_19: 4016402818215113387
+      CY_OpenLetter_2: -9036824066797449731
+      CY_OpenLetter_20: -8151395160299440602
+      CY_OpenLetter_21: -7116874897077386611
+      CY_OpenLetter_3: 2717223573219373107
+      CY_OpenLetter_4: -3138458099447339288
+      CY_OpenLetter_5: 994589446637246898
+      CY_OpenLetter_6: -8175457505617427929
+      CY_OpenLetter_7: -2742791727239357733
+      CY_OpenLetter_8: -348524271477954656
+      CY_OpenLetter_9: -5128080953325744215
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

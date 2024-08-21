@@ -22,16 +22,19 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b2e19a16c33021e45a6f98bfb60312ff
     m_Address: UI_zh-Hans
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14fb2ac16f86124498be7aa43e8bdd69
     m_Address: Inventory_zh-Hans
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-zh-Hans
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 0e833aa0965fb8d419a625f6fcbfb5f0, type: 2}
   m_SchemaSet:

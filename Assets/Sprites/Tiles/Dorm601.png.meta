@@ -141,7 +141,7 @@ TextureImporter:
       213: 6141489426941771223
     second: Dorm601_45
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -158,10 +158,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -200,6 +202,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -211,6 +215,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -223,6 +228,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -235,6 +241,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1216,9 +1236,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Dorm601_0: -8335018169344299842
+      Dorm601_1: -3485798735539328354
+      Dorm601_10: -2986680965598813027
+      Dorm601_11: 2555819880183438916
+      Dorm601_12: -7150680235822271571
+      Dorm601_13: -4767644898285139997
+      Dorm601_14: -7221076973302277574
+      Dorm601_15: -8640796652986331925
+      Dorm601_16: -4915147428764815360
+      Dorm601_17: 7287140274522231073
+      Dorm601_18: -4186687054184929097
+      Dorm601_19: 6861241262634381826
+      Dorm601_2: 497942064450129570
+      Dorm601_20: -156579742734391814
+      Dorm601_21: -6427594950590629088
+      Dorm601_22: 8563863566934424521
+      Dorm601_23: -8742783221431381936
+      Dorm601_24: 7740157791403815342
+      Dorm601_25: 4369462417620258650
+      Dorm601_26: 4766636517304422902
+      Dorm601_27: 2407195286528916728
+      Dorm601_28: -2877243593261792492
+      Dorm601_29: 3990910351359071538
+      Dorm601_3: -7411975004815222679
+      Dorm601_30: -8159012897729326742
+      Dorm601_31: 8575960950762471651
+      Dorm601_32: 1859528453854793586
+      Dorm601_33: -8343256943863715490
+      Dorm601_34: -3466549733792625401
+      Dorm601_35: -5064968112434501947
+      Dorm601_36: -4886787518408242762
+      Dorm601_37: -2783805042425412558
+      Dorm601_38: 8021406697230864526
+      Dorm601_39: 737192389559629060
+      Dorm601_4: 6757304138772052322
+      Dorm601_40: 241439736277508106
+      Dorm601_41: -4870147905664004783
+      Dorm601_42: 3449540031743395785
+      Dorm601_43: -303082804567015291
+      Dorm601_44: -5253263862520854328
+      Dorm601_45: 6141489426941771223
+      Dorm601_5: -1261943363489587699
+      Dorm601_6: -6187827624711940665
+      Dorm601_7: -1273969072241453621
+      Dorm601_8: -2960968004824746924
+      Dorm601_9: 685027854848780920
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

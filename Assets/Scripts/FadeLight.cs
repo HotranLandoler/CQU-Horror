@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class FadeLight : MonoBehaviour
 {
-    private Light2D light2d;
+    private UnityEngine.Rendering.Universal.Light2D light2d;
 
     [SerializeField]
     private float fadeSpeed = 3;
@@ -15,7 +15,7 @@ public class FadeLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        light2d = GetComponent<Light2D>();
+        light2d = GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         currIntensity = light2d.intensity;
         targetIntensity = currIntensity;
     }
@@ -31,9 +31,9 @@ public class FadeLight : MonoBehaviour
     }
 
     /// <summary>
-    /// ÁÁ¶È½¥±ä
+    /// ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½
     /// </summary>
-    /// <param name="target">Ä¿±êintensity</param>
+    /// <param name="target">Ä¿ï¿½ï¿½intensity</param>
     public void Fade(float target)
     {
         targetIntensity = target;
