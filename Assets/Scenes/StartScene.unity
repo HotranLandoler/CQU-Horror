@@ -2982,7 +2982,7 @@ MonoBehaviour:
     m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
   m_Text: "\u6700\u5927\u751F\u547D-40%\n\u8865\u7ED9\u66F4\u5C11\n\u66F4\u591A\u654C\u4EBA\u548C\u5956\u52B1"
