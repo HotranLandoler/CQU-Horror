@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÓÎÏ·ÄÚ²¿±äÁ¿
+    /// ï¿½ï¿½Ï·ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public GameVariables gameVariables;
 
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
 
     private int hp;
     /// <summary>
-    /// Íæ¼ÒÉúÃüÖµ
+    /// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
     /// </summary>
     public int Hp
     {
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
             }
             hp = value;
             
-            //HP¸Ä±äÊ±UIÑªÌõ¸Ä±ä
+            //HPï¿½Ä±ï¿½Ê±UIÑªï¿½ï¿½ï¿½Ä±ï¿½
             //Debug.Log(value);
             HpChanged?.Invoke(value);
         }
@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
 
     private int san;
     /// <summary>
-    /// Íæ¼ÒSanÖµ
+    /// ï¿½ï¿½ï¿½SanÖµ
     /// </summary>
     public int Sanity
     {
@@ -166,7 +166,7 @@ public class GameManager : MonoBehaviour
             //First run, set the instance
             _instance = this;
             DontDestroyOnLoad(gameObject);
-            //³õÊ¼»¯·ÅÔÚ´Ë´¦·ÀÖ¹¶à´ÎÌí¼Ó¼àÌý
+            //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ú´Ë´ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¼ï¿½ï¿½ï¿½
             //Initialize();
             InitFromData(SaveManager.currentSave);
             SaveManager.currentSave = null;
@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
     {
         if (CurGameMode != GameMode.Gameplay)
             return;
-        //ÓÐµÐÈËÊ±³ÖÐø¼õÉÙSanÖµ
+        //ï¿½Ðµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½SanÖµ
         if (sanTimer > 0)
             sanTimer -= Time.deltaTime;
         if (sanTimer <= 0 && EnemyDetected)
@@ -251,7 +251,7 @@ public class GameManager : MonoBehaviour
         Equip(weapons[equippedWeaponIndex]);
     }
 
-    //Ã¿¸ö³¡¾°¿ªÊ¼
+    //Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //foreach (var item in ItemNums)
@@ -276,7 +276,7 @@ public class GameManager : MonoBehaviour
 
     private void InitFromData(SaveData data)
     {
-        //³õÊ¼»¯ÎïÆ·
+        //ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Æ·
         inventory = new Inventory(data);
         if (data == null)
         {
@@ -355,7 +355,7 @@ public class GameManager : MonoBehaviour
     {
         if (change < 0)
         {
-            //¿ÛÑª
+            //ï¿½ï¿½Ñª
             if (Hp <= Game.SevereHpPercent * MaxHp) change = (int)(change * playerSkills.LowHpDamageMod);
         }
         Hp += change;    
@@ -366,9 +366,9 @@ public class GameManager : MonoBehaviour
         Sanity += change;
     }
 
-    //´¥·¢Ò»´Î
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
     /// <summary>
-    /// ³õÊ¼»¯ÊýÖµ
+    /// ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Öµ
     /// </summary>
     public void Initialize()
     {
@@ -396,7 +396,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Ìí¼Ó³õÊ¼ÎïÆ·
+    /// ï¿½ï¿½ï¿½Ó³ï¿½Ê¼ï¿½ï¿½Æ·
     /// </summary>
     public void AddStartItems()
     {
@@ -408,7 +408,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// °´ÏÂEsc
+    /// ï¿½ï¿½ï¿½ï¿½Esc
     /// </summary>
     public void OnEscapePressed()
     {
@@ -419,7 +419,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÇÐ»»ÔÝÍ£²Ëµ¥
+    /// ï¿½Ð»ï¿½ï¿½ï¿½Í£ï¿½Ëµï¿½
     /// </summary>
     public void TogglePauseMenu()
     {
@@ -457,7 +457,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÇÐ»»ÓÎÏ·Ä£Ê½ÖÁ¹ý³¡¶¯»­
+    /// ï¿½Ð»ï¿½ï¿½ï¿½Ï·Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void OnCgStarted()
     {
@@ -479,7 +479,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ÇÐ»»ÓÎÏ·Ä£Ê½
+    /// ï¿½Ð»ï¿½ï¿½ï¿½Ï·Ä£Ê½
     /// </summary>
     /// <param name="mode"></param>
     public void SwitchGameMode(GameMode mode)
@@ -498,7 +498,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ´ò¿ª/¹Ø±Õ±³°ü
+    /// ï¿½ï¿½/ï¿½Ø±Õ±ï¿½ï¿½ï¿½
     /// </summary>
     public void ToggleBag(bool playSound = true)
     {
@@ -507,8 +507,8 @@ public class GameManager : MonoBehaviour
         {
             if (bag == false)
             {
-                //¿ª±³°üÍ£Ö¹ÒÆ¶¯
-                //Í£Ö¹Ãé×¼
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½Æ¶ï¿½
+                //Í£Ö¹ï¿½ï¿½×¼
                 player.StopAim?.Invoke();
                 player.SetRun(false);
                 //player.StopAction?.Invoke(); //#
@@ -523,11 +523,11 @@ public class GameManager : MonoBehaviour
 
     public void UseItem(Item item)
     {
-        //ÔÝÍ£Ê±²»ÄÜÊ¹ÓÃ
+        //ï¿½ï¿½Í£Ê±ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
         if (paused) return;
         if (OnItemBox)
         {
-            //ÕýÔÚ´æÈ¡ÎïÆ·
+            //ï¿½ï¿½ï¿½Ú´ï¿½È¡ï¿½ï¿½Æ·
             inventory.StoreItem(item);
             return;
         }
@@ -638,7 +638,7 @@ public class GameManager : MonoBehaviour
             //Destroy(player.Equip.gameObject);
             if (player.Equip.data == weapon)
             {
-                //½â³ý×°±¸
+                //ï¿½ï¿½ï¿½×°ï¿½ï¿½
                 UIManager.Instance.ToggleEquipment(false);
                 player.SetEquip(null);
                 EquippedWeaponData = null;
@@ -659,11 +659,11 @@ public class GameManager : MonoBehaviour
     {
         switch (id)
         {
-            case 0: //Î¯ÍÐÐÅ
+            case 0: //Î¯ï¿½ï¿½ï¿½ï¿½
                 {
                     StartDialogue(Game.gameStrings.UseSpecialItem[id]);
                     inventory.RemoveItem(ItemData[id]);
-                    //»ñµÃ¿Õ°×µÄÐÅ
+                    //ï¿½ï¿½Ã¿Õ°×µï¿½ï¿½ï¿½
                     inventory.AddItem(9);
                     break;
                 }
@@ -680,7 +680,7 @@ public class GameManager : MonoBehaviour
         {
             if (!EnemyDetected)
             {
-                //²¥·ÅÐÄÌøÉù
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 AudioManager.Instance.PlayHeartBeat(true);
                 PanicStarted?.Invoke();
             }
@@ -702,7 +702,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ¹ýÍ¼
+    /// ï¿½ï¿½Í¼
     /// </summary>
     /// <param name="sceneId"></param>
     public void LoadScene(int sceneId)
@@ -763,7 +763,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// °´ÏÂÈ·¶¨¼ü
+    /// ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public void OnAccept()
     {
@@ -797,7 +797,7 @@ public class GameManager : MonoBehaviour
         dialogIndex++;
         if (dialogs == null || dialogIndex >= dialogs.Length)
         {
-            //½áÊø¶Ô»°
+            //ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½
             if (CurGameMode == GameMode.NormalDialogue)
             {
                 UIManager.Instance.ToggleDialoguePanel(false);
@@ -814,23 +814,23 @@ public class GameManager : MonoBehaviour
 public enum GameMode
 {
 	/// <summary>
-	/// ÓÎÏ·ÖÐ
+	/// ï¿½ï¿½Ï·ï¿½ï¿½
 	/// </summary>
 	Gameplay,
 	/// <summary>
-	/// ¹ý³¡¶¯»­
+	/// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	/// </summary>
 	Timeline,
 	/// <summary>
-	/// ¶Ô»°µÈ´ýÖÐ
+	/// ï¿½Ô»ï¿½ï¿½È´ï¿½ï¿½ï¿½
 	/// </summary>
 	DialogueMoment,
 	/// <summary>
-	/// Ò»°ãµÄ³¡¾°¶Ô»°
+	/// Ò»ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½Ô»ï¿½
 	/// </summary>
 	NormalDialogue,
     /// <summary>
-    /// ±³°ü
+    /// ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     //Items,
 }
